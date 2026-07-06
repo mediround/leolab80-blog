@@ -1,26 +1,8 @@
 ---
-import { Icon } from 'astro-icon/components';
-import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE, SOCIALS } from '../consts';
+import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE } from '../consts';
 ---
 
 <header>
-	<div class="util">
-		<div class="wrap util-in">
-			<span>SEOUL · 2026</span>
-			<span class="soc">
-				<a href={SOCIALS.instagram} target="_blank" rel="noopener" aria-label="인스타그램">
-					<Icon name="simple-icons:instagram" size={17} />
-				</a>
-				<a href={SOCIALS.youtube} target="_blank" rel="noopener" aria-label="유튜브">
-					<Icon name="simple-icons:youtube" size={17} />
-				</a>
-				<a href={SOCIALS.linkedin} target="_blank" rel="noopener" aria-label="링크드인">
-					<Icon name="simple-icons:linkedin" size={17} />
-				</a>
-			</span>
-		</div>
-	</div>
-
 	<div class="wrap mast">
 		<div class="mast-line"><a href="/" class="logo">{SITE_TITLE}</a></div>
 		<div class="mast-line"><span class="tag">{SITE_TAGLINE}</span></div>
@@ -81,7 +63,7 @@ import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE, SOCIALS } from '..
 	}
 	.mast {
 		text-align: center;
-		padding: 26px 0 12px;
+		padding: 40px 0 14px;
 	}
 	.mast-line {
 		text-align: center;
