@@ -79,9 +79,9 @@ hr {
 	margin: 2rem 0;
 }
 
-/* 블로그 대표이미지는 브랜드 톤 = 흑백 */
+/* 대표이미지 = 풀컬러 (보그 웹진 톤: 흑백 타이포·UI + 컬러 사진) */
 .duotone {
-	filter: grayscale(100%) contrast(1.02);
+	display: block;
 }
 
 /* 카테고리 kicker */
