@@ -3,7 +3,7 @@ title: "외국인환자 유치가 어려운 진짜 이유 — 획득비용(CAC)"
 description: "가장 안 보이는 문제는 '한 명을 데려오는 비용'이다. 높은 획득비용·낮은 재구매·고객 소유권 상실이 겹쳐, 단건 수수료 모델이 구조적으로 안 풀린다."
 pubDate: "2026-06-30"
 category: "비즈니스"
-heroImage: "../../assets/blog-placeholder-4.jpg"
+heroImage: "../../assets/hero-cac.jpg"
 ---
 
 

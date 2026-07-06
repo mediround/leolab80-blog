@@ -3,7 +3,7 @@ title: "재구매 없는 시장에서 무엇을 쌓을 것인가"
 description: "한 번 오면 두 번 오기 어려운 시장에서 '더 많이'는 밑 빠진 독이다. 유량을 늘리는 대신, 떠난 뒤에도 남아 복리로 쌓이는 것에 대하여."
 pubDate: "2026-07-01"
 category: "비즈니스"
-heroImage: "../../assets/blog-placeholder-2.jpg"
+heroImage: "../../assets/hero-accumulate.jpg"
 ---
 
 

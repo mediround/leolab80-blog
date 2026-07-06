@@ -3,7 +3,7 @@ title: "열 번째 시도는 왜 첫 번째보다 정확해야 하나 — 학습
 description: "대부분의 유치 시도가 매번 0에서 다시 시작하는 이유는 배움이 새고 있기 때문이다. 무엇을 기록해야 열 번째가 첫 번째보다 정확해지는가."
 pubDate: "2026-07-04T09:00:00"
 category: "메모"
-heroImage: "../../assets/blog-placeholder-5.jpg"
+heroImage: "../../assets/hero-tenth.jpg"
 ---
 
 
