@@ -23,5 +23,5 @@ export const SOCIALS = {
 
 // 애널리틱스 / 서치콘솔 — 값을 채우면 자동 활성화(빈 값이면 아무 코드도 안 나감).
 // GA는 프로덕션 빌드에서만 로드된다(개발 중 데이터 오염 방지).
-export const GA_MEASUREMENT_ID = ''; // 예: 'G-XXXXXXXXXX' (GA4 측정 ID)
+export const GA_MEASUREMENT_ID = 'G-X4YJYKKB90'; // GA4 측정 ID (LEO LAB · mediseed.kr 스트림)
 export const GSC_VERIFICATION = ''; // Search Console HTML 태그 인증 코드(google-site-verification content 값)
