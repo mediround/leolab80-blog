@@ -1,0 +1,210 @@
+/*
+  LEOLAB80 — Vogue 스타일 흑백 편집형 테마
+  전부 블랙(#000) on 화이트, 각진 괘선, 명조 본문, 좌우 justify.
+*/
+
+:root {
+	--ink: #000;
+	--paper: #fff;
+	--muted: #555; /* 날짜·메타 (무채색) */
+	--line: #000;
+	--line-thin: #d8d8d8;
+	--content: 1120px;
+	--prose: 720px;
+	--font-sans: 'Noto Sans KR', 'Malgun Gothic', system-ui, -apple-system, sans-serif;
+	--font-display: var(--font-sans);
+	--font-serif: var(--font-sans);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: var(--font-sans);
+	margin: 0;
+	padding: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-size: 16px;
+	line-height: 1.85;
+	word-break: keep-all;
+	overflow-wrap: break-word;
+	-webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+	width: var(--content);
+	max-width: calc(100% - 3em);
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-sans);
+	color: var(--ink);
+	line-height: 1.4;
+	font-weight: 700;
+	margin: 0 0 0.5rem 0;
+	letter-spacing: -0.01em;
+}
+
+a {
+	color: var(--ink);
+	text-decoration: none;
+}
+
+p {
+	margin: 0 0 1.2em;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 0; /* 각진 모서리 */
+}
+
+hr {
+	border: none;
+	border-top: 1px solid var(--line);
+	margin: 2rem 0;
+}
+
+/* 블로그 대표이미지는 브랜드 톤 = 흑백 */
+.duotone {
+	filter: grayscale(100%) contrast(1.02);
+}
+
+/* 카테고리 kicker */
+.kicker {
+	font-size: 11px;
+	letter-spacing: 0.2em;
+	font-weight: 700;
+	text-transform: none;
+	margin: 0 0 10px;
+	display: inline-block;
+}
+
+/* 대표이미지 좌측 상단 카테고리 배지 */
+.badge {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	color: #fff;
+	font-size: 11px;
+	letter-spacing: 0.1em;
+	font-weight: 500;
+	padding: 5px 11px;
+	z-index: 1;
+}
+
+/* 날짜·메타 */
+.meta {
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	color: var(--muted);
+}
+
+/* 더보기 링크 */
+.more {
+	font-size: 12px;
+	letter-spacing: 0.12em;
+	border-bottom: 1px solid var(--ink);
+	padding-bottom: 2px;
+}
+
+/* 굵은 섹션 구분선 */
+.rule-thick {
+	border-top: 3px solid var(--line);
+	margin: 3rem 0 1.6rem;
+}
+
+/* 섹션 헤딩(짧은 밑줄) */
+.sec-head {
+	font-size: 22px;
+	font-weight: 700;
+	display: inline-block;
+	border-bottom: 2px solid var(--ink);
+	padding-bottom: 8px;
+	margin: 0 0 1.6rem;
+}
+
+/* 본문 좌우 정렬 */
+.justify {
+	text-align: justify;
+}
+
+/* prose (글 상세 본문) */
+.prose {
+	width: var(--prose);
+	max-width: 100%;
+	margin: 0 auto;
+	font-size: 16.5px;
+	line-height: 1.95;
+}
+.prose p {
+	text-align: justify;
+}
+.prose h2 {
+	font-size: 22px;
+	margin: 2.2em 0 0.8em;
+	padding-top: 1.2em;
+	border-top: 1px solid var(--line-thin);
+}
+.prose h3 {
+	font-size: 18px;
+	margin: 1.8em 0 0.6em;
+}
+.prose blockquote {
+	border-left: 2px solid var(--ink);
+	margin: 1.6em 0;
+	padding: 0.2em 0 0.2em 1.2em;
+	font-style: italic;
+}
+.prose code {
+	font-family: ui-monospace, 'Courier New', monospace;
+	font-size: 0.9em;
+	border: 1px solid var(--line-thin);
+	padding: 1px 5px;
+}
+.prose pre {
+	border: 1px solid var(--line);
+	padding: 1.2em;
+	overflow-x: auto;
+}
+.prose pre code {
+	border: none;
+	padding: 0;
+}
+
+.sr-only {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
+@media (max-width: 720px) {
+	body {
+		font-size: 16px;
+	}
+	.wrap {
+		max-width: calc(100% - 2em);
+	}
+}

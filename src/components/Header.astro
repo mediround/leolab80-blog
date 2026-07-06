@@ -1,0 +1,130 @@
+---
+import { Icon } from 'astro-icon/components';
+import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE, SOCIALS } from '../consts';
+---
+
+<header>
+	<div class="util">
+		<div class="wrap util-in">
+			<span>SEOUL · 2026</span>
+			<span class="soc">
+				<a href={SOCIALS.instagram} target="_blank" rel="noopener" aria-label="인스타그램">
+					<Icon name="simple-icons:instagram" size={17} />
+				</a>
+				<a href={SOCIALS.youtube} target="_blank" rel="noopener" aria-label="유튜브">
+					<Icon name="simple-icons:youtube" size={17} />
+				</a>
+				<a href={SOCIALS.linkedin} target="_blank" rel="noopener" aria-label="링크드인">
+					<Icon name="simple-icons:linkedin" size={17} />
+				</a>
+			</span>
+		</div>
+	</div>
+
+	<div class="wrap mast">
+		<div class="mast-line"><a href="/" class="logo">{SITE_TITLE}</a></div>
+		<div class="mast-line"><span class="tag">{SITE_TAGLINE}</span></div>
+	</div>
+
+	<nav class="nav" aria-label="카테고리">
+		<div class="wrap nav-in">
+			{
+				CATEGORIES.map((c) => (
+					<a href={`/category/${CATEGORY_SLUG[c]}/`}>{c}</a>
+				))
+			}
+		</div>
+	</nav>
+</header>
+
+<script is:inline>
+	(function () {
+		function fit() {
+			var logo = document.querySelector('.mast .logo');
+			var tag = document.querySelector('.mast .tag');
+			if (!logo || !tag) return;
+			logo.style.fontSize = '';
+			var tagW = tag.getBoundingClientRect().width;
+			var logoW = logo.getBoundingClientRect().width;
+			if (logoW > 0 && tagW > 0) {
+				var cur = parseFloat(getComputedStyle(logo).fontSize);
+				logo.style.fontSize = (cur * tagW) / logoW + 'px';
+			}
+		}
+		if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+		window.addEventListener('load', fit);
+		window.addEventListener('resize', fit);
+		fit();
+	})();
+</script>
+
+<style>
+	header {
+		margin: 0;
+	}
+	.util {
+		border-bottom: 1px solid #000;
+	}
+	.util-in {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 9px 0;
+		font-size: 11px;
+		letter-spacing: 0.14em;
+	}
+	.soc a {
+		margin-left: 14px;
+		display: inline-flex;
+		align-items: center;
+		color: #000;
+	}
+	.mast {
+		text-align: center;
+		padding: 26px 0 12px;
+	}
+	.mast-line {
+		text-align: center;
+		line-height: 1;
+	}
+	.logo {
+		font-family: var(--font-sans);
+		font-weight: 700;
+		font-size: 52px; /* JS가 태그라인 폭에 맞춰 재조정 */
+		letter-spacing: 0; /* 철자 붙임 */
+		line-height: 1;
+		display: inline-block;
+		color: #000;
+	}
+	.tag {
+		display: inline-block;
+		white-space: nowrap;
+		font-size: 13px;
+		font-weight: 400;
+		margin-top: 12px;
+	}
+	.nav {
+		border-top: 1px solid #000;
+		border-bottom: 2px solid #000;
+		margin-top: 18px;
+	}
+	.nav-in {
+		display: flex;
+		justify-content: center;
+		gap: 34px;
+		padding: 13px 0;
+		font-size: 13px;
+		letter-spacing: 0.12em;
+		font-weight: 500;
+	}
+	.nav-in a {
+		color: #000;
+	}
+	@media (max-width: 720px) {
+		.nav-in {
+			gap: 18px;
+			font-size: 12px;
+			flex-wrap: wrap;
+		}
+	}
+</style>

@@ -1,0 +1,118 @@
+---
+import { Image } from 'astro:assets';
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import PostCard from '../components/PostCard.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, category, heroImage } = Astro.props;
+
+const all = await getCollection('blog');
+const others = all.filter((p) => p.data.title !== title);
+const same = others.filter((p) => p.data.category === category);
+const rest = others.filter((p) => p.data.category !== category);
+const related = [...same, ...rest]
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
+---
+
+<html lang="ko">
+	<head>
+		<BaseHead title={`${title} — LEOLAB80`} description={description} image={heroImage} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				{
+					heroImage && (
+						<div class="hero">
+							<Image class="duotone" src={heroImage} width={1200} height={675} alt="" />
+							<span class="badge">{category}</span>
+						</div>
+					)
+				}
+				<div class="prose">
+					<div class="post-head">
+						<h1>{title}</h1>
+						<p class="meta">
+							LEO · <FormattedDate date={pubDate} />
+							{updatedDate && <span> · 수정 <FormattedDate date={updatedDate} /></span>}
+						</p>
+						<div class="tick"></div>
+					</div>
+					<slot />
+				</div>
+			</article>
+
+			{
+				related.length > 0 && (
+					<section class="wrap related">
+						<h2 class="sec-head">함께 읽기</h2>
+						<div class="rel-grid">
+							{related.map((p) => (
+								<PostCard post={p} />
+							))}
+						</div>
+					</section>
+				)
+			}
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.hero {
+		position: relative;
+		max-width: 980px;
+		margin: 2.4rem auto 0;
+		aspect-ratio: 16 / 9;
+		border: 1px solid #000;
+		overflow: hidden;
+	}
+	.hero :global(img) {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.post-head {
+		text-align: center;
+		padding: 2.4rem 0 0.5rem;
+	}
+	.post-head h1 {
+		font-size: 32px;
+		line-height: 1.32;
+		margin: 0.4em 0 0.5em;
+	}
+	.post-head .meta {
+		margin-bottom: 0;
+	}
+	.tick {
+		width: 56px;
+		border-top: 2px solid #000;
+		margin: 1.5rem auto 0.5rem;
+	}
+	.related {
+		margin-top: 4.5rem;
+		border-top: 3px solid #000;
+		padding-top: 1.6rem;
+	}
+	.rel-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 28px;
+	}
+	@media (max-width: 620px) {
+		.rel-grid {
+			grid-template-columns: 1fr;
+		}
+		.post-head h1 {
+			font-size: 26px;
+		}
+	}
+</style>

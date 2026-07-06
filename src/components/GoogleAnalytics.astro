@@ -1,0 +1,23 @@
+---
+import { GA_MEASUREMENT_ID } from '../consts';
+
+const id = GA_MEASUREMENT_ID;
+// 프로덕션 빌드 + ID가 채워졌을 때만 로드
+const enabled = import.meta.env.PROD && Boolean(id);
+---
+
+{
+	enabled && (
+		<>
+			<script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} />
+			<script is:inline define:vars={{ id }}>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() {
+					dataLayer.push(arguments);
+				}
+				gtag('js', new Date());
+				gtag('config', id);
+			</script>
+		</>
+	)
+}

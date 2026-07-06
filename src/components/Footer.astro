@@ -1,0 +1,44 @@
+---
+import { Icon } from 'astro-icon/components';
+import { SOCIALS } from '../consts';
+const year = new Date().getFullYear();
+---
+
+<footer>
+	<div class="wrap foot-in">
+		<span>© {year} LEOLAB80 · mediseed.kr</span>
+		<span class="soc">
+			<a href={SOCIALS.instagram} target="_blank" rel="noopener" aria-label="인스타그램">
+				<Icon name="simple-icons:instagram" size={16} />
+			</a>
+			<a href={SOCIALS.youtube} target="_blank" rel="noopener" aria-label="유튜브">
+				<Icon name="simple-icons:youtube" size={16} />
+			</a>
+			<a href={SOCIALS.linkedin} target="_blank" rel="noopener" aria-label="링크드인">
+				<Icon name="simple-icons:linkedin" size={16} />
+			</a>
+		</span>
+	</div>
+</footer>
+
+<style>
+	footer {
+		border-top: 2px solid #000;
+		margin-top: 4rem;
+	}
+	.foot-in {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 16px 0;
+		font-size: 11px;
+		letter-spacing: 0.1em;
+		color: #000;
+	}
+	.soc a {
+		margin-left: 12px;
+		display: inline-flex;
+		align-items: center;
+		color: #000;
+	}
+</style>

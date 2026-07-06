@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	post: CollectionEntry<'blog'>;
+}
+const { post } = Astro.props;
+const { title, category, heroImage } = post.data;
+---
+
+<a class="card" href={`/blog/${post.id}/`}>
+	<div class="card-img">
+		{heroImage && <Image class="duotone" src={heroImage} width={520} height={390} alt="" />}
+		<span class="badge">{category}</span>
+	</div>
+	<h3 class="card-title">{title}</h3>
+</a>
+
+<style>
+	.card {
+		color: #000;
+		display: block;
+	}
+	.card-img {
+		position: relative;
+		aspect-ratio: 4 / 3;
+		border: 1px solid #000;
+		overflow: hidden;
+	}
+	.card-img :global(img) {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.card-title {
+		font-size: 17px;
+		line-height: 1.45;
+		margin: 12px 0 0;
+	}
+</style>
