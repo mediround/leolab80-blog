@@ -44,6 +44,7 @@ const related = [...same, ...rest]
 							{updatedDate && <span> · 수정 <FormattedDate date={updatedDate} /></span>}
 						</p>
 						<div class="tick"></div>
+						<p class="ai-notice">이 블로그는 나의 생각과 시도에 대한 메모를 AI가 대리집필한 것입니다.</p>
 					</div>
 					<slot />
 				</div>
@@ -97,6 +98,13 @@ const related = [...same, ...rest]
 		width: 56px;
 		border-top: 2px solid #000;
 		margin: 1.5rem auto 0.5rem;
+	}
+	.ai-notice {
+		font-size: 13px;
+		line-height: 1.6;
+		color: #000;
+		text-align: center;
+		margin: 0.9rem 0 0;
 	}
 	.related {
 		margin-top: 4.5rem;
