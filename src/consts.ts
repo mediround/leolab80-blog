@@ -5,12 +5,13 @@ export const SITE_TAGLINE = '외국인환자 유치를 잘하고 싶어서 만�
 export const SITE_DESCRIPTION =
 	'외국인환자 유치와 비즈니스, 그리고 그 사이의 메모. LEO가 직접 쓰는 기록.';
 
-export const CATEGORIES = ['외국인환자 유치', '비즈니스', '메모'] as const;
+export const CATEGORIES = ['외국인환자 유치', 'AI로 외국인환자 유치하기', '비즈니스', '메모'] as const;
 export type Category = (typeof CATEGORIES)[number];
 
 // 카테고리 → URL 슬러그 (한글 경로 대신 안정적인 라틴 슬러그)
 export const CATEGORY_SLUG: Record<Category, string> = {
 	'외국인환자 유치': 'inbound',
+	'AI로 외국인환자 유치하기': 'ai-inbound',
 	비즈니스: 'business',
 	메모: 'notes',
 };

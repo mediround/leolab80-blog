@@ -13,7 +13,7 @@ const blog = defineCollection({
 			// Transform string to Date object
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
-			category: z.enum(['외국인환자 유치', '비즈니스', '메모']),
+			category: z.enum(['외국인환자 유치', 'AI로 외국인환자 유치하기', '비즈니스', '메모']),
 			heroImage: z.optional(image()),
 		}),
 });
