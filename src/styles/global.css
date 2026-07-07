@@ -147,7 +147,7 @@ hr {
 /* prose (글 상세 본문) */
 .prose {
 	width: var(--prose);
-	max-width: 100%;
+	max-width: calc(100% - 3em);
 	margin: 0 auto;
 	font-size: 16.5px;
 	line-height: 1.95;
@@ -204,7 +204,8 @@ hr {
 	body {
 		font-size: 16px;
 	}
-	.wrap {
+	.wrap,
+	.prose {
 		max-width: calc(100% - 2em);
 	}
 }
