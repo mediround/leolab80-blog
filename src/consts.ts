@@ -32,3 +32,4 @@ export const SOCIALS = {
 // GA는 프로덕션 빌드에서만 로드된다(개발 중 데이터 오염 방지).
 export const GA_MEASUREMENT_ID = 'G-X4YJYKKB90'; // GA4 측정 ID (LEO LAB · mediseed.kr 스트림)
 export const GSC_VERIFICATION = ''; // Search Console HTML 태그 인증 코드(google-site-verification content 값)
+export const NAVER_VERIFICATION = 'affd60e90b89b58384544ab073693cb26f827446'; // 네이버 서치어드바이저 소유확인 (2026-07-12)
