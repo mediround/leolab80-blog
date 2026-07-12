@@ -22,7 +22,12 @@ const related = [...same, ...rest]
 
 <html lang="ko">
 	<head>
-		<BaseHead title={`${title} — LEOLAB80`} description={description} image={heroImage} />
+		<BaseHead
+			title={`${title} — LEOLAB80`}
+			description={description}
+			image={heroImage}
+			post={{ headline: title, pubDate, updatedDate }}
+		/>
 	</head>
 	<body>
 		<Header />

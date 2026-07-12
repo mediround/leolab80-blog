@@ -16,6 +16,12 @@ export const CATEGORY_SLUG: Record<Category, string> = {
 	메모: 'notes',
 };
 
+// JSON-LD Person (검색엔진·AI용 저자 신원 — 이전 결정문서 SEO/GEO 원칙: 실명)
+export const AUTHOR = {
+	name: '신영종',
+	alternateName: 'LEO',
+};
+
 export const SOCIALS = {
 	instagram: 'https://www.instagram.com/leolab_80/',
 	youtube: 'https://www.youtube.com/@LEOLAB80',
