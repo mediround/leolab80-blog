@@ -22,6 +22,8 @@ interface Props {
 	imageAlt?: string;
 	// 글 페이지에서만 전달 — og:type=article 및 BlogPosting JSON-LD 활성화
 	post?: { headline: string; pubDate: Date; updatedDate?: Date };
+	// 이동 경로(홈→카테고리→글). 마지막 항목은 url 생략(현재 페이지)
+	breadcrumb?: { name: string; url?: string }[];
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -29,7 +31,7 @@ const siteURL = Astro.site?.toString() ?? 'https://mediseed.kr/';
 const aboutURL = new URL('/about/', Astro.site).toString();
 const logoURL = new URL('/logo.png', Astro.site).toString();
 
-const { title, description, image = FallbackImage, imageAlt = title, post } = Astro.props;
+const { title, description, image = FallbackImage, imageAlt = title, post, breadcrumb } = Astro.props;
 const ogImage = new URL(image.src, Astro.site).toString();
 const isHome = Astro.url.pathname === '/';
 const socials = Object.values(SOCIALS);
@@ -89,6 +91,18 @@ const jsonLd = post && {
 		logo: orgLogo,
 	},
 };
+
+const breadcrumbLd = breadcrumb &&
+	breadcrumb.length > 0 && {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: breadcrumb.map((b, i) => ({
+			'@type': 'ListItem',
+			position: i + 1,
+			name: b.name,
+			...(b.url ? { item: b.url } : {}),
+		})),
+	};
 ---
 
 <!-- Global Metadata -->
@@ -131,6 +145,7 @@ const jsonLd = post && {
 
 {siteJsonLd && <script type="application/ld+json" set:html={JSON.stringify(siteJsonLd)} />}
 {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+{breadcrumbLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />}
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />

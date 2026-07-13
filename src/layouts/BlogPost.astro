@@ -6,10 +6,19 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import PostCard from '../components/PostCard.astro';
+import { CATEGORY_SLUG } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, category, heroImage } = Astro.props;
+
+// 이동 경로: 홈 → 카테고리 → (현재 글)
+const categoryURL = new URL(`/category/${CATEGORY_SLUG[category]}/`, Astro.site).toString();
+const breadcrumb = [
+	{ name: '홈', url: new URL('/', Astro.site).toString() },
+	{ name: category, url: categoryURL },
+	{ name: title },
+];
 
 const all = await getCollection('blog');
 const others = all.filter((p) => p.data.title !== title);
@@ -27,6 +36,7 @@ const related = [...same, ...rest]
 			description={description}
 			image={heroImage}
 			post={{ headline: title, pubDate, updatedDate }}
+				breadcrumb={breadcrumb}
 		/>
 	</head>
 	<body>
@@ -43,7 +53,12 @@ const related = [...same, ...rest]
 				}
 				<div class="prose">
 					<div class="post-head">
-						<h1>{title}</h1>
+						<nav class="crumbs" aria-label="이동 경로">
+								<a href="/">홈</a>
+								<span aria-hidden="true">›</span>
+								<a href={categoryURL}>{category}</a>
+							</nav>
+							<h1>{title}</h1>
 						<p class="meta">
 							LEO · <FormattedDate date={pubDate} />
 							{updatedDate && <span> · 수정 <FormattedDate date={updatedDate} /></span>}
@@ -128,5 +143,22 @@ const related = [...same, ...rest]
 		.post-head h1 {
 			font-size: 26px;
 		}
+	}
+	.crumbs {
+		font-size: 13px;
+		letter-spacing: 0.02em;
+		margin-bottom: 0.6rem;
+	}
+	.crumbs a {
+		color: #000;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+	}
+	.crumbs a:hover {
+		border-bottom-color: #000;
+	}
+	.crumbs span {
+		margin: 0 0.4em;
+		color: #666;
 	}
 </style>
