@@ -11,7 +11,7 @@ const { title, category, heroImage } = post.data;
 
 <a class="card" href={`/blog/${post.id}/`}>
 	<div class="card-img">
-		{heroImage && <Image class="duotone" src={heroImage} width={520} height={390} alt="" />}
+		{heroImage && <Image class="duotone" src={heroImage} width={520} height={390} alt={title} />}
 		<span class="badge">{category}</span>
 	</div>
 	<h3 class="card-title">{title}</h3>

@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { CATEGORIES, CATEGORY_SLUG, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { CATEGORIES, CATEGORY_SLUG, SITE_DESCRIPTION, SITE_TAGLINE, SITE_TITLE } from '../consts';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -17,11 +17,12 @@ const minis = posts.slice(1, 5);
 <!doctype html>
 <html lang="ko">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={`${SITE_TITLE} — ${SITE_TAGLINE}`} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
 		<main class="wrap home">
+			<h1 class="sr-only">{SITE_TITLE} — {SITE_TAGLINE}</h1>
 			{
 				lead && (
 					<section>
@@ -30,7 +31,7 @@ const minis = posts.slice(1, 5);
 							<a class="lead" href={`/blog/${lead.id}/`}>
 								<div class="lead-img">
 									{lead.data.heroImage && (
-										<Image class="duotone" src={lead.data.heroImage} width={880} height={660} alt="" />
+										<Image class="duotone" src={lead.data.heroImage} width={880} height={660} alt={lead.data.title} />
 									)}
 									<span class="badge">{lead.data.category}</span>
 								</div>
@@ -42,7 +43,7 @@ const minis = posts.slice(1, 5);
 									<a class="mini" href={`/blog/${p.id}/`}>
 										<div class="mini-img">
 											{p.data.heroImage && (
-												<Image class="duotone" src={p.data.heroImage} width={480} height={360} alt="" />
+												<Image class="duotone" src={p.data.heroImage} width={480} height={360} alt={p.data.title} />
 											)}
 											<span class="badge">{p.data.category}</span>
 										</div>
@@ -71,7 +72,7 @@ const minis = posts.slice(1, 5);
 									<a class="card" href={`/blog/${p.id}/`}>
 										<div class="card-img">
 											{p.data.heroImage && (
-												<Image class="duotone" src={p.data.heroImage} width={520} height={390} alt="" />
+												<Image class="duotone" src={p.data.heroImage} width={520} height={390} alt={p.data.title} />
 											)}
 											<span class="badge">{p.data.category}</span>
 										</div>
