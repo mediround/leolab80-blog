@@ -6,11 +6,15 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import PostCard from '../components/PostCard.astro';
+import ShareButtons from '../components/ShareButtons.astro';
 import { CATEGORY_SLUG } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, category, heroImage } = Astro.props;
+
+// 공유 링크에 쓸 이 글의 정식 URL(사이트 도메인 + 현재 경로)
+const shareUrl = new URL(Astro.url.pathname, Astro.site).toString();
 
 // 이동 경로: 홈 → 카테고리 → (현재 글)
 const categoryURL = new URL(`/category/${CATEGORY_SLUG[category]}/`, Astro.site).toString();
@@ -68,6 +72,7 @@ const related = [...same, ...rest]
 					</div>
 					<slot />
 				</div>
+				<ShareButtons url={shareUrl} title={title} />
 			</article>
 
 			{

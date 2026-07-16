@@ -1,0 +1,122 @@
+---
+// 글 하단 공유 UI. 메디라운드 사이트의 ShareButtons를 이 블로그의 흑백 편집형
+// 톤(각진 괘선·블랙 온 화이트·호버 시 반전)에 맞춰 옮긴 것.
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+	url: string;
+	title: string;
+}
+const { url, title } = Astro.props;
+const u = encodeURIComponent(url);
+const t = encodeURIComponent(title);
+
+const fb = `https://www.facebook.com/sharer/sharer.php?u=${u}`;
+const x = `https://twitter.com/intent/tweet?url=${u}&text=${t}`;
+const li = `https://www.linkedin.com/sharing/share-offsite/?url=${u}`;
+---
+
+<div class="share">
+	<span class="share__label">이 글 공유</span>
+	<div class="share__btns">
+		<a class="share__btn" href={fb} target="_blank" rel="noopener" aria-label="페이스북에 공유">
+			<Icon name="simple-icons:facebook" size={16} />
+		</a>
+		<a class="share__btn" href={x} target="_blank" rel="noopener" aria-label="X(트위터)에 공유">
+			<Icon name="simple-icons:x" size={14} />
+		</a>
+		<a class="share__btn" href={li} target="_blank" rel="noopener" aria-label="링크드인에 공유">
+			<Icon name="simple-icons:linkedin" size={16} />
+		</a>
+		<button class="share__btn share__btn--copy" type="button" data-url={url} aria-label="링크 복사">
+			<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+			<span class="share__copied" aria-hidden="true">복사됨</span>
+		</button>
+	</div>
+</div>
+
+<style>
+	.share {
+		width: var(--prose);
+		max-width: calc(100% - 3em);
+		margin: 3rem auto 0;
+		padding-top: 1.4rem;
+		border-top: 2px solid #000;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 14px;
+		flex-wrap: wrap;
+	}
+	.share__label {
+		font-size: 11px;
+		letter-spacing: 0.2em;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #000;
+	}
+	.share__btns {
+		display: flex;
+		gap: 8px;
+	}
+	.share__btn {
+		position: relative;
+		width: 38px;
+		height: 38px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #000;
+		background: #fff;
+		color: #000;
+		cursor: pointer;
+		padding: 0;
+		transition:
+			background 0.15s ease,
+			color 0.15s ease;
+	}
+	.share__btn:hover {
+		background: #000;
+		color: #fff;
+	}
+	.share__copied {
+		position: absolute;
+		bottom: calc(100% + 7px);
+		left: 50%;
+		transform: translateX(-50%);
+		background: #000;
+		color: #fff;
+		font-size: 11px;
+		letter-spacing: 0.05em;
+		padding: 3px 8px;
+		white-space: nowrap;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.15s ease;
+	}
+	.share__btn--copy.is-copied .share__copied {
+		opacity: 1;
+	}
+</style>
+
+<script>
+	document.querySelectorAll('.share__btn--copy').forEach((btn) => {
+		btn.addEventListener('click', async () => {
+			const url = btn.getAttribute('data-url') || window.location.href;
+			try {
+				await navigator.clipboard.writeText(url);
+			} catch {
+				const ta = document.createElement('textarea');
+				ta.value = url;
+				ta.style.position = 'fixed';
+				ta.style.opacity = '0';
+				document.body.appendChild(ta);
+				ta.select();
+				document.execCommand('copy');
+				document.body.removeChild(ta);
+			}
+			btn.classList.add('is-copied');
+			setTimeout(() => btn.classList.remove('is-copied'), 1600);
+		});
+	});
+</script>
