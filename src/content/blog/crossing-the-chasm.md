@@ -66,24 +66,24 @@ heroImage: "../../assets/hero-crossing-the-chasm.jpg"
 <figure>
 <svg viewBox="0 0 560 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="하나의 교두보 세그먼트에서 인접 세그먼트로 번지는 볼링 앨리 확산">
 <g font-family="'Noto Sans KR', sans-serif">
-<circle cx="90" cy="105" r="34" fill="#000"/>
-<text x="90" y="101" text-anchor="middle" font-size="12" fill="#fff">한 나라</text>
-<text x="90" y="117" text-anchor="middle" font-size="12" fill="#fff">한 시술</text>
-<text x="90" y="168" text-anchor="middle" font-size="11.5" fill="#555">교두보</text>
-<line x1="130" y1="105" x2="196" y2="105" stroke="#000" stroke-width="1.6"/>
-<polygon points="196,100 208,105 196,110" fill="#000"/>
-<circle cx="250" cy="75" r="26" fill="none" stroke="#000" stroke-width="1.8"/>
-<text x="250" y="79" text-anchor="middle" font-size="11">인접 시술</text>
-<circle cx="250" cy="150" r="26" fill="none" stroke="#000" stroke-width="1.8"/>
-<text x="250" y="154" text-anchor="middle" font-size="11">인접 국가</text>
-<line x1="278" y1="70" x2="330" y2="60" stroke="#000" stroke-width="1.4" stroke-dasharray="4 4"/>
-<line x1="278" y1="150" x2="330" y2="160" stroke="#000" stroke-width="1.4" stroke-dasharray="4 4"/>
-<circle cx="370" cy="52" r="20" fill="none" stroke="#000" stroke-width="1.4"/>
-<circle cx="370" cy="168" r="20" fill="none" stroke="#000" stroke-width="1.4"/>
-<circle cx="440" cy="90" r="20" fill="none" stroke="#000" stroke-width="1.4"/>
-<circle cx="440" cy="135" r="20" fill="none" stroke="#000" stroke-width="1.4"/>
-<line x1="392" y1="60" x2="424" y2="80" stroke="#000" stroke-width="1.2" stroke-dasharray="3 4"/>
-<line x1="392" y1="160" x2="424" y2="140" stroke="#000" stroke-width="1.2" stroke-dasharray="3 4"/>
+<circle cx="112" cy="105" r="34" fill="#000"/>
+<text x="112" y="101" text-anchor="middle" font-size="12" fill="#fff">한 나라</text>
+<text x="112" y="117" text-anchor="middle" font-size="12" fill="#fff">한 시술</text>
+<text x="112" y="168" text-anchor="middle" font-size="11.5" fill="#555">교두보</text>
+<line x1="152" y1="105" x2="218" y2="105" stroke="#000" stroke-width="1.6"/>
+<polygon points="218,100 230,105 218,110" fill="#000"/>
+<circle cx="272" cy="75" r="26" fill="none" stroke="#000" stroke-width="1.8"/>
+<text x="272" y="79" text-anchor="middle" font-size="11">인접 시술</text>
+<circle cx="272" cy="150" r="26" fill="none" stroke="#000" stroke-width="1.8"/>
+<text x="272" y="154" text-anchor="middle" font-size="11">인접 국가</text>
+<line x1="300" y1="70" x2="352" y2="60" stroke="#000" stroke-width="1.4" stroke-dasharray="4 4"/>
+<line x1="300" y1="150" x2="352" y2="160" stroke="#000" stroke-width="1.4" stroke-dasharray="4 4"/>
+<circle cx="392" cy="52" r="20" fill="none" stroke="#000" stroke-width="1.4"/>
+<circle cx="392" cy="168" r="20" fill="none" stroke="#000" stroke-width="1.4"/>
+<circle cx="462" cy="90" r="20" fill="none" stroke="#000" stroke-width="1.4"/>
+<circle cx="462" cy="135" r="20" fill="none" stroke="#000" stroke-width="1.4"/>
+<line x1="414" y1="60" x2="446" y2="80" stroke="#000" stroke-width="1.2" stroke-dasharray="3 4"/>
+<line x1="414" y1="160" x2="446" y2="140" stroke="#000" stroke-width="1.2" stroke-dasharray="3 4"/>
 </g>
 </svg>
 <figcaption>좁은 하나를 완전히 이기면, 그 승리가 옆으로 번진다. <b>넓게 시작한 병원은 아무 데도 못 가고, 좁게 시작한 병원이 멀리 간다.</b></figcaption>

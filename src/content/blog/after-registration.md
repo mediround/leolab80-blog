@@ -27,17 +27,17 @@ heroImage: "../../assets/hero-after-registration.jpg"
 <figure>
 <svg viewBox="0 0 560 168" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="등록은 필요조건이지만 충분조건이 아니다 — 등록만으로는 환자가 오지 않고, 발견의 경로를 지어야 환자가 온다">
 <g font-family="'Noto Sans KR', sans-serif" font-size="12">
-<rect x="24" y="40" width="150" height="52" fill="none" stroke="#000" stroke-width="1.6"/>
-<text x="99" y="62" text-anchor="middle" font-weight="700">등록</text>
-<text x="99" y="80" text-anchor="middle" font-size="10.5" fill="#555">문을 열 자격</text>
-<text x="205" y="58" text-anchor="middle" font-size="18">✕</text>
-<text x="205" y="80" text-anchor="middle" font-size="10.5" fill="#555">그것만으론</text>
-<rect x="236" y="40" width="150" height="52" fill="none" stroke="#000" stroke-width="1.2" stroke-dasharray="4 3"/>
-<text x="311" y="70" text-anchor="middle" fill="#555">환자는 오지 않는다</text>
-<line x1="99" y1="100" x2="99" y2="122" stroke="#000" stroke-width="1.4"/>
-<polygon points="99,122 95,114 103,114" fill="#000"/>
-<rect x="24" y="124" width="362" height="34" fill="#000"/>
-<text x="205" y="146" text-anchor="middle" fill="#fff" font-weight="700">발견의 경로를 지어야 환자가 온다</text>
+<rect x="99" y="40" width="150" height="52" fill="none" stroke="#000" stroke-width="1.6"/>
+<text x="174" y="62" text-anchor="middle" font-weight="700">등록</text>
+<text x="174" y="80" text-anchor="middle" font-size="10.5" fill="#555">문을 열 자격</text>
+<text x="280" y="58" text-anchor="middle" font-size="18">✕</text>
+<text x="280" y="80" text-anchor="middle" font-size="10.5" fill="#555">그것만으론</text>
+<rect x="311" y="40" width="150" height="52" fill="none" stroke="#000" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="386" y="70" text-anchor="middle" fill="#555">환자는 오지 않는다</text>
+<line x1="174" y1="100" x2="174" y2="122" stroke="#000" stroke-width="1.4"/>
+<polygon points="174,122 170,114 178,114" fill="#000"/>
+<rect x="99" y="124" width="362" height="34" fill="#000"/>
+<text x="280" y="146" text-anchor="middle" fill="#fff" font-weight="700">발견의 경로를 지어야 환자가 온다</text>
 </g>
 </svg>
 <figcaption>등록은 필요조건이지 충분조건이 아니다. <b>문을 여는 것과 문 앞에 길을 내는 것은 다른 일이다.</b></figcaption>
