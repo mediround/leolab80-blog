@@ -1,7 +1,7 @@
 ---
 title: "AARRR — 성장을 다섯 단계로 나눠 재는 법"
 description: "그로스 해킹의 출발점인 AARRR, 이른바 해적 지표(Pirate Metrics). 획득·활성화·유지·추천·매출로 성장을 쪼개 보는 이유, 그리고 총매출 한 줄로는 병목이 보이지 않는 까닭에 대하여."
-pubDate: "2026-07-18T10:00:00"
+pubDate: "2026-07-18T09:00:00"
 category: "비즈니스"
 heroImage: "../../assets/hero-aarrr-funnel.jpg"
 ---

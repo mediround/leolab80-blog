@@ -1,7 +1,7 @@
 ---
 title: "성장이 스스로 도는 자리 — 유지·추천·매출"
 description: "그로스 해킹 AARRR의 뒤 세 단계, 유지(Retention)·추천(Referral)·매출(Revenue). 위에서 붓는 성장과 밑에서 도는 성장은 다르다. 리텐션이 진짜 성장 엔진인 이유, 그리고 매출을 맨 뒤에 두는 까닭에 대하여."
-pubDate: "2026-07-18T09:00:00"
+pubDate: "2026-07-18T10:00:00"
 category: "비즈니스"
 heroImage: "../../assets/hero-retention-referral-revenue.jpg"
 ---
