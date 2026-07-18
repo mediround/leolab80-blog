@@ -39,7 +39,7 @@ heroImage: "../../assets/hero-seventeen-years.jpg"
 <text x="520" y="235" text-anchor="middle" font-size="12" fill="#555">2026</text>
 </g>
 </svg>
-<figcaption>17년의 세 곡선. <b>정보는 오르고 중개의 값은 내렸다. 그러나 신뢰의 난이도는 꿈쩍도 하지 않았다.</b></figcaption>
+<figcaption>17년의 세 곡선.<br><b>정보는 오르고 중개의 값은 내렸다. 그러나 신뢰의 난이도는 꿈쩍도 하지 않았다.</b></figcaption>
 </figure>
 
 여기까지만 보면 오래된 방식은 저무는 것처럼 보인다. 실제로 저문다. 그런데 저무는 것은 방식이지 일 자체가 아니다.
@@ -69,7 +69,7 @@ heroImage: "../../assets/hero-seventeen-years.jpg"
 <text x="300" y="186" font-size="14">— 시술 뒤엔 돌아간다</text>
 </g>
 </svg>
-<figcaption>기술은 접점의 <b>양</b>을 늘렸지만, 신뢰의 <b>질</b>은 늘리지 못했다.</figcaption>
+<figcaption>기술은 접점의 <b>양</b>을 늘렸지만,<br>신뢰의 <b>질</b>은 늘리지 못했다.</figcaption>
 </figure>
 
 ## 착시를 걷어내면

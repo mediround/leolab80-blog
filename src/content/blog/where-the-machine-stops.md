@@ -46,7 +46,7 @@ heroImage: "../../assets/hero-where-the-machine-stops.jpg"
 <text x="462" y="98" text-anchor="middle" font-size="10.5" fill="#555">예약하고 책임지는 자리</text>
 </g>
 </svg>
-<figcaption>기계는 초안까지, 사람은 확정까지. <b>그 선이 견적을 신뢰의 영역으로 옮긴다.</b></figcaption>
+<figcaption>기계는 초안까지, 사람은 확정까지.<br><b>그 선이 견적을 신뢰의 영역으로 옮긴다.</b></figcaption>
 </figure>
 
 ## 결과 — 정확한 숫자가 아니라 정직한 근거

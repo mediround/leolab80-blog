@@ -44,7 +44,7 @@ heroImage: "../../assets/hero-why-products-stall.jpg"
 <text x="505" y="240" text-anchor="middle" font-size="10.5" fill="#555">16%</text>
 </g>
 </svg>
-<figcaption>부류마다 금이 가 있다. 그러나 <b>선각 수용자와 전기 다수 사이의 금만은 골이다.</b></figcaption>
+<figcaption>부류마다 금이 가 있다.<br>그러나 <b>선각 수용자와 전기 다수 사이의 금만은 골이다.</b></figcaption>
 </figure>
 
 ## 왜 하필 거기가 갈라지는가
@@ -83,7 +83,7 @@ heroImage: "../../assets/hero-why-products-stall.jpg"
 <text x="430" y="205" text-anchor="middle" font-size="11" fill="#555">주류 시장</text>
 </g>
 </svg>
-<figcaption>초기의 상승은 진짜다. 문제는 <b>그 상승이 저절로 이어지지 않는다는 것</b>이다.</figcaption>
+<figcaption>초기의 상승은 진짜다.<br>문제는 <b>그 상승이 저절로 이어지지 않는다는 것</b>이다.</figcaption>
 </figure>
 
 ## 건너는 원리 — 넓히지 말고 좁혀라
@@ -115,7 +115,7 @@ heroImage: "../../assets/hero-why-products-stall.jpg"
 <polygon points="196,75 210,70 210,80" fill="#000"/>
 </g>
 </svg>
-<figcaption>골을 건넌 다음에야 나머지 길이 열린다. <b>순서를 건너뛸 수 없다.</b></figcaption>
+<figcaption>골을 건넌 다음에야 나머지 길이 열린다.<br><b>순서를 건너뛸 수 없다.</b></figcaption>
 </figure>
 
 ## 좁힘이 곧 건넘이다

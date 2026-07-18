@@ -45,7 +45,7 @@ heroImage: "../../assets/hero-fears.jpg"
 <text x="455" y="107" text-anchor="middle" font-size="11.5" fill="#555">과정과 결과</text>
 </g>
 </svg>
-<figcaption>외국인 환자가 오기 전에 던지는 세 가지 질문. <b>'얼마나 걸리나'는 내국인에게는 없는, 원거리 환자 특유의 물음이다.</b></figcaption>
+<figcaption>외국인 환자가 오기 전에 던지는 세 가지 질문.<br><b>'얼마나 걸리나'는 내국인에게는 없는, 원거리 환자 특유의 물음이다.</b></figcaption>
 </figure>
 
 세 질문은 단순해 보인다. 그런데 오래 답해 보면 안다. 이것들은 진짜 궁금한 것의 겉면일 뿐이라는 걸.
@@ -86,7 +86,7 @@ heroImage: "../../assets/hero-fears.jpg"
 <text x="280" y="214" text-anchor="middle" font-size="13" fill="#555">속으로 — 진짜 두려운 것</text>
 </g>
 </svg>
-<figcaption>수면 위로는 질문이 뜨고, 아래로는 공포가 가라앉아 있다. <b>가격표만 내미는 답이 절반짜리인 이유다.</b></figcaption>
+<figcaption>수면 위로는 질문이 뜨고, 아래로는 공포가 가라앉아 있다.<br><b>가격표만 내미는 답이 절반짜리인 이유다.</b></figcaption>
 </figure>
 
 값을 알려줘도 '바가지 아닐까'가 풀리지 않으면 사람은 움직이지 않는다. 고단가 원거리 의료의 전환은 기대를 키우는 일이 아니라 공포를 없애는 일이다. 거칠게 말하면, 공포 제거가 8할이다.
@@ -113,7 +113,7 @@ heroImage: "../../assets/hero-fears.jpg"
 <text x="280" y="242" text-anchor="middle" font-size="12.5" font-weight="700">결정 · 예약</text>
 </g>
 </svg>
-<figcaption>가격은 문을 여는 열쇠고, 안심은 계약서에 서명하게 하는 방이다. <b>가격은 후크지, 자리가 아니다.</b></figcaption>
+<figcaption>가격은 문을 여는 열쇠고, 안심은 계약서에 서명하게 하는 방이다.<br><b>가격은 후크지, 자리가 아니다.</b></figcaption>
 </figure>
 
 가격으로 유혹하고 가격으로만 승부하면, 더 싼 곳이 나타나는 순간 손님은 떠난다. 사람을 방에 앉혀 결정하게 하는 것은 낮은 값이 아니라 흔들리지 않는 안심이다.

@@ -54,7 +54,7 @@ heroImage: "../../assets/hero-decoupling.jpg"
 <text x="132" y="280" font-size="12" fill="#555">싫지만 하는 일 · 매장 방문 · 줄서기 · 대기</text>
 </g>
 </svg>
-<figcaption>고객가치사슬(CVC)과 세 가지 활동 유형. <b>사슬은 눈에 보이지 않지만, 모든 거래가 그 위를 지난다.</b></figcaption>
+<figcaption>고객가치사슬(CVC)과 세 가지 활동 유형.<br><b>사슬은 눈에 보이지 않지만, 모든 거래가 그 위를 지난다.</b></figcaption>
 </figure>
 
 여기까지는 지도다. 지도를 그려 놓으면 파괴자가 어디를 노리는지 보인다.
@@ -85,7 +85,7 @@ heroImage: "../../assets/hero-decoupling.jpg"
 <text x="280" y="160" text-anchor="middle" font-size="12.5" font-weight="700">여기서 고리가 끊긴다</text>
 </g>
 </svg>
-<figcaption>쇼루밍. 파괴자는 사업 전체가 아니라 <b>고객이 가장 좋아하는 한 토막만</b> 가져간다.</figcaption>
+<figcaption>쇼루밍.<br>파괴자는 사업 전체가 아니라 <b>고객이 가장 좋아하는 한 토막만</b> 가져간다.</figcaption>
 </figure>
 
 같은 방식이 곳곳에서 반복됐다. 자동차를 소유하지 않고 필요한 순간에만 빌리게 한 카셰어링, 남는 방을 하룻밤 숙소로 바꾼 에어비앤비, 화장품을 사기 전에 먼저 써보게 한 구독 박스. 전부 신기술의 승리가 아니라 사슬을 나누어 좋은 고리만 쥔 결과다.
@@ -117,7 +117,7 @@ heroImage: "../../assets/hero-decoupling.jpg"
 <text x="280" y="178" text-anchor="middle" font-size="12.5" font-weight="700">이 부등식이 성립할 때만 고객은 사슬을 끊는다</text>
 </g>
 </svg>
-<figcaption>디커플링의 성립 조건. <b>고객이 쪼개지 않는 이유는 충성이 아니라 번거로움이다.</b> 번거로움이 사라지는 순간, 충성도 사라진다.</figcaption>
+<figcaption>디커플링의 성립 조건.<br><b>고객이 쪼개지 않는 이유는 충성이 아니라 번거로움이다.</b> 번거로움이 사라지는 순간, 충성도 사라진다.</figcaption>
 </figure>
 
 기업이 반격하는 길도 여기서 나온다. 하나는 끊긴 고리를 다시 붙여 통합된 경험을 복원하는 재결합(recouple). 다른 하나는 무엇에 돈을 매길지 자리를 옮기는 재조정(rebalance)이다. 어느 쪽이든 출발점은 같다. 내 사슬의 어느 고리가 약한지를 먼저 아는 것.

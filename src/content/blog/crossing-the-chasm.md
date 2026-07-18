@@ -38,7 +38,7 @@ heroImage: "../../assets/hero-crossing-the-chasm.jpg"
 <text x="360" y="120" text-anchor="middle" font-size="12.5">실용주의자</text>
 </g>
 </svg>
-<figcaption>먼저 오는 소수와 뒤따르는 대중 사이의 골. <b>앞의 열 명이 왔다는 것이 뒤의 백 명을 보장하지 않는다.</b></figcaption>
+<figcaption>먼저 오는 소수와 뒤따르는 대중 사이의 골.<br><b>앞의 열 명이 왔다는 것이 뒤의 백 명을 보장하지 않는다.</b></figcaption>
 </figure>
 
 여기서 병원이 자주 속는다. 모험가 몇 명의 열광을 대중의 수요로 착각한다. 첫 환자들이 만족하고 돌아갔으니 이제 길이 열렸다고 믿는다. 그러나 모험가는 원래 모험을 하는 사람이다. 그들이 왔다는 사실은 다음 사람이 온다는 신호가 아니다. 오히려 실용주의자에게 모험가의 추천은 경계 신호다 — 저 사람은 원래 겁 없이 덤비는 사람이니까.
@@ -86,7 +86,7 @@ heroImage: "../../assets/hero-crossing-the-chasm.jpg"
 <line x1="414" y1="160" x2="446" y2="140" stroke="#000" stroke-width="1.2" stroke-dasharray="3 4"/>
 </g>
 </svg>
-<figcaption>좁은 하나를 완전히 이기면, 그 승리가 옆으로 번진다. <b>넓게 시작한 병원은 아무 데도 못 가고, 좁게 시작한 병원이 멀리 간다.</b></figcaption>
+<figcaption>좁은 하나를 완전히 이기면, 그 승리가 옆으로 번진다.<br><b>넓게 시작한 병원은 아무 데도 못 가고, 좁게 시작한 병원이 멀리 간다.</b></figcaption>
 </figure>
 
 ## 좁게, 완전하게

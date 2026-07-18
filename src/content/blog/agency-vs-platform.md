@@ -53,7 +53,7 @@ heroImage: "../../assets/hero-agency-vs-platform.jpg"
 <text x="465" y="192" text-anchor="middle" font-size="10.5" fill="#555">고객이 쌓이는 곳</text>
 </g>
 </svg>
-<figcaption>같은 '유치 지원'이라도 파는 것이 다르다. <b>무엇을 파는가가 다르면, 계약이 끝난 뒤 병원에 남는 것이 다르다.</b></figcaption>
+<figcaption>같은 '유치 지원'이라도 파는 것이 다르다.<br><b>무엇을 파는가가 다르면, 계약이 끝난 뒤 병원에 남는 것이 다르다.</b></figcaption>
 </figure>
 
 ## 무엇을 파는지가 무엇이 남는지를 정한다

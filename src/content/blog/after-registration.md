@@ -40,7 +40,7 @@ heroImage: "../../assets/hero-after-registration.jpg"
 <text x="280" y="146" text-anchor="middle" fill="#fff" font-weight="700">발견의 경로를 지어야 환자가 온다</text>
 </g>
 </svg>
-<figcaption>등록은 필요조건이지 충분조건이 아니다. <b>문을 여는 것과 문 앞에 길을 내는 것은 다른 일이다.</b></figcaption>
+<figcaption>등록은 필요조건이지 충분조건이 아니다.<br><b>문을 여는 것과 문 앞에 길을 내는 것은 다른 일이다.</b></figcaption>
 </figure>
 
 등록은 병원을 합법으로 만든다. 그러나 환자의 눈앞에 세워 주지는 않는다. 이 차이를 모르면, 병원은 아무 일도 일어나지 않는 등록증을 걸어 두고 이유를 몰라 한다.
