@@ -24,9 +24,9 @@ export const AUTHOR = {
 
 export const SOCIALS = {
 	instagram: 'https://www.instagram.com/leolab_80/',
-	youtube: 'https://www.youtube.com/@LEOLAB80',
-	linkedin: 'https://www.linkedin.com/in/leolab80/',
 	x: 'https://x.com/leolab80',
+	linkedin: 'https://www.linkedin.com/in/leolab80/',
+	youtube: 'https://www.youtube.com/@LEOLAB80',
 };
 
 // 애널리틱스 / 서치콘솔 — 값을 채우면 자동 활성화(빈 값이면 아무 코드도 안 나감).
