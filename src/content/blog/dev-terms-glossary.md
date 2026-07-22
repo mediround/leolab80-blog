@@ -113,6 +113,28 @@ heroImage: "../../assets/hero-dev-terms.jpg"
 <figcaption>본류는 그대로 두고 옆에서 실험한다.<br><b>되면 합치고, 아니면 버린다.</b></figcaption>
 </figure>
 
+<figure>
+<svg viewBox="0 0 560 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="풀 리퀘스트 PR의 흐름. 브랜치에서 작업한 변경을 올려 합치자고 제안하고, 검토와 논의를 거쳐 본류에 머지한다">
+<g font-family="'Noto Sans KR', sans-serif">
+<text x="280" y="40" text-anchor="middle" font-size="10.5" fill="#555">곧장 합치지 않고 — 펼쳐 보이고, 이야기한 뒤 합친다</text>
+<rect x="22" y="60" width="108" height="54" fill="none" stroke="#000" stroke-width="1.6"/>
+<text x="76" y="91" text-anchor="middle" font-size="12" font-weight="700">브랜치 작업</text>
+<rect x="158" y="54" width="108" height="66" fill="none" stroke="#000" stroke-width="2.6"/>
+<text x="212" y="83" text-anchor="middle" font-size="12" font-weight="700">PR 올림</text>
+<text x="212" y="101" text-anchor="middle" font-size="9.5" fill="#555">합쳐 주세요</text>
+<rect x="294" y="60" width="108" height="54" fill="none" stroke="#000" stroke-width="1.6"/>
+<text x="348" y="91" text-anchor="middle" font-size="12" font-weight="700">검토·논의</text>
+<rect x="430" y="60" width="108" height="54" fill="none" stroke="#000" stroke-width="1.6"/>
+<text x="484" y="91" text-anchor="middle" font-size="12" font-weight="700">머지</text>
+<line x1="130" y1="87" x2="158" y2="87" stroke="#000" stroke-width="1.4"/><polygon points="158,87 149,83 149,91" fill="#000"/>
+<line x1="266" y1="87" x2="294" y2="87" stroke="#000" stroke-width="1.4"/><polygon points="294,87 285,83 285,91" fill="#000"/>
+<line x1="402" y1="87" x2="430" y2="87" stroke="#000" stroke-width="1.4"/><polygon points="430,87 421,83 421,91" fill="#000"/>
+<text x="484" y="134" text-anchor="middle" font-size="9.5" fill="#555">본류에 합쳐진다</text>
+</g>
+</svg>
+<figcaption>PR은 "내 변경을 합쳐 달라"는 제안이다.<br><b>펼쳐 보이고, 검토를 거쳐, 그때 합친다.</b></figcaption>
+</figure>
+
 ## 오가는 일 — 클론·푸시·풀
 
 내 컴퓨터와 GitHub 창고 사이를 오가는 세 동작이 있다.
