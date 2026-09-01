@@ -12,7 +12,6 @@ import {
 	SITE_TITLE,
 	SOCIALS,
 } from '../consts';
-import { Font } from 'astro:assets';
 import GoogleAnalytics from './GoogleAnalytics.astro';
 
 interface Props {
@@ -24,6 +23,8 @@ interface Props {
 	post?: { headline: string; pubDate: Date; updatedDate?: Date };
 	// 이동 경로(홈→카테고리→글). 마지막 항목은 url 생략(현재 페이지)
 	breadcrumb?: { name: string; url?: string }[];
+	// 얇은 페이지(빈 카테고리 등)를 색인에서 제외. 내용이 생기면 호출부에서 자동 해제.
+	noindex?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -31,7 +32,7 @@ const siteURL = Astro.site?.toString() ?? 'https://mediseed.kr/';
 const aboutURL = new URL('/about/', Astro.site).toString();
 const logoURL = new URL('/logo.png', Astro.site).toString();
 
-const { title, description, image = FallbackImage, imageAlt = title, post, breadcrumb } = Astro.props;
+const { title, description, image = FallbackImage, imageAlt = title, post, breadcrumb, noindex } = Astro.props;
 const ogImage = new URL(image.src, Astro.site).toString();
 const isHome = Astro.url.pathname === '/';
 const socials = Object.values(SOCIALS);
@@ -123,7 +124,15 @@ const breadcrumbLd = breadcrumb &&
 {GSC_VERIFICATION && <meta name="google-site-verification" content={GSC_VERIFICATION} />}
 {NAVER_VERIFICATION && <meta name="naver-site-verification" content={NAVER_VERIFICATION} />}
 
-<Font cssVariable="--font-sans" preload />
+<!-- 폰트: 외부 스타일시트로 로드 — 인라인 @font-face 235KB가 매 페이지 반복되던 것을 캐시 가능한 링크로 대체 (2026-09-01 SEO 감사) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+/>
+
+{noindex && <meta name="robots" content="noindex, follow" />}
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />

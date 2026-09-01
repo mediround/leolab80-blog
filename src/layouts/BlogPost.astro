@@ -50,7 +50,15 @@ const related = [...same, ...rest]
 				{
 					heroImage && (
 						<div class="hero">
-							<Image class="duotone" src={heroImage} width={1200} height={675} alt={title} />
+							<Image
+								class="duotone"
+								src={heroImage}
+								width={1200}
+								height={675}
+								alt={title}
+								loading="eager"
+								fetchpriority="high"
+							/>
 							<span class="badge">{category}</span>
 						</div>
 					)

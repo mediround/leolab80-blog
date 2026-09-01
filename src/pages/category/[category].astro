@@ -25,7 +25,7 @@ const { cat, posts } = Astro.props;
 <!doctype html>
 <html lang="ko">
 	<head>
-		<BaseHead title={`${cat} — ${SITE_TITLE}`} description={`${cat} 카테고리의 글`} />
+		<BaseHead title={`${cat} — ${SITE_TITLE}`} description={`${cat} 카테고리의 글`} noindex={posts.length === 0} />
 	</head>
 	<body>
 		<Header />

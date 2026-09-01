@@ -5,7 +5,7 @@ import path from 'node:path';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import icon from 'astro-icon';
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig } from 'astro/config';
 
 // 카테고리 → 슬러그 (consts.ts와 동일하게 유지)
 const CATEGORY_SLUG = {
@@ -51,6 +51,11 @@ export default defineConfig({
 	integrations: [
 		mdx(),
 		sitemap({
+			// 글이 없는 카테고리 페이지는 sitemap에서 제외(얇은 페이지) — 글이 생기면 catNewest에 잡혀 자동 복귀
+			filter(page) {
+				const m = new URL(page).pathname.match(/^\/category\/([^/]+)\/$/);
+				return !m || Boolean(catNewest[m[1]]);
+			},
 			serialize(item) {
 				const lm = lastmodFor(item.url);
 				if (lm) item.lastmod = lm;
@@ -58,15 +63,5 @@ export default defineConfig({
 			},
 		}),
 		icon(),
-	],
-	fonts: [
-		{
-			// 한글·라틴 공용 고딕 (맑은 고딕 계열) — Noto Sans KR
-			provider: fontProviders.google(),
-			name: 'Noto Sans KR',
-			cssVariable: '--font-sans',
-			weights: [400, 500, 700],
-			fallbacks: ['Malgun Gothic', 'sans-serif'],
-		},
 	],
 });
