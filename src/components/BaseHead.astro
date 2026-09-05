@@ -4,6 +4,7 @@
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
 import FallbackImage from '../assets/blog-placeholder-1.jpg';
+import ProfileImage from '../assets/profile-leo.jpg';
 import {
 	AUTHOR,
 	GSC_VERIFICATION,
@@ -44,6 +45,7 @@ const author = {
 	alternateName: AUTHOR.alternateName,
 	url: aboutURL,
 	jobTitle: AUTHOR.jobTitle,
+	image: new URL(ProfileImage.src, Astro.site).toString(),
 	worksFor: { '@type': 'Organization', name: AUTHOR.worksFor.name, url: AUTHOR.worksFor.url },
 	knowsAbout: AUTHOR.knowsAbout,
 	sameAs: socials,

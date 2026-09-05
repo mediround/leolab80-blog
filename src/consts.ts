@@ -24,7 +24,7 @@ export const AUTHOR = {
 	jobTitle: '메디라운드 대표',
 	worksFor: { name: '메디라운드', url: 'https://mediround.co.kr' },
 	knowsAbout: ['외국인환자 유치', '의료관광', '마이클리닉'],
-	bio: '2009년부터 외국인환자 유치를 해온 사람. 메디라운드 대표, 마이클리닉을 만들고 운영한다.',
+	bio: '외국인환자 유치를 잘하고 싶은 사람. MyClinic을 개발하고 운영합니다.', // 대표 확정 2026-09-05
 };
 
 export const SOCIALS = {
