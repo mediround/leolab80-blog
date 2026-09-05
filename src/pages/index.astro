@@ -10,8 +10,9 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
+// 홈 구조 (2026-09-05 대표 확정): 최신 글 1편 = 전체 가로폭 대표이미지 + 제목만(구역 이름 없음)
+// → 카테고리별 최신 3편씩 한 행 (최대 4×3 = 12편)
 const lead = posts[0];
-const minis = posts.slice(1, 5);
 ---
 
 <!doctype html>
@@ -25,33 +26,23 @@ const minis = posts.slice(1, 5);
 			<h1 class="sr-only">{SITE_TITLE} — {SITE_TAGLINE}</h1>
 			{
 				lead && (
-					<section>
-						<h2 class="sec-head">최신 글</h2>
-						<div class="latest">
-							<a class="lead" href={`/blog/${lead.id}/`}>
-								<div class="lead-img">
-									{lead.data.heroImage && (
-										<Image class="duotone" src={lead.data.heroImage} width={880} height={660} alt={lead.data.title} />
-									)}
-									<span class="badge">{lead.data.category}</span>
-								</div>
-								<h3 class="lead-title">{lead.data.title}</h3>
-							</a>
-
-							<div class="minis">
-								{minis.map((p) => (
-									<a class="mini" href={`/blog/${p.id}/`}>
-										<div class="mini-img">
-											{p.data.heroImage && (
-												<Image class="duotone" src={p.data.heroImage} width={480} height={360} alt={p.data.title} />
-											)}
-											<span class="badge">{p.data.category}</span>
-										</div>
-										<h4 class="mini-title">{p.data.title}</h4>
-									</a>
-								))}
+					<section class="hero">
+						<a class="lead" href={`/blog/${lead.id}/`}>
+							<div class="lead-img">
+								{lead.data.heroImage && (
+									<Image
+										class="duotone"
+										src={lead.data.heroImage}
+										width={1120}
+										height={630}
+										alt={lead.data.title}
+										loading="eager"
+									/>
+								)}
+								<span class="badge">{lead.data.category}</span>
 							</div>
-						</div>
+							<h2 class="lead-title">{lead.data.title}</h2>
+						</a>
 					</section>
 				)
 			}
@@ -102,77 +93,58 @@ const minis = posts.slice(1, 5);
 		justify-content: space-between;
 	}
 
-	/* 최신 글: 대표 + 미니 그리드 */
-	.latest {
-		display: grid;
-		grid-template-columns: 1.05fr 1fr;
-		gap: 36px;
-		align-items: start;
+	/* 최신 글 1편: 전체 가로폭 */
+	.hero {
+		margin: 0 0 0.5rem;
 	}
-	.lead-img,
-	.mini-img,
-	.card-img {
+	.lead {
+		display: block;
+	}
+	.lead-img {
 		position: relative;
+		aspect-ratio: 16 / 9;
 		border: 1px solid #000;
 		overflow: hidden;
 	}
-	.lead-img {
-		aspect-ratio: 4 / 3;
-	}
 	.lead-img :global(img),
-	.mini-img :global(img),
 	.card-img :global(img) {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
 	.lead-title {
-		font-size: 25px;
+		text-align: center;
+		font-size: 34px;
 		line-height: 1.35;
-		margin: 14px 0 0;
+		margin: 22px auto 0;
+		max-width: 860px;
 	}
 
-	.minis {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 24px;
-	}
-	.mini-img {
-		aspect-ratio: 4 / 3;
-	}
-	.mini-title {
-		font-size: 15px;
-		line-height: 1.45;
-		margin: 10px 0 0;
-	}
-
-	/* 카테고리 카드 */
+	/* 카테고리별 3편 */
 	.cards {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 28px;
 	}
 	.card-img {
+		position: relative;
 		aspect-ratio: 4 / 3;
+		border: 1px solid #000;
+		overflow: hidden;
 	}
 	.card-title {
 		font-size: 17px;
 		line-height: 1.45;
 		margin: 12px 0 0;
 	}
-
-	@media (max-width: 860px) {
-		.latest {
-			grid-template-columns: 1fr;
-			gap: 28px;
+	@media (max-width: 720px) {
+		.lead-title {
+			font-size: 24px;
 		}
 	}
 	@media (max-width: 620px) {
 		.cards {
 			grid-template-columns: 1fr;
-		}
-		.minis {
-			grid-template-columns: 1fr 1fr;
 		}
 	}
 </style>

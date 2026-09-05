@@ -13,7 +13,7 @@ export async function getStaticPaths({ paginate }) {
 		const list = posts
 			.filter((p) => p.data.category === cat)
 			.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-		return paginate(list, { params: { category: CATEGORY_SLUG[cat] }, props: { cat }, pageSize: 10 });
+		return paginate(list, { params: { category: CATEGORY_SLUG[cat] }, props: { cat }, pageSize: 8 });
 	});
 }
 
