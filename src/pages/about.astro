@@ -1,10 +1,11 @@
 ---
+// LEO 소개 페이지 — 단일 정적 페이지. 본문은 대표가 직접 채운다 (2026-09-05 구조 확정: 글이 쌓이는 카테고리 아님)
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { AUTHOR, SITE_TAGLINE, SITE_TITLE, SOCIALS } from '../consts';
+import { AUTHOR, SITE_TITLE, SOCIALS } from '../consts';
 
-// 저자 엔티티(E-E-A-T·GEO): "LEO가 누구인가"를 검색엔진·AI가 이해하도록
+// 저자 엔티티(E-E-A-T·GEO)
 const personLd = {
 	'@context': 'https://schema.org',
 	'@type': 'ProfilePage',
@@ -13,8 +14,6 @@ const personLd = {
 		name: AUTHOR.name,
 		alternateName: AUTHOR.alternateName,
 		url: new URL('/about/', Astro.site).toString(),
-		description:
-			'LEOLAB80을 쓰는 사람. 외국인환자 유치를 중개가 아닌 인프라로 다시 짓는 일을 기록한다.',
 		sameAs: Object.values(SOCIALS),
 		worksFor: { '@type': 'Organization', name: SITE_TITLE, url: Astro.site?.toString() },
 	},
@@ -24,37 +23,17 @@ const personLd = {
 <!doctype html>
 <html lang="ko">
 	<head>
-		<BaseHead title={`소개 — ${SITE_TITLE}`} description="LEOLAB80와 LEO에 대하여" />
-			<script type="application/ld+json" set:html={JSON.stringify(personLd)} />
+		<BaseHead title={`LEO — ${SITE_TITLE}`} description="LEOLAB80을 쓰는 LEO에 대하여" />
+		<script type="application/ld+json" set:html={JSON.stringify(personLd)} />
 	</head>
 	<body>
 		<Header />
 		<main class="prose about">
 			<div class="post-head">
-				<span class="kicker">About</span>
-				<h1>{SITE_TITLE}</h1>
-				<p class="meta">{SITE_TAGLINE}</p>
+				<h1>LEO</h1>
 				<div class="tick"></div>
 			</div>
-			<p class="justify">
-				저는 외국인환자 유치를 잘하고 싶은 사람입니다. 이 블로그는 그 일을 실제로 하며 배우는 것, 틀리는
-				것, 그리고 다시 세우는 것을 공개로 적어두는 자리입니다.
-			</p>
-			<p class="justify">
-				중개가 아니라 인프라를 짓고 싶다는 생각에서 시작했습니다. 한 건을 넘기고 사라지는 자리가 아니라,
-				한 번 놓이면 이후의 모든 거래를 더 싸고 쉽게 만드는 자리. 그 베팅이 맞는지 틀리는지를 시간을 두고
-				여기에 기록합니다.
-			</p>
-			<p class="justify">
-				세 개의 서랍에 글을 나눠 담습니다. <strong>외국인환자 유치</strong>는 이 시장의 구조와 방법,
-				<strong>비즈니스</strong>는 그 아래에서 작동하는 원리와 숫자, <strong>메모</strong>는 아직 정리되지
-				않은 생각의 조각입니다.
-			</p>
-			<p class="justify">
-				이 블로그는 특정 병원이나 시술 결과를 자랑하지 않습니다. 오직 구조와 운영의 이야기로만 말합니다.
-				그게 오래가는 방식이라고 믿기 때문입니다.
-			</p>
-			<p class="justify">— LEO</p>
+			<!-- 본문: 대표 작성 -->
 		</main>
 		<Footer />
 	</body>
@@ -63,6 +42,7 @@ const personLd = {
 <style>
 	.about {
 		padding-top: 1rem;
+		min-height: 40vh;
 	}
 	.post-head {
 		text-align: center;

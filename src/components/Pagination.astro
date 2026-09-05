@@ -1,0 +1,42 @@
+---
+// 페이지네이션 (구조 v0.2 · 2026-09-05)
+interface Props {
+	current: number;
+	last: number;
+	prevUrl?: string;
+	nextUrl?: string;
+	hrefFor: (n: number) => string;
+}
+const { current, last, prevUrl, nextUrl, hrefFor } = Astro.props;
+const pages = Array.from({ length: last }, (_, i) => i + 1);
+---
+
+{
+	last > 1 && (
+		<nav class="pager" aria-label="페이지">
+			{prevUrl ? <a href={prevUrl}>‹ 이전</a> : <span class="off">‹ 이전</span>}
+			{pages.map((n) => (n === current ? <b aria-current="page">{n}</b> : <a href={hrefFor(n)}>{n}</a>))}
+			{nextUrl ? <a href={nextUrl}>다음 ›</a> : <span class="off">다음 ›</span>}
+		</nav>
+	)
+}
+
+<style>
+	.pager {
+		display: flex;
+		justify-content: center;
+		gap: 18px;
+		padding: 2rem 0 0.5rem;
+		font-size: 13px;
+		letter-spacing: 0.1em;
+	}
+	.pager a {
+		color: var(--ink);
+	}
+	.pager b {
+		border-bottom: 2px solid var(--ink);
+	}
+	.off {
+		color: #bbb;
+	}
+</style>

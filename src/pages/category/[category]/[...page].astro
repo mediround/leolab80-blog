@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../../components/BaseHead.astro';
+import Footer from '../../../components/Footer.astro';
+import Header from '../../../components/Header.astro';
+import Pagination from '../../../components/Pagination.astro';
+import PostListItem from '../../../components/PostListItem.astro';
+import { CATEGORIES, CATEGORY_SLUG, SITE_TITLE } from '../../../consts';
+
+export async function getStaticPaths({ paginate }) {
+	const posts = await getCollection('blog');
+	return CATEGORIES.flatMap((cat) => {
+		const list = posts
+			.filter((p) => p.data.category === cat)
+			.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+		return paginate(list, { params: { category: CATEGORY_SLUG[cat] }, props: { cat }, pageSize: 10 });
+	});
+}
+
+const { cat } = Astro.props;
+const { page } = Astro.props;
+const base = `/category/${CATEGORY_SLUG[cat]}/`;
+const hrefFor = (n: number) => (n === 1 ? base : `${base}${n}/`);
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={`${cat} — ${SITE_TITLE}`} description={`${cat} 카테고리의 글`} noindex={page.data.length === 0} />
+	</head>
+	<body>
+		<Header />
+		<main class="wrap archive">
+			<h1 class="sec-head">{cat}</h1>
+			{
+				page.data.length === 0 ? (
+					<p class="empty">아직 이 카테고리의 글이 없습니다.</p>
+				) : (
+					<div class="list">
+						{page.data.map((p) => <PostListItem post={p} />)}
+					</div>
+				)
+			}
+			<Pagination current={page.currentPage} last={page.lastPage} prevUrl={page.url.prev} nextUrl={page.url.next} hrefFor={hrefFor} />
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.archive {
+		padding: 2.4rem 0 0;
+	}
+	.list {
+		border-top: 2px solid var(--line);
+	}
+	.empty {
+		color: #555;
+	}
+</style>
