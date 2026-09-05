@@ -20,6 +20,11 @@ export const CATEGORY_SLUG: Record<Category, string> = {
 export const AUTHOR = {
 	name: '신영종',
 	alternateName: 'LEO',
+	// E-E-A-T·GEO: 저자 엔티티 보강 (사실만 — 2026-09-05)
+	jobTitle: '메디라운드 대표',
+	worksFor: { name: '메디라운드', url: 'https://mediround.co.kr' },
+	knowsAbout: ['외국인환자 유치', '의료관광', '마이클리닉'],
+	bio: '2009년부터 외국인환자 유치를 해온 사람. 메디라운드 대표, 마이클리닉을 만들고 운영한다.',
 };
 
 export const SOCIALS = {

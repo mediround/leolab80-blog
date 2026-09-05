@@ -20,7 +20,7 @@ interface Props {
 	image?: ImageMetadata;
 	imageAlt?: string;
 	// 글 페이지에서만 전달 — og:type=article 및 BlogPosting JSON-LD 활성화
-	post?: { headline: string; pubDate: Date; updatedDate?: Date };
+	post?: { headline: string; pubDate: Date; updatedDate?: Date; section?: string };
 	// 이동 경로(홈→카테고리→글). 마지막 항목은 url 생략(현재 페이지)
 	breadcrumb?: { name: string; url?: string }[];
 	// 얇은 페이지(빈 카테고리 등)를 색인에서 제외. 내용이 생기면 호출부에서 자동 해제.
@@ -43,6 +43,9 @@ const author = {
 	name: AUTHOR.name,
 	alternateName: AUTHOR.alternateName,
 	url: aboutURL,
+	jobTitle: AUTHOR.jobTitle,
+	worksFor: { '@type': 'Organization', name: AUTHOR.worksFor.name, url: AUTHOR.worksFor.url },
+	knowsAbout: AUTHOR.knowsAbout,
 	sameAs: socials,
 };
 const orgLogo = { '@type': 'ImageObject', url: logoURL };
@@ -140,6 +143,7 @@ const breadcrumbLd = breadcrumb &&
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="description" content={description} />
+<meta name="author" content={`${AUTHOR.name} (${AUTHOR.alternateName})`} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={post ? 'article' : 'website'} />
@@ -150,7 +154,12 @@ const breadcrumbLd = breadcrumb &&
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
 <meta property="og:image:alt" content={imageAlt} />
+<meta property="og:image:width" content={String(image.width)} />
+<meta property="og:image:height" content={String(image.height)} />
 {post && <meta property="article:published_time" content={post.pubDate.toISOString()} />}
+{post && <meta property="article:author" content={aboutURL} />}
+{post?.section && <meta property="article:section" content={post.section} />}
+{post?.section && <meta property="article:tag" content={post.section} />}
 {post?.updatedDate && <meta property="article:modified_time" content={post.updatedDate.toISOString()} />}
 
 {siteJsonLd && <script type="application/ld+json" set:html={JSON.stringify(siteJsonLd)} />}

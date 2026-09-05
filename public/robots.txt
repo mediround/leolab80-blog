@@ -1,4 +1,16 @@
 User-agent: *
 Allow: /
 
+# AI 검색 크롤러 — 인용·검색 노출 허용 (2026-09-05)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://mediseed.kr/sitemap-index.xml

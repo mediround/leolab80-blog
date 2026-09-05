@@ -7,7 +7,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import PostCard from '../components/PostCard.astro';
 import ShareButtons from '../components/ShareButtons.astro';
-import { CATEGORY_SLUG } from '../consts';
+import { AUTHOR, CATEGORY_SLUG } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -39,7 +39,7 @@ const related = [...same, ...rest]
 			title={`${title} — LEOLAB80`}
 			description={description}
 			image={heroImage}
-			post={{ headline: title, pubDate, updatedDate }}
+			post={{ headline: title, pubDate, updatedDate, section: category }}
 				breadcrumb={breadcrumb}
 		/>
 	</head>
@@ -80,6 +80,16 @@ const related = [...same, ...rest]
 					<slot />
 				</div>
 				<ShareButtons url={shareUrl} title={title} />
+				<aside class="author prose" aria-label="글쓴이">
+					<div class="author-mark" aria-hidden="true">L</div>
+					<div>
+						<p class="author-name">
+							<a href="/about/">{AUTHOR.alternateName}</a>
+							<span class="author-title">{AUTHOR.jobTitle}</span>
+						</p>
+						<p class="author-bio">{AUTHOR.bio} <a class="more" href="/about/">소개 →</a></p>
+					</div>
+				</aside>
 			</article>
 
 			{
@@ -130,6 +140,43 @@ const related = [...same, ...rest]
 		width: 56px;
 		border-top: 2px solid #000;
 		margin: 1.5rem auto 0.5rem;
+	}
+	.author {
+		display: grid;
+		grid-template-columns: 56px 1fr;
+		gap: 18px;
+		align-items: start;
+		margin-top: 2.6rem;
+		padding: 1.4rem 0 0;
+		border-top: 1px solid var(--line-thin);
+		font-size: 14px;
+		line-height: 1.7;
+	}
+	.author-mark {
+		width: 56px;
+		height: 56px;
+		border: 2px solid var(--ink);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 900;
+		font-size: 26px;
+	}
+	.author-name {
+		margin: 0 0 4px;
+		font-weight: 700;
+		font-size: 15px;
+	}
+	.author-title {
+		margin-left: 10px;
+		font-weight: 400;
+		font-size: 12px;
+		letter-spacing: 0.08em;
+		color: var(--muted);
+	}
+	.author-bio {
+		margin: 0;
+		text-align: left;
 	}
 	.related {
 		margin-top: 4.5rem;
