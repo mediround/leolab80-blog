@@ -100,7 +100,7 @@ AI에게 작업을 맡기는 순간부터 실제 서비스에 반영하기까지
 | **회귀 테스트 · Regression Test** | 수정 후 기존 기능이 망가지지 않았는지 확인한다. | 회원가입 수정 뒤 기존 로그인도 다시 확인한다. |
 | **리팩터링 · Refactoring** | 외부에서 관찰되는 동작을 유지하면서 코드 내부 구조를 개선하는 작업이다. | 반복 코드를 하나로 모아 수정하기 쉽게 만든다. |
 
-“테스트 통과”라는 보고를 받으면 **무엇을 어떤 조건에서 테스트했는지**도 함께 보면 좋다. 계산 기능 검사와 실제 브라우저에서 신청을 완료하는 검사는 확인하는 범위가 다르다. 테스트에서 가짜 응답을 사용했다면 실제 외부 서비스 연결까지 검증한 것은 아닐 수 있다. [개발 도구와 테스트 설명](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Overview), [브라우저 테스트 예시](https://playwright.dev/docs/writing-tests)
+“테스트 통과”라는 보고를 받으면 **무엇을 어떤 조건에서 테스트했는지**도 함께 보면 좋다. 계산 기능 검사와 실제 브라우저에서 신청을 완료하는 검사는 확인하는 범위가 다르다. 테스트에서 가짜 응답을 사용했다면 실제 외부 서비스 연결까지 검증한 것은 아닐 수 있다. [테스트 설명](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing), [브라우저 테스트 예시](https://playwright.dev/docs/writing-tests)
 
 린트와 타입 검사도 유용하지만 사용자가 원하는 기능이 완성됐다는 보장은 아니다. 코드 규칙을 지키면서도 신청 결과를 잘못 표시하는 프로그램은 만들 수 있다. [ESLint 설명](https://eslint.org/docs/latest/use/core-concepts/), [TypeScript 설명](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
@@ -115,13 +115,13 @@ AI에게 작업을 맡기는 순간부터 실제 서비스에 반영하기까지
 | **CD · Continuous Delivery / Deployment** | 변경을 배포 가능한 상태로 유지하거나, 검사를 통과한 변경을 자동 배포하는 방식을 뜻한다. | CD가 어느 뜻으로 쓰이는지, 실제 배포까지 자동인지 확인한다. |
 | **롤백 · Rollback** | 문제가 생겼을 때 이전 버전이나 상태로 되돌리는 작업이다. | 코드 버전을 되돌려도 이미 변경된 데이터까지 자동 복구되는 것은 아니다. |
 
-푸시나 머지 뒤에 자동 배포가 실행되도록 설정한 프로젝트도 있다. 따라서 “푸시하겠습니다”라는 설명을 들으면, 그 작업에 배포가 연결되어 있는지도 알아두는 편이 좋다. [GitHub 자동화 설명](https://docs.github.com/en/actions/get-started/understand-github-actions), [운영 환경과 자동 배포 설명](https://vercel.com/docs/deployments/environments)
+푸시나 머지 뒤에 자동 배포가 실행되도록 설정한 프로젝트도 있다. 따라서 “푸시하겠습니다”라는 설명을 들으면, 그 작업에 배포가 연결되어 있는지도 알아두는 편이 좋다. [GitHub 자동화 설명](https://docs.github.com/en/actions/get-started/understand-github-actions), [자동 배포 설명](https://vercel.com/docs/git)
 
-## AI 도구를 연결하다 보면 만나는 말, MCP
+## MCP
 
 AI 도구를 연결하다 보면 **MCP**라는 말도 만나게 된다. MCP는 AI 애플리케이션이 외부 데이터와 도구에 연결할 때 사용하는 공개 표준이다. 연결된 도구의 기능과 권한에 따라 자료를 읽거나 작업을 수행할 수 있다. [MCP 공식 설명](https://modelcontextprotocol.io/docs/getting-started/intro)
 
-## 용어를 알게 되면 요청하는 문장이 바뀐다
+## 질문이 달라진다
 
 용어를 조금 알게 되면 AI에게 요청하는 문장도 구체적으로 바뀐다.
 
