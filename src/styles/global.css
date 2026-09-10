@@ -186,6 +186,39 @@ hr {
 	border: none;
 	padding: 0;
 }
+/* 본문 표 — 용어 정리 등 (편집형 흑백 · 좁은 화면 가로 스크롤) */
+.prose table {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
+	border-collapse: collapse;
+	margin: 2.2em 0;
+	font-size: 0.95em;
+	line-height: 1.7;
+	text-align: left;
+}
+.prose table th {
+	text-align: left;
+	font-weight: 700;
+	border-bottom: 2px solid var(--line);
+	padding: 0.65em 0.9em 0.65em 0;
+	white-space: nowrap;
+}
+.prose table td {
+	border-bottom: 1px solid var(--line-thin);
+	padding: 0.75em 0.9em 0.75em 0;
+	vertical-align: top;
+	text-align: left;
+}
+.prose table tr:last-child td {
+	border-bottom: 1px solid var(--line);
+}
+.prose table td:first-child {
+	white-space: nowrap;
+	padding-right: 1.4em;
+}
+
 /* 본문 다이어그램 (인라인 SVG) — 편집형 흑백 */
 .prose figure {
 	margin: 2.4em 0;
