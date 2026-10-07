@@ -4,12 +4,11 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import AuthorBox from '../components/AuthorBox.astro';
 import Header from '../components/Header.astro';
 import PostCard from '../components/PostCard.astro';
 import ShareButtons from '../components/ShareButtons.astro';
-import { Icon } from 'astro-icon/components';
-import ProfileImage from '../assets/profile-leo.jpg';
-import { AUTHOR, CATEGORY_SLUG, SOCIALS } from '../consts';
+import { CATEGORY_SLUG } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -82,27 +81,7 @@ const related = [...same, ...rest]
 					<slot />
 				</div>
 				<ShareButtons url={shareUrl} title={title} />
-				<aside class="author prose" aria-label="글쓴이">
-					<a class="author-photo" href="/about/" aria-hidden="true" tabindex="-1">
-						<Image src={ProfileImage} width={112} height={112} alt="LEO(신영종) 프로필 사진" />
-					</a>
-					<div>
-						<p class="author-name">
-							<a href="/about/">{AUTHOR.alternateName}</a>
-							<span class="author-title">{AUTHOR.jobTitle}</span>
-						</p>
-						<p class="author-bio">{AUTHOR.bio}</p>
-						<p class="author-links">
-							<a class="more" href="/about/">LEO 소개 →</a>
-							<span class="author-soc">
-								<a href={SOCIALS.instagram} target="_blank" rel="noopener" aria-label="인스타그램"><Icon name="simple-icons:instagram" size={15} /></a>
-								<a href={SOCIALS.x} target="_blank" rel="noopener" aria-label="엑스"><Icon name="simple-icons:x" size={14} /></a>
-								<a href={SOCIALS.linkedin} target="_blank" rel="noopener" aria-label="링크드인"><Icon name="simple-icons:linkedin" size={15} /></a>
-								<a href={SOCIALS.youtube} target="_blank" rel="noopener" aria-label="유튜브"><Icon name="simple-icons:youtube" size={15} /></a>
-							</span>
-						</p>
-					</div>
-				</aside>
+				<AuthorBox />
 			</article>
 
 			{
@@ -153,61 +132,6 @@ const related = [...same, ...rest]
 		width: 56px;
 		border-top: 2px solid #000;
 		margin: 1.5rem auto 0.5rem;
-	}
-	.author {
-		display: grid;
-		grid-template-columns: 64px 1fr;
-		gap: 20px;
-		align-items: start;
-		margin-top: 2.6rem;
-		padding: 1.4rem 0 0;
-		border-top: 1px solid var(--line-thin);
-		font-size: 14px;
-		line-height: 1.7;
-	}
-	.author-photo {
-		display: block;
-		width: 64px;
-		height: 64px;
-		border: 1px solid var(--ink);
-		overflow: hidden;
-	}
-	.author-photo :global(img) {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-	.author-name {
-		margin: 0 0 4px;
-		font-weight: 700;
-		font-size: 15px;
-	}
-	.author-title {
-		margin-left: 10px;
-		font-weight: 400;
-		font-size: 12px;
-		letter-spacing: 0.08em;
-		color: var(--muted);
-	}
-	.author-bio {
-		margin: 0 0 8px;
-		text-align: left;
-	}
-	.author-links {
-		margin: 0;
-		display: flex;
-		align-items: center;
-		gap: 16px;
-	}
-	.author-soc {
-		display: inline-flex;
-		gap: 12px;
-		align-items: center;
-	}
-	.author-soc a {
-		display: inline-flex;
-		align-items: center;
-		color: var(--ink);
 	}
 	.related {
 		margin-top: 4.5rem;
