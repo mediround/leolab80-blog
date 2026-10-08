@@ -39,7 +39,7 @@ heroImage: "../../assets/hero-ai-foreign-patient-acquisition.jpg"
 
 <figure>
 <iframe width="720" height="405" src="https://www.youtube.com/embed/jNwSiaQgaPY" title="Rhinoplasty in Korea: From Video Consultation to Recovery | Steven" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;width:100%;height:auto;aspect-ratio:16/9;border:0"></iframe>
-<figcaption>지니가 편집한 외국인환자 유튜브 영상 · 스티븐 인터뷰<br>위 문단의 본편과는 따로 편집한 영상이다.</figcaption>
+<figcaption>지니가 편집한 외국인환자 유튜브 영상 · 스티븐 인터뷰</figcaption>
 </figure>
 
 콘텐츠 제작 다음에는 고객 문의에도 직접 답한다. 테오는 인스타그램과 페이스북 메신저의 문의가 MyClinic 사이트 내부로 들어오도록 연결하고, 데이터셋의 정보를 기반으로 실제 고객에게 안내를 보내기도 한다. 방문 준비와 병원 위치를 안내할 때는 내가 한국어 내용을 검토하면, 지니는 기존 대화와 최신 메시지를 읽고 같은 안내를 이미 보내지 않았는지 확인한 뒤 발송한다. 전송된 영어 문장과 한국어 뜻도 다시 보여준다.
