@@ -1,12 +1,12 @@
 ---
-// LEO 소개 페이지 하단 문의폼 (2026-10-09 대표 요청 — mediround.co.kr/about 「문의 보내기」와 같은 방식)
+// LEO 소개 페이지 맨 아래(저자 칸 다음) 메일 보내기 폼 (2026-10-09 대표 요청 — mediround.co.kr/about 「문의 보내기」와 같은 방식)
+// 저자 칸처럼 main 밖에 놓이므로 .prose 클래스로 본문 폭·h2 양식을 맞춘다.
 // 발송 = /api/contact → Resend → syj@mediround.co.kr. 수신 주소는 화면에 내보내지 않는다.
 // 입력 칸 = 이메일·제목·내용. 이름 칸·개인정보 안내 문구는 두지 않는다(대표 결정 2026-10-09).
 ---
 
-<section class="contact" id="contact" aria-labelledby="contact-title">
-	<h2 id="contact-title">문의 보내기</h2>
-	<p class="contact-lead">LEO에게 연락하실 일이 있으면 아래로 보내 주세요. 메일로 답장드리겠습니다.</p>
+<section class="contact prose" id="contact" aria-labelledby="contact-title">
+	<h2 id="contact-title">LEO에게 메일 보내기</h2>
 	<form id="contact-form" novalidate>
 		<label>이메일 <input type="email" name="email" required maxlength="200" autocomplete="email" /></label>
 		<label>제목 <input type="text" name="subject" required maxlength="200" /></label>
@@ -70,16 +70,18 @@
 
 <style>
 	/* 제목 괘선·여백은 본문 h2(.prose h2) 양식을 그대로 쓴다 */
+	/* 바로 위 저자 칸(.author, 14px)과 글자 크기를 맞춰야 .prose 폭(100% - 3em)이 같아져 좁은 화면에서 좌우 끝이 맞는다 */
 	.contact {
+		margin-bottom: 3.2rem;
+		font-size: 14px;
 		scroll-margin-top: 96px;
 	}
-	/* 짧은 안내문은 양쪽 맞춤(.prose p)이면 좁은 화면에서 띄어쓰기가 벌어진다 */
-	.contact-lead,
+	.contact h2 {
+		margin-bottom: 1.2em;
+	}
+	/* 짧은 상태 문구는 양쪽 맞춤(.prose p)이면 좁은 화면에서 띄어쓰기가 벌어진다 */
 	.contact-status {
 		text-align: left;
-	}
-	.contact-lead {
-		margin: 0 0 1.6rem;
 	}
 	form label {
 		display: block;
@@ -99,6 +101,7 @@
 		background: var(--paper);
 		color: var(--ink);
 		font: inherit;
+		font-size: 16px; /* 16px 미만이면 아이폰이 입력 때 화면을 확대한다 */
 		font-weight: 400;
 	}
 	form textarea {
