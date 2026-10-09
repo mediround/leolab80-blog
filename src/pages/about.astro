@@ -2,6 +2,7 @@
 // LEO 소개 페이지 — 단일 정적 페이지. 본문 = 대표 확정 원고 그대로 (2026-09-05 구조 확정: 글이 쌓이는 카테고리 아님)
 import BaseHead from '../components/BaseHead.astro';
 import AuthorBox from '../components/AuthorBox.astro';
+import ContactForm from '../components/ContactForm.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import ProfileImage from '../assets/profile-leo.jpg';
@@ -48,6 +49,7 @@ const personLd = {
 			<p>AI에 관심을 갖고 함께 일하는 방법을 배우는 것도 이 고민과 이어져 있습니다. 제 생각을 구체적인 결과물로 만들고, 반복해서 해야 하는 일을 줄이고, 제가 중요하게 여기는 판단에 더 집중할 수 있을지 살펴보고 있습니다. 서비스를 만들어 가는 과정에서 AI에게 무엇을 맡길 수 있는지, 어떤 부분은 제가 이해하고 확인해야 하는지도 배우고 있습니다.</p>
 			<p>이 블로그 LEOLAB80은 그 과정을 제 언어로 남기고 나누기 위해 만든 공간입니다. 일을 계속해 나가는 동안 어떤 문제를 만났고, 무엇 때문에 고민했으며, 왜 그런 선택을 했는지 기록하고 싶습니다. 기록하면서 제 생각을 정리하고, 시간이 흐른 뒤에도 그때의 판단을 다시 살펴볼 수 있기를 바랍니다.</p>
 			<p>이곳을 LAB이라고 부르는 것은 직접 해보고 배우는 과정을 담고 싶기 때문입니다. 잘 풀리지 않은 시도와 아직 답을 찾지 못한 질문도 그 과정에 포함됩니다. 시간이 지나 생각이 달라진다면 무엇 때문에 달라졌는지도 적어두려 합니다. 그렇게 쌓인 기록을 통해 제가 어떤 일을 하며 어떤 삶을 찾고 있는지 스스로 이해하고, 비슷한 고민을 하는 분들과 나누고 싶습니다.</p>
+			<ContactForm />
 		</main>
 		<AuthorBox showAboutLink={false} />
 		<Footer />

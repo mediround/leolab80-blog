@@ -1,0 +1,146 @@
+---
+// LEO 소개 페이지 하단 문의폼 (2026-10-09 대표 요청 — mediround.co.kr/about 「문의 보내기」와 같은 방식)
+// 발송 = /api/contact → Resend → syj@mediround.co.kr. 수신 주소는 화면에 내보내지 않는다.
+// 입력 칸 = 이메일·제목·내용. 이름 칸·개인정보 안내 문구는 두지 않는다(대표 결정 2026-10-09).
+---
+
+<section class="contact" id="contact" aria-labelledby="contact-title">
+	<h2 id="contact-title">문의 보내기</h2>
+	<p class="contact-lead">LEO에게 연락하실 일이 있으면 아래로 보내 주세요. 메일로 답장드리겠습니다.</p>
+	<form id="contact-form" novalidate>
+		<label>이메일 <input type="email" name="email" required maxlength="200" autocomplete="email" /></label>
+		<label>제목 <input type="text" name="subject" required maxlength="200" /></label>
+		<label>내용 <textarea name="message" rows="7" required maxlength="5000"></textarea></label>
+		<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+		<input type="hidden" name="ts" id="contact-ts" />
+		<button type="submit" id="contact-submit">보내기</button>
+		<p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
+	</form>
+</section>
+
+<script is:inline>
+	// 서버 발송(/api/contact → Resend). 수신 주소를 노출하지 않으므로 mailto 폴백은 두지 않는다.
+	(() => {
+		const form = document.getElementById('contact-form');
+		const btn = document.getElementById('contact-submit');
+		const status = document.getElementById('contact-status');
+		document.getElementById('contact-ts').value = Date.now();
+		const reset = (msg) => {
+			btn.disabled = false;
+			btn.textContent = '보내기';
+			status.textContent = msg;
+		};
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			if (!form.checkValidity()) {
+				form.reportValidity();
+				return;
+			}
+			const data = Object.fromEntries(new FormData(form));
+			btn.disabled = true;
+			btn.textContent = '보내는 중…';
+			status.textContent = '';
+			try {
+				const r = await fetch('/api/contact', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(data),
+				});
+				if (r.status === 429) {
+					reset('짧은 시간에 여러 번 보내셨습니다. 잠시 뒤에 다시 보내 주세요.');
+					return;
+				}
+				const result = await r.json().catch(() => ({}));
+				// HTTP 200 만으로 완료를 표시하지 않는다 — 서버는 봇 판정 시 sent 없이 200 을 돌려준다.
+				if (!r.ok || result.ok !== true || result.sent !== true) {
+					reset('보내지 못했습니다. 입력하신 내용은 그대로 있으니 잠시 뒤에 다시 보내 주세요.');
+					return;
+				}
+				form.reset();
+				document.getElementById('contact-ts').value = Date.now();
+				btn.textContent = '보냈습니다';
+				status.textContent = '문의가 전달되었습니다. 확인한 뒤 메일로 답장드리겠습니다.';
+				if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead');
+			} catch {
+				reset('보내지 못했습니다. 입력하신 내용은 그대로 있으니 잠시 뒤에 다시 보내 주세요.');
+			}
+		});
+	})();
+</script>
+
+<style>
+	/* 제목 괘선·여백은 본문 h2(.prose h2) 양식을 그대로 쓴다 */
+	.contact {
+		scroll-margin-top: 96px;
+	}
+	/* 짧은 안내문은 양쪽 맞춤(.prose p)이면 좁은 화면에서 띄어쓰기가 벌어진다 */
+	.contact-lead,
+	.contact-status {
+		text-align: left;
+	}
+	.contact-lead {
+		margin: 0 0 1.6rem;
+	}
+	form label {
+		display: block;
+		margin-bottom: 14px;
+		font-size: 14px;
+		font-weight: 700;
+	}
+	form input,
+	form textarea {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		margin-top: 6px;
+		padding: 10px 12px;
+		border: 1px solid var(--line-thin);
+		border-radius: 0;
+		background: var(--paper);
+		color: var(--ink);
+		font: inherit;
+		font-weight: 400;
+	}
+	form textarea {
+		resize: vertical;
+	}
+	form input:focus,
+	form textarea:focus {
+		outline: 2px solid var(--ink);
+		outline-offset: -1px;
+		border-color: var(--ink);
+	}
+	.hp {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+	}
+	button {
+		display: inline-block;
+		padding: 12px 32px;
+		border: 1px solid var(--ink);
+		border-radius: 0;
+		background: var(--ink);
+		color: var(--paper);
+		font: inherit;
+		font-size: 15px;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		cursor: pointer;
+	}
+	button:hover:not(:disabled) {
+		background: var(--paper);
+		color: var(--ink);
+	}
+	button:disabled {
+		opacity: 0.6;
+		cursor: default;
+	}
+	.contact-status {
+		margin: 12px 0 0;
+		min-height: 1.4em;
+		font-size: 14px;
+	}
+</style>
