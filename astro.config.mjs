@@ -12,7 +12,7 @@ const CATEGORY_SLUG = {
 	'외국인환자 유치': 'inbound',
 	'AI로 외국인환자 유치하기': 'ai-inbound',
 	비즈니스: 'business',
-	메모: 'notes',
+	다이어리: 'notes',
 };
 
 // 사이트맵 <lastmod> 주입 — 각 글의 updatedDate(없으면 pubDate)에서 URL별 최종수정일을 계산.
