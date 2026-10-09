@@ -9,7 +9,12 @@ import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE } from '../consts';
 	</div>
 
 	<nav class="nav" aria-label="카테고리">
-		<div class="wrap nav-in">
+		<!-- 휴대폰(720px 이하)에서만 보이는 메뉴 버튼 (2026-10-09 대표 요청). JS 가 꺼져 있으면 버튼은 숨고 링크가 그대로 펼쳐진다 -->
+		<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+			<span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+			<span class="nav-toggle-label">메뉴</span>
+		</button>
+		<div class="wrap nav-in" id="nav-links">
 			{
 				CATEGORIES.map((c) => (
 					<a href={`/category/${CATEGORY_SLUG[c]}/`}>{c}</a>
@@ -38,6 +43,29 @@ import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE } from '../consts';
 		window.addEventListener('load', fit);
 		window.addEventListener('resize', fit);
 		fit();
+	})();
+
+	// 휴대폰 메뉴 열고 닫기 — has-js 가 붙어야만 CSS 가 링크를 접는다(스크립트 실패 시 메뉴가 사라지지 않게)
+	(function () {
+		var nav = document.querySelector('header .nav');
+		var btn = nav && nav.querySelector('.nav-toggle');
+		if (!btn) return;
+		var label = btn.querySelector('.nav-toggle-label');
+		nav.classList.add('has-js');
+		function setOpen(open) {
+			nav.classList.toggle('is-open', open);
+			btn.setAttribute('aria-expanded', String(open));
+			label.textContent = open ? '닫기' : '메뉴';
+		}
+		btn.addEventListener('click', function () {
+			setOpen(!nav.classList.contains('is-open'));
+		});
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+				setOpen(false);
+				btn.focus();
+			}
+		});
 	})();
 </script>
 
@@ -103,11 +131,73 @@ import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE } from '../consts';
 	.nav-in a {
 		color: #000;
 	}
+	.nav-toggle {
+		display: none;
+	}
 	@media (max-width: 720px) {
+		/* JS 가 없을 때의 대체 모양(예전과 같음) */
 		.nav-in {
 			gap: 18px;
 			font-size: 12px;
 			flex-wrap: wrap;
+		}
+		.nav.has-js .nav-toggle {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			width: 100%;
+			padding: 13px 0;
+			border: 0;
+			border-radius: 0;
+			background: none;
+			color: #000;
+			font: inherit;
+			font-size: 12px;
+			font-weight: 500;
+			letter-spacing: 0.12em;
+			cursor: pointer;
+		}
+		.burger {
+			display: inline-flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 16px;
+			height: 11px;
+		}
+		.burger span {
+			display: block;
+			height: 1.5px;
+			background: #000;
+			transition: transform 0.2s ease, opacity 0.2s ease;
+		}
+		.nav.is-open .burger span:nth-child(1) {
+			transform: translateY(4.75px) rotate(45deg);
+		}
+		.nav.is-open .burger span:nth-child(2) {
+			opacity: 0;
+		}
+		.nav.is-open .burger span:nth-child(3) {
+			transform: translateY(-4.75px) rotate(-45deg);
+		}
+		.nav.has-js .nav-in {
+			display: none;
+		}
+		.nav.has-js.is-open .nav-in {
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			gap: 0;
+			padding: 0 0 4px;
+			border-top: 1px solid var(--line-thin);
+		}
+		.nav.has-js.is-open .nav-in a {
+			display: block;
+			padding: 13px 0;
+			text-align: center;
+		}
+		.nav.has-js.is-open .nav-in a + a {
+			border-top: 1px solid var(--line-thin);
 		}
 	}
 </style>
