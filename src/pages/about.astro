@@ -6,7 +6,7 @@ import ContactForm from '../components/ContactForm.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import ProfileImage from '../assets/profile-leo.jpg';
-import { AUTHOR, SITE_TITLE, SOCIALS } from '../consts';
+import { ABOUT_DESCRIPTION, AUTHOR, SITE_TITLE, SOCIALS } from '../consts';
 
 // 저자 엔티티(E-E-A-T·GEO)
 const personLd = {
@@ -29,7 +29,7 @@ const personLd = {
 <!doctype html>
 <html lang="ko">
 	<head>
-		<BaseHead title={`LEO — ${SITE_TITLE}`} description="LEOLAB80을 쓰는 LEO에 대하여" />
+		<BaseHead title={`LEO — ${SITE_TITLE}`} description={ABOUT_DESCRIPTION} />
 		<script type="application/ld+json" set:html={JSON.stringify(personLd)} />
 	</head>
 	<body>

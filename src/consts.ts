@@ -16,6 +16,21 @@ export const CATEGORY_SLUG: Record<Category, string> = {
 	노트: 'notes', // 2026-10-09 「메모」→「노트」 이름 변경(주소 notes 에 맞춤 · 대표 지시) · 주소는 그대로 /category/notes/
 };
 
+// 검색 결과·공유 미리보기용 설명문 (60~120자 · 2026-10-11 대표 지시로 보강 — 짧으면 구글이 본문을 임의로 발췌한다)
+export const ABOUT_DESCRIPTION =
+	'2009년부터 외국인환자 유치 일을 해왔고, 지금은 MyClinic을 만들고 운영하는 LEO의 소개. 현장에서 만난 문제와 고민, 선택을 기록하려고 LEOLAB80을 만들었다.';
+export const BLOG_DESCRIPTION =
+	'LEOLAB80의 모든 글을 최신 순으로 모았다. 외국인환자 유치 현장에서 겪은 일과 AI로 유치 일을 해 본 기록, 그 사이의 생각을 LEO가 직접 쓴다.';
+export const CATEGORY_DESCRIPTION: Record<Category, string> = {
+	'외국인환자 유치':
+		'2009년부터 외국인환자 유치 일을 해 온 LEO가 현장에서 본 것을 정리한 글. 유치 비용, 달라진 고객, 중개의 역할처럼 이 일을 하며 만난 문제를 다룬다.',
+	'AI로 외국인환자 유치하기':
+		'AI와 함께 외국인환자 유치 일을 해 본 기록. ChatGPT, Claude Code와 콘텐츠를 만들고 고객 안내를 준비하며 AI에게 맡길 일과 사람이 확인할 일을 나눠 본다.',
+	비즈니스:
+		'외국인환자 유치를 하며 마주한 비즈니스 질문을 정리한 글. 고객과 시장, 제품과 수익을 어떻게 볼지 LEO가 읽고 겪은 것을 바탕으로 적는다.',
+	노트: 'LEO가 일하며 남기는 짧은 노트. 블로그를 운영하고 서비스를 만들며 배운 것, 아직 답을 찾지 못한 질문을 그때그때 적어 둔다.',
+};
+
 // JSON-LD Person (검색엔진·AI용 저자 신원 — 이전 결정문서 SEO/GEO 원칙: 실명)
 export const AUTHOR = {
 	name: '신영종',

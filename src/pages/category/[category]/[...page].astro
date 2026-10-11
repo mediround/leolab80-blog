@@ -5,7 +5,7 @@ import Footer from '../../../components/Footer.astro';
 import Header from '../../../components/Header.astro';
 import Pagination from '../../../components/Pagination.astro';
 import PostListItem from '../../../components/PostListItem.astro';
-import { CATEGORIES, CATEGORY_SLUG, SITE_TITLE } from '../../../consts';
+import { CATEGORIES, CATEGORY_DESCRIPTION, CATEGORY_SLUG, SITE_TITLE } from '../../../consts';
 
 export async function getStaticPaths({ paginate }) {
 	const posts = await getCollection('blog');
@@ -26,7 +26,7 @@ const hrefFor = (n: number) => (n === 1 ? base : `${base}${n}/`);
 <!doctype html>
 <html lang="ko">
 	<head>
-		<BaseHead title={`${cat} — ${SITE_TITLE}`} description={`${cat} 카테고리의 글`} noindex={page.data.length === 0} />
+		<BaseHead title={`${cat} — ${SITE_TITLE}`} description={CATEGORY_DESCRIPTION[cat]} noindex={page.data.length === 0} />
 	</head>
 	<body>
 		<Header />
