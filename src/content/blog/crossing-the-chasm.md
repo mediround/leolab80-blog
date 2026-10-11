@@ -11,39 +11,7 @@ heroImage: "../../assets/hero-crossing-the-chasm.jpg"
 외국인환자 실환자는 2009년 약 6만 명에서 2019년 약 50만 명으로 늘었다. 팬데믹을 거친 뒤에는 2023년 약 61만 명, 2024년 약 117만 명, 2025년 약 201만 명으로 확대됐다. 한국을 찾는 외국인환자는 분명 내가 처음 시작할 때와는 비교가 되지 않을 정도로 늘었다.
 
 <figure>
-<svg viewBox="0 0 560 330" width="560" height="330" role="img" aria-labelledby="chasm-svg-title chasm-svg-desc" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font-family:inherit">
-  <title id="chasm-svg-title">연도별 외국인환자 실환자 수</title>
-  <desc id="chasm-svg-desc">2009년 60,201명, 2019년 497,464명, 2024년 1,170,467명, 2025년 2,011,822명</desc>
-  <g fill="#111">
-    <text x="10" y="30" font-size="17">(단위: 명)</text>
-    <text x="74" y="295.0" text-anchor="end" font-size="17">0</text>
-    <path d="M84 235.0 L545 235.0" stroke="#111" stroke-opacity="0.18" stroke-width="1"/>
-    <text x="74" y="240.0" text-anchor="end" font-size="17">50만</text>
-    <path d="M84 180.0 L545 180.0" stroke="#111" stroke-opacity="0.18" stroke-width="1"/>
-    <text x="74" y="185.0" text-anchor="end" font-size="17">100만</text>
-    <path d="M84 125.0 L545 125.0" stroke="#111" stroke-opacity="0.18" stroke-width="1"/>
-    <text x="74" y="130.0" text-anchor="end" font-size="17">150만</text>
-    <path d="M84 70.0 L545 70.0" stroke="#111" stroke-opacity="0.18" stroke-width="1"/>
-    <text x="74" y="75.0" text-anchor="end" font-size="17">200만</text>
-  </g>
-  <path d="M84 290 L545 290" stroke="#111" stroke-width="1.5" fill="none"/>
-  <g fill="#111">
-    <rect x="109.6" y="283.4" width="64" height="6.6"/>
-    <rect x="224.9" y="235.3" width="64" height="54.7"/>
-    <rect x="340.1" y="161.2" width="64" height="128.8"/>
-    <rect x="455.4" y="68.7" width="64" height="221.3"/>
-  </g>
-  <g fill="#111" font-size="20" text-anchor="middle">
-    <text x="141.6" y="273.4" font-weight="700">60,201</text>
-    <text x="256.9" y="225.3" font-weight="700">497,464</text>
-    <text x="372.1" y="151.2" font-weight="700">1,170,467</text>
-    <text x="487.4" y="58.7" font-weight="700">2,011,822</text>
-    <text font-size="18" x="141.6" y="318">2009년</text>
-    <text font-size="18" x="256.9" y="318">2019년</text>
-    <text font-size="18" x="372.1" y="318">2024년</text>
-    <text font-size="18" x="487.4" y="318">2025년</text>
-  </g>
-</svg>
+<div class="fig-body" role="img" aria-label="연도별 외국인환자 실환자 수: 2009년 60,201명, 2019년 497,464명, 2024년 1,170,467명, 2025년 2,011,822명"><div class="fig-note">(단위: 명)</div><div class="chart-bars"><div><b>60,201</b><i style="--h:2.9%"></i></div><div><b>497,464</b><i style="--h:23.7%"></i></div><div><b>1,170,467</b><i style="--h:55.7%"></i></div><div><b>2,011,822</b><i style="--h:95.8%"></i></div></div><div class="chart-x"><span>2009년</span><span>2019년</span><span>2024년</span><span>2025년</span></div></div>
 <figcaption>연도별 외국인환자 실환자 수(의료기관별 실인원, 복수진료 횟수 제외)<br>출처: <a href="https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&act=view&list_no=1490280">보건복지부, 2025년 외국인 환자 유치실적 보도자료(2026-04-24) 붙임 통계</a></figcaption>
 </figure>
 
@@ -52,6 +20,11 @@ heroImage: "../../assets/hero-crossing-the-chasm.jpg"
 이제 이 시장은 분명 과거에 내가 경험했던 것과는 다르다. 변화한 이 시장을 나는 어떻게 이해해야 할까.
 
 제프리 무어의 캐즘 마케팅은 기존 이용 방식의 변화를 요구하는 혁신적 기술이 초기시장에서 주류시장으로 넘어가는 문제를 다룬다. 특히 [초기 수용자와 전기 다수 수용자 사이](https://thoughtbot.com/podcast-transcripts/geoffrey-moore-crossing-the-chasm)에서 구매 이유가 크게 달라진다고 봤다. 앞선 고객에게 좋은 평가를 받았더라도 다음 고객을 설득하는 근거는 새로 마련해야 한다는 것이다.
+
+<figure>
+<div class="fig-body"><div class="fig-labels" style="grid-template-columns:340fr 40fr 610fr;margin-bottom:6px"><span>초기시장</span><span class="nowrap"><b>캐즘</b></span><span>주류시장</span></div><svg viewBox="0 0 990 256" role="img" aria-label="기술 수용 주기 곡선. 초기시장의 혁신 수용자·초기 수용자와 주류시장의 전기 다수·후기 다수·지각 수용자 사이에 캐즘이 있다" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#777" stroke-width="1" stroke-dasharray="5 5"><path d="M1 236 V8 H338 V236" vector-effect="non-scaling-stroke"/><path d="M382 236 V8 H989 V236" vector-effect="non-scaling-stroke"/></g><path d="M360 2 V30 M351.5 22 L360 31 L368.5 22" fill="none" stroke="#777" stroke-width="2" vector-effect="non-scaling-stroke"/><path d="M0.0 250 L0.0 249.1 L4.3 249.0 L8.7 248.9 L13.0 248.8 L17.3 248.7 L21.6 248.6 L25.9 248.4 L30.3 248.2 L34.6 248.0 L38.9 247.8 L43.2 247.6 L47.6 247.4 L51.9 247.1 L56.2 246.9 L60.5 246.6 L64.9 246.2 L69.2 245.9 L73.5 245.5 L77.8 245.1 L82.2 244.6 L86.5 244.1 L90.8 243.6 L95.2 243.1 L99.5 242.5 L103.8 241.8 L108.1 241.1 L112.5 240.4 L116.8 239.6 L121.1 238.8 L125.4 237.9 L129.8 236.9 L134.1 235.9 L138.4 234.9 L142.7 233.7 L147.1 232.5 L151.4 231.2 L155.7 229.9 L160.0 228.5 L164.3 227.0 L168.7 225.4 L173.0 223.7 L173.0 250 Z" fill="#e3e3e3"/><path d="M177.0 250 L177.0 222.3 L181.0 220.9 L185.1 219.5 L189.1 218.0 L193.1 216.5 L197.1 214.9 L201.2 213.3 L205.2 211.6 L209.2 209.9 L213.2 208.1 L217.2 206.3 L221.3 204.4 L225.3 202.5 L229.3 200.5 L233.3 198.4 L237.4 196.3 L241.4 194.2 L245.4 192.0 L249.4 189.7 L253.5 187.4 L257.5 185.1 L261.5 182.7 L265.6 180.2 L269.6 177.7 L273.6 175.2 L277.6 172.6 L281.6 170.0 L285.7 167.3 L289.7 164.6 L293.7 161.9 L297.8 159.1 L301.8 156.3 L305.8 153.5 L309.8 150.6 L313.9 147.8 L317.9 144.9 L321.9 141.9 L325.9 139.0 L329.9 136.1 L334.0 133.1 L338.0 130.2 L338.0 250 Z" fill="#c8c8c8"/><path d="M382.0 250 L382.0 127.3 L386.1 124.3 L390.3 121.4 L394.4 118.4 L398.6 115.5 L402.8 112.6 L406.9 109.7 L411.1 106.8 L415.2 104.0 L419.4 101.1 L423.5 98.4 L427.6 95.6 L431.8 92.9 L435.9 90.3 L440.1 87.7 L444.2 85.2 L448.4 82.7 L452.6 80.3 L456.7 78.0 L460.9 75.7 L465.0 73.5 L469.1 71.4 L473.3 69.4 L477.4 67.4 L481.6 65.6 L485.8 63.8 L489.9 62.1 L494.1 60.5 L498.2 59.1 L502.4 57.7 L506.5 56.4 L510.6 55.3 L514.8 54.2 L519.0 53.3 L523.1 52.5 L527.2 51.8 L531.4 51.2 L535.5 50.7 L539.7 50.4 L543.9 50.1 L548.0 50.0 L548.0 250 Z" fill="#9a9a9a"/><path d="M552.0 250 L552.0 50.0 L556.1 50.1 L560.3 50.4 L564.5 50.7 L568.6 51.2 L572.8 51.8 L576.9 52.5 L581.0 53.3 L585.2 54.2 L589.4 55.3 L593.5 56.4 L597.6 57.7 L601.8 59.1 L606.0 60.5 L610.1 62.1 L614.2 63.8 L618.4 65.6 L622.5 67.4 L626.7 69.4 L630.9 71.4 L635.0 73.5 L639.1 75.7 L643.3 78.0 L647.5 80.3 L651.6 82.7 L655.8 85.2 L659.9 87.7 L664.0 90.3 L668.2 92.9 L672.4 95.6 L676.5 98.4 L680.6 101.1 L684.8 104.0 L689.0 106.8 L693.1 109.7 L697.2 112.6 L701.4 115.5 L705.5 118.4 L709.7 121.4 L713.9 124.3 L718.0 127.3 L718.0 250 Z" fill="#6e6e6e"/><path d="M722.0 250 L722.0 130.5 L728.7 136.5 L735.4 142.5 L742.1 148.4 L748.8 154.2 L755.5 159.9 L762.2 165.5 L768.9 170.9 L775.6 176.2 L782.3 181.3 L789.0 186.1 L795.7 190.8 L802.4 195.3 L809.1 199.6 L815.8 203.6 L822.5 207.4 L829.2 211.1 L835.9 214.4 L842.6 217.6 L849.3 220.6 L856.0 223.3 L862.7 225.9 L869.4 228.3 L876.1 230.4 L882.8 232.4 L889.5 234.3 L896.2 236.0 L902.9 237.5 L909.6 238.9 L916.3 240.2 L923.0 241.3 L929.7 242.3 L936.4 243.2 L943.1 244.1 L949.8 244.8 L956.5 245.5 L963.2 246.0 L969.9 246.6 L976.6 247.0 L983.3 247.4 L990.0 247.8 L990.0 250 Z" fill="#444444"/><path d="M0 250.5 H990" stroke="#111" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg><div class="fig-labels" style="grid-template-columns:175fr 165fr 40fr 170fr 170fr 270fr;margin-top:10px"><span><b>혁신 수용자</b>2.5%<small>기술 애호가</small></span><span><b>초기 수용자</b>13.5%<small>선각자</small></span><span></span><span><b>전기 다수 수용자</b>34%<small>실용주의자</small></span><span><b>후기 다수 수용자</b>34%<small>보수주의자</small></span><span><b>지각 수용자</b>16%<small>회의론자</small></span></div></div>
+<figcaption>기술 수용 주기와 캐즘. 비율은 로저스의 혁신 확산 모형 값이고, 아래 작은 글씨는 무어가 붙인 고객 이름이다.<br>출처: 제프리 무어, 『Crossing the Chasm』의 기술 수용 주기 그림을 다시 그림</figcaption>
+</figure>
 
 - 혁신 수용자(Innovators): 새로운 가능성을 가장 먼저 탐색한다
     - 새로운 정보를 적극적으로 찾고 가장 먼저 받아들이는 사람들이다. 무어가 기술 애호가라고 부른 고객은 기술 자체가 어떻게 작동하는지, 무엇이 가능해지는지에 관심이 크다. 아직 널리 알려지지 않은 선택지에도 먼저 관심을 갖는다.
