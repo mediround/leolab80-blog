@@ -23,22 +23,7 @@ heroImage: "../../assets/hero-seventeen-years.jpg"
 **'소개'의 값이 얇아졌다.** 앞의 둘을 겹치면 결론은 하나다. 단순히 환자와 병원을 연결만 해주던 중개의 값이 얄팍해졌다. 연결은 이제 검색창이 공짜로 해준다. 소개만으로 받던 값은 매년 줄고 있다.
 
 <figure>
-<svg viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="2009년부터 2026년까지 정보량은 오르고 중개의 값은 내리고 신뢰의 난이도는 그대로다">
-<g font-family="'Noto Sans KR', sans-serif">
-<line x1="40" y1="28" x2="80" y2="28" stroke="#000" stroke-width="2"/>
-<text x="88" y="32" font-size="12.5">정보량 — 많아졌다</text>
-<line x1="40" y1="48" x2="80" y2="48" stroke="#000" stroke-width="1.8" stroke-dasharray="6 4"/>
-<text x="88" y="52" font-size="12.5">중개의 값 — 얇아졌다</text>
-<line x1="40" y1="68" x2="80" y2="68" stroke="#000" stroke-width="1.8" stroke-dasharray="1 4" stroke-linecap="round"/>
-<text x="88" y="72" font-size="12.5">신뢰의 난이도 — 그대로다</text>
-<line x1="60" y1="215" x2="520" y2="215" stroke="#000" stroke-width="1.4"/>
-<polyline points="60,205 200,178 360,120 520,72" fill="none" stroke="#000" stroke-width="2"/>
-<polyline points="60,100 200,122 360,152 520,186" fill="none" stroke="#000" stroke-width="1.8" stroke-dasharray="6 4"/>
-<polyline points="60,150 290,148 520,146" fill="none" stroke="#000" stroke-width="1.8" stroke-dasharray="1 4" stroke-linecap="round"/>
-<text x="60" y="235" text-anchor="middle" font-size="12" fill="#555">2009</text>
-<text x="520" y="235" text-anchor="middle" font-size="12" fill="#555">2026</text>
-</g>
-</svg>
+<div class="fig-body"><div class="fig-legend"><span><svg viewBox="0 0 40 10" aria-hidden="true"><line x1="0" y1="5" x2="40" y2="5" stroke="#000" stroke-width="2"/></svg>정보량 — 많아졌다</span><span><svg viewBox="0 0 40 10" aria-hidden="true"><line x1="0" y1="5" x2="40" y2="5" stroke="#000" stroke-width="1.8" stroke-dasharray="6 4"/></svg>중개의 값 — 얇아졌다</span><span><svg viewBox="0 0 40 10" aria-hidden="true"><line x1="0" y1="5" x2="40" y2="5" stroke="#000" stroke-width="1.8" stroke-dasharray="1 4" stroke-linecap="round"/></svg>신뢰의 난이도 — 그대로다</span></div><svg viewBox="0 0 500 120" role="img" aria-label="2009년부터 2026년까지 정보량은 오르고 중개의 값은 내리고 신뢰의 난이도는 그대로다" xmlns="http://www.w3.org/2000/svg"><path d="M20 116.6 H480" stroke="#000" stroke-width="1.4" vector-effect="non-scaling-stroke"/><polyline points="20,108.8 160,88.5 320,45.0 480,9.0" fill="none" stroke="#000" stroke-width="2" vector-effect="non-scaling-stroke"/><polyline points="20,30.0 160,46.5 320,69.0 480,94.5" fill="none" stroke="#000" stroke-width="1.8" stroke-dasharray="6 4" vector-effect="non-scaling-stroke"/><polyline points="20,67.5 250,66.0 480,64.5" fill="none" stroke="#000" stroke-width="1.8" stroke-dasharray="1 4" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><div class="fig-axis"><span style="left:4%">2009</span><span style="left:96%">2026</span></div></div>
 <figcaption>17년의 세 곡선.<br><b>정보는 오르고 중개의 값은 내렸다. 그러나 신뢰의 난이도는 꿈쩍도 하지 않았다.</b></figcaption>
 </figure>
 
@@ -55,20 +40,7 @@ heroImage: "../../assets/hero-seventeen-years.jpg"
 **시술이 끝나면 돌아간다.** 어렵게 데려온 환자도 시술 한 번을 받고 본국으로 돌아가면 그걸로 끝인 경우가 많다. 재방문은 여전히 헐겁고, 귀국 후의 관리는 여전히 사각지대다. [한 명에게서 오래 가치를 거두는 일](/blog/foreign-patient-cac/)은 그때나 지금이나 숙제다.
 
 <figure>
-<svg viewBox="0 0 560 234" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="변한 것과 그대로인 것 대비">
-<g font-family="'Noto Sans KR', sans-serif">
-<text x="150" y="40" text-anchor="middle" font-size="16" font-weight="700">변한 것</text>
-<text x="410" y="40" text-anchor="middle" font-size="16" font-weight="700">그대로인 것</text>
-<line x1="40" y1="56" x2="520" y2="56" stroke="#000" stroke-width="1.4"/>
-<line x1="280" y1="24" x2="280" y2="212" stroke="#000" stroke-width="1.2"/>
-<text x="52" y="96" font-size="14">— 정보가 흔해졌다</text>
-<text x="52" y="141" font-size="14">— 병원이 직접 뛴다</text>
-<text x="52" y="186" font-size="14">— 소개의 값이 얇아졌다</text>
-<text x="300" y="96" font-size="14">— 신뢰는 여전히 어렵다</text>
-<text x="300" y="141" font-size="14">— 언어와 거리는 그대로</text>
-<text x="300" y="186" font-size="14">— 시술 뒤엔 돌아간다</text>
-</g>
-</svg>
+<div class="fig-body"><div class="fig-compare"><div><b>변한 것</b><span>— 정보가 흔해졌다</span><span>— 병원이 직접 뛴다</span><span>— 소개의 값이 얇아졌다</span></div><div><b>그대로인 것</b><span>— 신뢰는 여전히 어렵다</span><span>— 언어와 거리는 그대로</span><span>— 시술 뒤엔 돌아간다</span></div></div></div>
 <figcaption>기술은 접점의 <b>양</b>을 늘렸지만,<br>신뢰의 <b>질</b>은 늘리지 못했다.</figcaption>
 </figure>
 

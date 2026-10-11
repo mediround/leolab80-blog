@@ -332,7 +332,190 @@ hr {
 	white-space: nowrap;
 	overflow: visible;
 }
+/* 상자 도식 — 상자·연결선 모두 HTML/CSS (SVG 없음)
+   .fig-row(상자 줄, --n칸) · .fig-stubs(칸마다 세로선, .arrow 면 끝에 화살촉) · .fig-hbar(첫 칸 가운데~끝 칸 가운데 가로선)
+   .fig-down(가운데 세로선, .arrow 면 화살촉) · .fig-box(.strong 굵은 테두리 · .center/.narrow/.wide 가운데 한 상자)
+   .fig-body.flow = 상자 사이 오른쪽 화살표 · .fig-body.split = 두 칸 사이를 넓게 */
+.prose .fig-body {
+	--gap: 24px;
+}
+.prose .fig-body.flow {
+	--gap: 32px;
+}
+.prose .fig-body.split {
+	--gap: 14%;
+}
+.prose .fig-row,
+.prose .fig-stubs {
+	display: grid;
+	grid-template-columns: repeat(var(--n, 3), 1fr);
+	column-gap: var(--gap);
+}
+.prose .fig-box {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 76px;
+	padding: 12px 10px;
+	border: 1.5px solid var(--ink);
+	text-align: center;
+	word-break: keep-all;
+}
+.prose .fig-box.strong {
+	border-width: 2.5px;
+}
+.prose .fig-box.center,
+.prose .fig-box.narrow,
+.prose .fig-box.wide {
+	margin: 0 auto;
+	width: min(100%, 320px);
+}
+.prose .fig-box.narrow {
+	width: min(100%, 240px);
+}
+.prose .fig-box.wide {
+	width: min(100%, 460px);
+}
+.prose .fig-box b {
+	display: block;
+	font-weight: 700;
+}
+.prose .fig-box small {
+	display: block;
+	margin-top: 4px;
+	font-size: 13px;
+	color: var(--muted);
+}
+.prose .fig-stubs {
+	height: 20px;
+}
+.prose .fig-stubs.arrow,
+.prose .fig-down {
+	height: 22px;
+}
+.prose .fig-stubs > i,
+.prose .fig-down {
+	position: relative;
+	display: block;
+}
+.prose .fig-stubs > i::before,
+.prose .fig-down::before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 0;
+	bottom: 0;
+	border-left: 1.5px solid var(--ink);
+	transform: translateX(-50%);
+}
+.prose .fig-stubs.arrow > i::after,
+.prose .fig-down.arrow::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 1px;
+	width: 8px;
+	height: 8px;
+	border-right: 1.5px solid var(--ink);
+	border-bottom: 1.5px solid var(--ink);
+	transform: translateX(-50%) rotate(45deg);
+}
+.prose .fig-hbar {
+	height: 0;
+	border-top: 1.5px solid var(--ink);
+	margin: 0 calc((100% - (var(--n, 3) - 1) * var(--gap)) / var(--n, 3) / 2);
+}
+.prose .fig-body.flow .fig-row > .fig-box:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	width: var(--gap);
+	border-top: 1.5px solid var(--ink);
+}
+.prose .fig-body.flow .fig-row > .fig-box:not(:last-child)::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: calc(100% + var(--gap) - 8px);
+	width: 7px;
+	height: 7px;
+	border-top: 1.5px solid var(--ink);
+	border-right: 1.5px solid var(--ink);
+	transform: translateY(-50%) rotate(45deg);
+}
+
+/* 선 그래프 — 선만 SVG, 범례·축 글자는 HTML */
+.prose .fig-legend > span {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 4px;
+}
+.prose .fig-legend svg {
+	display: inline-block;
+	flex: none;
+	width: 40px;
+	height: 10px;
+	margin: 0;
+}
+.prose .fig-axis {
+	position: relative;
+	height: 1.4em;
+	margin-top: 6px;
+	font-size: 13px;
+	color: var(--muted);
+}
+.prose .fig-axis > span {
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+/* 대비 두 칸 */
+.prose .fig-compare {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.prose .fig-compare > div {
+	padding: 0 16px;
+}
+.prose .fig-compare > div + div {
+	border-left: 1.2px solid var(--ink);
+}
+.prose .fig-compare b {
+	display: block;
+	margin: 0 -16px 6px;
+	padding-bottom: 10px;
+	border-bottom: 1.4px solid var(--ink);
+	text-align: center;
+	font-weight: 700;
+}
+.prose .fig-compare span {
+	display: block;
+	padding: 8px 0;
+	word-break: keep-all;
+}
+
 @media (max-width: 720px) {
+	.prose .fig-body {
+		--gap: 12px;
+	}
+	.prose .fig-body.flow {
+		--gap: 22px;
+	}
+	.prose .fig-body.split {
+		--gap: 14%;
+	}
+	.prose .fig-box {
+		padding: 10px 6px;
+	}
+	.prose .fig-compare > div {
+		padding: 0 10px;
+	}
+	.prose .fig-compare b {
+		margin: 0 -10px 6px;
+	}
 	.prose .fig-labels {
 		font-size: 12.5px;
 	}

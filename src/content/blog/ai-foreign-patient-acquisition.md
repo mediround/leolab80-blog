@@ -11,25 +11,7 @@ heroImage: "../../assets/hero-ai-foreign-patient-acquisition.jpg"
 지니와 테오는 정말 많은 일을 한다. 인터뷰 영상을 편집하여 유튜브에 올리고, 숏폼과 카드북 뉴스를 만들어 인스타그램에 올린다. 영어는 물론, 중국어, 태국어, 일본어로 직접 메시지 회신도 한다. 이제 지니와 테오, 그리고 챗지피티의 Dots까지 나오면서, 일반적인 사무도 함께하고 있다.
 
 <figure>
-<svg viewBox="0 0 720 300" width="720" height="300" role="img" aria-labelledby="roles-svg-title" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font-family:inherit">
-  <title id="roles-svg-title">LEO와 함께 일하는 두 AI 에이전트 지니와 테오의 역할</title>
-  <g fill="none" stroke="#111" stroke-width="1.5">
-    <rect x="250" y="24" width="220" height="76" rx="2" stroke-width="2.5"/>
-    <rect x="40" y="200" width="250" height="76" rx="2"/>
-    <rect x="430" y="200" width="250" height="76" rx="2"/>
-    <path d="M360 100 L360 150"/>
-    <path d="M165 150 L555 150"/>
-    <path d="M165 150 L165 200"/>
-    <path d="M555 150 L555 200"/>
-    <path d="M157 190 L165 200 L173 190"/>
-    <path d="M547 190 L555 200 L563 190"/>
-  </g>
-  <g fill="#111" font-size="15" text-anchor="middle">
-    <text x="360" y="56" font-weight="700" font-size="17">LEO</text><text x="360" y="80">검토 · 고칠 점 짚기</text>
-    <text x="165" y="232" font-weight="700">지니 · ChatGPT</text><text x="165" y="256">콘텐츠 제작 · 메시지 회신</text>
-    <text x="555" y="232" font-weight="700">테오 · Claude Code</text><text x="555" y="256">서비스 코딩 · 문의 연결</text>
-  </g>
-</svg>
+<div class="fig-body split"><div class="fig-box strong narrow"><b>LEO</b><small>검토 · 고칠 점 짚기</small></div><div class="fig-down"></div><div class="fig-hbar" style="--n:2"></div><div class="fig-stubs arrow" style="--n:2"><i></i><i></i></div><div class="fig-row" style="--n:2"><div class="fig-box"><b>지니 · ChatGPT</b><small>콘텐츠 제작 · 메시지 회신</small></div><div class="fig-box"><b>테오 · Claude Code</b><small>서비스 코딩 · 문의 연결</small></div></div></div>
 <figcaption>LEO와 함께 일하는 두 AI 에이전트, 지니와 테오</figcaption>
 </figure>
 
@@ -69,27 +51,7 @@ heroImage: "../../assets/hero-ai-foreign-patient-acquisition.jpg"
 그래서 외국인환자를 유치하기 위해 필요한 일부터 정리하기로 했다. 콘텐츠를 보고 유입된 고객에게 답하려면 질문을 파악하고, 필요한 내용을 병원에 확인하고, 방문을 준비할 수 있도록 안내해야 한다. 이 과정에서 어떤 일을 지니가 끝낼 수 있고 어디에 테오의 개발이 필요한지 나누었다. 각 작업을 어디까지 마쳐야 다음 담당자가 이어갈 수 있는지도 함께 정했다.
 
 <figure>
-<svg viewBox="0 0 720 300" width="720" height="300" role="img" aria-labelledby="flow-svg-title" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font-family:inherit">
-  <title id="flow-svg-title">콘텐츠를 보고 들어온 고객에게 답하는 세 단계와 단계마다 나눈 일</title>
-  <g fill="none" stroke="#111" stroke-width="1.5">
-    <rect x="20" y="30" width="200" height="80" rx="2"/>
-    <rect x="260" y="30" width="200" height="80" rx="2"/>
-    <rect x="500" y="30" width="200" height="80" rx="2"/>
-    <path d="M220 70 L260 70"/><path d="M250 62 L260 70 L250 78"/>
-    <path d="M460 70 L500 70"/><path d="M490 62 L500 70 L490 78"/>
-    <rect x="130" y="200" width="460" height="70" rx="2" stroke-width="2.5"/>
-    <path d="M120 110 L120 150 L360 150 L360 200"/>
-    <path d="M360 110 L360 200"/>
-    <path d="M600 110 L600 150 L360 150"/>
-    <path d="M352 190 L360 200 L368 190"/>
-  </g>
-  <g fill="#111" font-size="15" text-anchor="middle">
-    <text x="120" y="62" font-weight="700">질문 파악</text><text x="120" y="86">고객이 무엇을 묻는가</text>
-    <text x="360" y="62" font-weight="700">병원 확인</text><text x="360" y="86">필요한 내용을 병원에</text>
-    <text x="600" y="62" font-weight="700">방문 준비 안내</text><text x="600" y="86">방문을 준비하도록</text>
-    <text x="360" y="230" font-weight="700" font-size="17">단계마다 나눈 것</text><text x="360" y="254">지니가 끝낼 일 · 테오가 개발할 일 · 넘기는 기준</text>
-  </g>
-</svg>
+<div class="fig-body flow"><div class="fig-row" style="--n:3"><div class="fig-box"><b>질문 파악</b><small>고객이 무엇을 묻는가</small></div><div class="fig-box"><b>병원 확인</b><small>필요한 내용을 병원에</small></div><div class="fig-box"><b>방문 준비 안내</b><small>방문을 준비하도록</small></div></div><div class="fig-stubs" style="--n:3"><i></i><i></i><i></i></div><div class="fig-hbar" style="--n:3"></div><div class="fig-down arrow"></div><div class="fig-box strong wide"><b>단계마다 나눈 것</b><small>지니가 끝낼 일 · 테오가 개발할 일 · 넘기는 기준</small></div></div>
 <figcaption>콘텐츠를 보고 들어온 고객에게 답하는 세 단계와, 단계마다 나눈 일</figcaption>
 </figure>
 

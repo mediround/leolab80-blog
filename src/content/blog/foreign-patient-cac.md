@@ -41,25 +41,7 @@ heroImage: "../../assets/hero-foreign-patient-cac.jpg"
 ## 높은 획득비용(CAC)과 낮은 생애가치(LTV)가 만나면 무슨 일이 생기는가
 
 <figure>
-<svg viewBox="0 0 720 300" width="720" height="300" role="img" aria-labelledby="cac-svg-title" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font-family:inherit">
-  <title id="cac-svg-title">높은 획득비용, 낮은 생애가치, 고객 소유권 부재가 겹치는 구조</title>
-  <g fill="none" stroke="#111" stroke-width="1.5">
-    <rect x="20" y="30" width="200" height="80" rx="2"/>
-    <rect x="260" y="30" width="200" height="80" rx="2"/>
-    <rect x="500" y="30" width="200" height="80" rx="2"/>
-    <rect x="200" y="200" width="320" height="70" rx="2" stroke-width="2.5"/>
-    <path d="M120 110 L120 150 L360 150 L360 200"/>
-    <path d="M360 110 L360 200"/>
-    <path d="M600 110 L600 150 L360 150"/>
-    <path d="M352 190 L360 200 L368 190"/>
-  </g>
-  <g fill="#111" font-size="15" text-anchor="middle">
-    <text x="120" y="62" font-weight="700">높은 획득비용</text><text x="120" y="86">CAC 한 명당 수십만 원↑</text>
-    <text x="360" y="62" font-weight="700">낮은 생애가치</text><text x="360" y="86">LTV 한 번 오고 끝</text>
-    <text x="600" y="62" font-weight="700">고객 소유권 부재</text><text x="600" y="86">기록·재방문은 병원 귀속</text>
-    <text x="360" y="230" font-weight="700" font-size="17">한 건으로는 회수 불가</text><text x="360" y="254">진료비가 CAC의 3~4배는 되어야 흑자</text>
-  </g>
-</svg>
+<div class="fig-body"><div class="fig-row" style="--n:3"><div class="fig-box"><b>높은 획득비용</b><small>CAC 한 명당 수십만 원↑</small></div><div class="fig-box"><b>낮은 생애가치</b><small>LTV 한 번 오고 끝</small></div><div class="fig-box"><b>고객 소유권 부재</b><small>기록·재방문은 병원 귀속</small></div></div><div class="fig-stubs" style="--n:3"><i></i><i></i><i></i></div><div class="fig-hbar" style="--n:3"></div><div class="fig-down arrow"></div><div class="fig-box strong center"><b>한 건으로는 회수 불가</b><small>진료비가 CAC의 3~4배는 되어야 흑자</small></div></div>
 <figcaption>높은 획득비용, 낮은 생애가치, 고객 소유권 부재가 겹치는 구조</figcaption>
 </figure>
 
