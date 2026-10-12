@@ -528,6 +528,163 @@ hr {
 	}
 }
 
+/* 대화 재생 그림 — 실제 대화 기록을 HTML 로 옮겨 순서대로 보여준다(2026-10-12 케이론 글 · 대표 지시)
+   글자 = 본문 기준(질문·답 14px · 이름·상태·출처 13px) · 흑백 · 16초 반복 · 동작 줄이기 설정이면 멈춘 완성 화면 */
+.prose .fig-chat {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 18px 16px;
+	border: 1px solid var(--line-thin);
+	background: #fafafa;
+	font-size: 14px;
+	line-height: 1.65;
+}
+.prose .fig-chat-q {
+	align-self: flex-end;
+	max-width: 85%;
+	padding: 8px 12px;
+	background: #111;
+	color: #fff;
+	border-radius: 8px;
+	word-break: keep-all;
+}
+.prose .fig-chat-a {
+	position: relative;
+	align-self: flex-start;
+	max-width: 100%;
+	padding: 10px 14px 12px;
+	background: #ececec;
+	border-radius: 8px;
+	word-break: keep-all;
+}
+.prose .fig-chat-a small,
+.prose .fig-chat-status,
+.prose .fig-chat-src {
+	display: block;
+	font-size: 13px;
+	color: var(--muted);
+}
+.prose .fig-chat-status {
+	position: absolute;
+	top: 32px;
+	left: 14px;
+}
+.prose .fig-chat p,
+.prose .fig-chat ul {
+	margin: 4px 0 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 1.65;
+	text-align: left;
+}
+.prose .fig-chat ul {
+	padding-left: 1.2em;
+	list-style: disc;
+}
+.prose .fig-chat ul ul {
+	margin: 2px 0;
+	list-style: circle;
+}
+.prose .fig-chat li {
+	margin: 2px 0;
+	font-size: 14px;
+}
+.prose .fig-chat .fig-chat-src {
+	margin-top: 8px;
+}
+@keyframes fig-chat-0 {
+	0%, 1.875% { opacity: 0; transform: translateY(4px); }
+	4.375%, 93.75% { opacity: 1; transform: none; }
+	97.5%, 100% { opacity: 0; transform: none; }
+}
+.prose .fig-chat .c0 { animation: fig-chat-0 16s infinite both; }
+@keyframes fig-chat-1 {
+	0%, 7.5% { opacity: 0; transform: translateY(4px); }
+	10.0%, 93.75% { opacity: 1; transform: none; }
+	97.5%, 100% { opacity: 0; transform: none; }
+}
+.prose .fig-chat .c1 { animation: fig-chat-1 16s infinite both; }
+@keyframes fig-chat-2 {
+	0%, 22.5% { opacity: 0; transform: translateY(4px); }
+	25.0%, 93.75% { opacity: 1; transform: none; }
+	97.5%, 100% { opacity: 0; transform: none; }
+}
+.prose .fig-chat .c2 { animation: fig-chat-2 16s infinite both; }
+@keyframes fig-chat-3 {
+	0%, 26.25% { opacity: 0; transform: translateY(4px); }
+	28.75%, 93.75% { opacity: 1; transform: none; }
+	97.5%, 100% { opacity: 0; transform: none; }
+}
+.prose .fig-chat .c3 { animation: fig-chat-3 16s infinite both; }
+@keyframes fig-chat-4 {
+	0%, 30.0% { opacity: 0; transform: translateY(4px); }
+	32.5%, 93.75% { opacity: 1; transform: none; }
+	97.5%, 100% { opacity: 0; transform: none; }
+}
+.prose .fig-chat .c4 { animation: fig-chat-4 16s infinite both; }
+@keyframes fig-chat-5 {
+	0%, 33.75% { opacity: 0; transform: translateY(4px); }
+	36.25%, 93.75% { opacity: 1; transform: none; }
+	97.5%, 100% { opacity: 0; transform: none; }
+}
+.prose .fig-chat .c5 { animation: fig-chat-5 16s infinite both; }
+@keyframes fig-chat-6 {
+	0%, 37.5% { opacity: 0; transform: translateY(4px); }
+	40.0%, 93.75% { opacity: 1; transform: none; }
+	97.5%, 100% { opacity: 0; transform: none; }
+}
+.prose .fig-chat .c6 { animation: fig-chat-6 16s infinite both; }
+@keyframes fig-chat-7 {
+	0%, 41.25% { opacity: 0; transform: translateY(4px); }
+	43.75%, 93.75% { opacity: 1; transform: none; }
+	97.5%, 100% { opacity: 0; transform: none; }
+}
+.prose .fig-chat .c7 { animation: fig-chat-7 16s infinite both; }
+@keyframes fig-chat-8 {
+	0%, 45.0% { opacity: 0; transform: translateY(4px); }
+	47.5%, 93.75% { opacity: 1; transform: none; }
+	97.5%, 100% { opacity: 0; transform: none; }
+}
+.prose .fig-chat .c8 { animation: fig-chat-8 16s infinite both; }
+@keyframes fig-chat-9 {
+	0%, 48.75% { opacity: 0; transform: translateY(4px); }
+	51.25%, 93.75% { opacity: 1; transform: none; }
+	97.5%, 100% { opacity: 0; transform: none; }
+}
+.prose .fig-chat .c9 { animation: fig-chat-9 16s infinite both; }
+@keyframes fig-chat-10 {
+	0%, 52.5% { opacity: 0; transform: translateY(4px); }
+	55.0%, 93.75% { opacity: 1; transform: none; }
+	97.5%, 100% { opacity: 0; transform: none; }
+}
+.prose .fig-chat .c10 { animation: fig-chat-10 16s infinite both; }
+@keyframes fig-chat-status {
+	0%, 7.5% { opacity: 0; }
+	9%, 20% { opacity: 1; }
+	21.5%, 100% { opacity: 0; }
+}
+.prose .fig-chat .fig-chat-status { animation: fig-chat-status 16s infinite both; }
+@media (prefers-reduced-motion: reduce) {
+	.prose .fig-chat * { animation: none !important; opacity: 1 !important; transform: none !important; }
+	.prose .fig-chat .fig-chat-status { display: none; }
+}
+/* 위아래 양방향 세로선 — .fig-down.both 안의 <i> 가 위쪽 화살촉 */
+.prose .fig-down.both {
+	height: 28px;
+}
+.prose .fig-down.both > i {
+	position: absolute;
+	left: 50%;
+	top: 1px;
+	width: 8px;
+	height: 8px;
+	border-left: 1.5px solid var(--ink);
+	border-top: 1.5px solid var(--ink);
+	transform: translateX(-50%) rotate(45deg);
+}
+
+
 .sr-only {
 	position: absolute !important;
 	width: 1px;
