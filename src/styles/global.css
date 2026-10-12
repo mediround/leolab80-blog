@@ -365,6 +365,13 @@ hr {
 .prose .fig-box.strong {
 	border-width: 2.5px;
 }
+.prose .fig-box.invert {
+	background: var(--ink);
+	color: #fff;
+}
+.prose .fig-box.invert small {
+	color: #fff;
+}
 .prose .fig-box.center,
 .prose .fig-box.narrow,
 .prose .fig-box.wide {
