@@ -12,7 +12,7 @@ When you vibe code with the help of an AI agent, you often run into unfamiliar w
 
 You asked it to write code, yet it feels as if you have to learn another language just to understand the result.
 
-You don't need to memorize every developer term. But if you know a few, it becomes easier to judge what the AI is doing, how far it has gotten, and what you should check at the next step.
+You don't need to memorize every developer term. But knowing a few makes it easier to judge what the AI is doing, how far it has gotten, and what to check next.
 
 I organized the terms that come up often, following the flow from the moment you hand a task to AI until the change reaches the live service.
 
@@ -25,9 +25,9 @@ I organized the terms that come up often, following the flow from the moment you
 | **Context** | The information AI refers to when deciding how to do the work. It includes the conversation, code, documents, tool outputs, and so on. | Have it read the existing design and login method first. |
 | **Token** | The unit AI uses to process text and code. It doesn't map exactly to the number of characters or words. | If you pass along long documents and a lot of code, the number of tokens processed goes up too. |
 | **[Context Window](https://platform.claude.com/docs/en/build-with-claude/context-windows)** | The limit on how much information AI can handle in a single pass. | On long tasks, summarize the key decisions and the current status separately and pass them along. |
-| **[Agent](https://www.anthropic.com/engineering/building-effective-agents)** | An AI system that decides its next action based on a goal and moves the work forward using tools. | It reads and edits files, looks at the test results, and fixes things again. |
+| **[Agent](https://www.anthropic.com/engineering/building-effective-agents)** | An AI system that decides its next action based on a goal and moves the work forward using tools. | It reads and edits files, reviews test results, and fixes things again. |
 
-In particular, it helps to understand context as separate from permanent memory. As a conversation gets long, depending on the tool, earlier content may be summarized or partly left out. When you hand ongoing work back to AI, it's useful to give a short summary of the current goal, the conditions already decided, and the problems that remain.
+In particular, it helps separate context from permanent memory. As a conversation gets longer, depending on the tool, earlier content may be summarized or partially omitted. When you hand ongoing work back to AI, it's useful to give a short summary of the current goal, the conditions already decided, and the problems that remain.
 ## Words that describe the structure of the service you're building
 
 For example, think of a feature where an application form appears, the user fills it in, and the submitted information is saved. The screen and the saving process are connected, but they play different roles.
@@ -42,14 +42,14 @@ For example, think of a feature where an application form appears, the user fill
 | **Component** | A reusable part that makes up a screen or feature. | Using the same Apply button on several pages. |
 | **Library** | A ready-made collection of code you can pull in for the features you need. | Pulling in features for date calculations or chart display. |
 | **[Framework](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Overview)** | A foundation that provides the basic structure and way of working for building an application. | Writing pages and server features to fit a set structure. |
-| **Dependency** | Other code or tools a project needs in order to run or to be developed. | Needing a specific version of a library you use. |
+| **Dependency** | Other code or tools a project needs to run or to be developed. | Needing a specific version of a library you use. |
 
 Once you know this distinction, you can make sense of an explanation like “The screen is built, but the save API isn't connected yet.” It means checking separately whether the screen shows up and whether the information is actually saved.
 ## Words for recording and combining changes
 
 | Term | Plain explanation |
 |---|---|
-| **[Git](https://git-scm.com/docs/gittutorial)** | A tool that records and manages the history of changes to code. |
+| **[Git](https://git-scm.com/docs/gittutorial)** | A tool that records and manages the history of code changes. |
 | **[GitHub](https://docs.github.com/en/get-started/start-your-journey/what-is-github)** | A service that stores Git repositories online and supports reviewing changes and collaborating. |
 | **Repository, Repo** | The space where a project's files and change history are managed. |
 | **Branch** | A line of work that splits off from the existing history and carries changes forward separately. |
@@ -69,15 +69,15 @@ When you hand work to several AIs at once, you may come across the word worktree
 | Term | Plain explanation | Good to know |
 |---|---|---|
 | **IDE** | An integrated development environment that helps you edit code, run it, check for errors, and more. | Think of it as the workshop where development work happens. |
-| **Terminal / CLI** | A terminal is a window where you type commands as text, and a CLI is a way of operating programs through commands. | These come up often when AI runs install, run, or check commands. |
+| **Terminal / CLI** | A terminal is a window where you type commands as text, and a CLI is a way to operate programs through commands. | These come up often when AI runs install, run, or check commands. |
 | **[Local / localhost](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)** | Local is the environment of the computer you're working on right now. localhost refers to the very computer making the connection. | If you send someone the localhost address from your computer, it won't take them to the same screen. |
 | **Development** | The environment where you build, modify, and check features. | A development environment can also be connected to external data or services. |
-| **Staging** | An environment set up for a final check before changes go to production. | This is a different meaning from ‘staging’ in Git, where you select the changes to commit. |
+| **Staging** | An environment set up for a final check before changes go to production. | This is different from ‘staging’ in Git, where you select changes to commit. |
 | **[Production](https://vercel.com/docs/deployments/environments)** | The live environment that real users use. | Changes here can affect real users. |
 | **[Environment Variable](https://12factor.net/config)** | A setting value passed to a program from the environment it runs in. | Used to set things like server addresses or feature settings differently for each environment. |
 | **API Key** | A value that, depending on the service, identifies who is making a call or authenticates access to an API. | Secret keys must not be included in public code or in code that is sent to the browser. |
 
-“It worked fine locally” tells you the scope of the environment that was checked. Whether it also works in the live service has to be checked, including the production settings and connection status. And putting a secret in an environment variable doesn't make it safe on its own.
+“It worked fine locally” tells you the scope of the environment that was checked. You also need to check whether it works in the live service, including production settings and connection status. And putting a secret in an environment variable doesn't make it safe on its own.
 ## Words for finding problems and checking that things work
 
 | Term | Plain explanation | Example |
@@ -93,37 +93,37 @@ When you hand work to several AIs at once, you may come across the word worktree
 | **Regression Test** | Checks that existing features didn't break after a change. | After changing sign-up, checking the existing login again too. |
 | **Refactoring** | Improving the internal structure of code while keeping its externally observable behavior the same. | Gathering repeated code into one place so it's easier to modify. |
 
-When you get a report that says “tests passed,” it's worth also looking at **what was tested, and under what conditions**. A check of a calculation feature and a check that completes an application in a real browser cover different ground. If the tests used fake responses, they may not have verified the connection to the real external service.
-Lint and type checks are useful too, but they don't guarantee that the feature the user wants is finished. You can build a program that follows the code rules and still displays application results incorrectly.
+When you get a report that says “tests passed,” it's also worth looking at **what was tested and under what conditions**. Testing a calculation feature and testing a full application flow in a real browser cover different ground. If the tests used fake responses, they may not have verified the connection to the real external service.
+Lint and type checks help, but they don't guarantee the feature the user wants is finished. You can build a program that follows the code rules and still display incorrect application results.
 ## Words you use when shipping finished code to the service
 
 | Term | Plain explanation | Good to know |
 |---|---|---|
 | **Build** | The process of preparing source code in a form that can be run or deployed. | A successful build and a feature that actually works are two separate things to check. |
-| **Deploy** | Putting the prepared program into the environment where it will run. | You can deploy to a test environment, or to the real production environment. |
+| **Deploy** | Putting the prepared program into the environment where it will run. | You can deploy to a test environment or the production environment. |
 | **Hosting** | Providing the operating environment so a website or service can run and be accessed. | The repository that stores code and the environment where the service runs play different roles. |
 | **[CI · Continuous Integration](https://docs.github.com/en/actions/get-started/understand-github-actions)** | A development practice of integrating code changes often while automatically running checks such as builds and tests. | Set it up so automatic checks run when changes are shared. |
-| **[CD · Continuous Delivery / Deployment](https://vercel.com/docs/git)** | Means either keeping changes in a deployable state, or automatically deploying changes that pass the checks. | Check which meaning of CD is in use, and whether it is automatic all the way to actual deployment. |
+| **[CD · Continuous Delivery / Deployment](https://vercel.com/docs/git)** | Means either keeping changes in a deployable state, or automatically deploying changes that pass the checks. | Check which meaning of CD is in use, and whether it automatically deploys all the way to production. |
 | **Rollback** | Going back to a previous version or state when a problem occurs. | Rolling back the code version doesn't automatically restore data that has already changed. |
 
 Some projects are set up so that a push or merge triggers an automatic deploy. So when you hear an explanation like “I'll push,” it's good to know whether a deploy is tied to that step.
 ## MCP
 
-As you connect AI tools, you'll also run into the term “[MCP](https://modelcontextprotocol.io/docs/getting-started/intro).” MCP is an open standard that AI applications use to connect to external data and tools. Depending on the features and permissions of the connected tool, an AI application can read information or carry out tasks.
+As you connect AI tools, you'll also run into the term “[MCP](https://modelcontextprotocol.io/docs/getting-started/intro).” MCP is an open standard that AI applications use to connect to external data and tools. Depending on the connected tool's features and permissions, an AI application can read information or carry out tasks.
 ## Your questions change
 
-Once you know a few terms, the sentences you use to make requests to AI become more specific too.
+Once you know a few terms, the sentences you use to make requests to AI become more specific, too.
 
-Instead of “Is it done?” you can ask like this.
+Instead of “Is it done?” you can ask:
 
 > “Tell me how far you've gotten, step by step: code changes, tests, commit, push, and deploy. Also explain which features you actually checked and which parts you haven't been able to check yet.”
 
 Before changes are made, you can confirm the scope of the work.
 
-> “First explain which screens and features this request will change. Also lay out the impact on existing features and how to check whether the work is done.”
+> “First, explain which screens and features this request will change. Also lay out the impact on existing features and how to check whether the work is done.”
 
 When reviewing the results, you can focus on understanding what changed.
 
 > “Based on the diff, explain in plain words what you changed and why. Also tell me how to revert it if something goes wrong.”
 
-The most practical moment to learn developer terms is when you ask questions like these. You become able to read the current status from AI's explanation of its work and judge what to do next.
+The most practical moment to learn developer terms is when you ask questions like these. You can read the current status from the AI's explanation of its work and decide what to do next.

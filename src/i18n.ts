@@ -154,7 +154,7 @@ export const UI: Record<Lang, Dict> = {
 		blogDescription:
 			'Every LEOLAB80 post, newest first. LEO writes about what he has seen while attracting international patients, what he has tried with AI, and the thinking in between.',
 		aboutDescription:
-			'About LEO, who has worked to attract international patients since 2009 and now builds and runs MyClinic. He created LEOLAB80 to record the problems, questions, and choices he encounters in his work.',
+			'LEO has worked to attract international patients since 2009 and now builds and runs MyClinic. He created LEOLAB80 to record the problems, questions, and choices he encounters in his work.',
 		categories: {
 			'외국인환자 유치': 'Attracting International Patients',
 			'AI로 외국인환자 유치하기': 'Attracting International Patients with AI',
@@ -163,11 +163,11 @@ export const UI: Record<Lang, Dict> = {
 		},
 		categoryDescriptions: {
 			'외국인환자 유치':
-				'What LEO has seen in the field since he started attracting international patients in 2009: acquisition costs, changing customers, and the role of the broker.',
+				'What LEO has seen in the field since he started attracting international patients in 2009: acquisition costs, changing customers, and the broker\'s role.',
 			'AI로 외국인환자 유치하기':
-				'A record of attracting international patients with AI. Working with ChatGPT and Claude Code on content and customer guidance, and sorting out what to hand to AI and what people must check.',
+				'A record of attracting international patients with AI and working with ChatGPT and Claude Code on content and customer guidance, and sorting out what to hand to AI and what people must check.',
 			비즈니스:
-				'Business questions LEO has faced while attracting international patients: how to look at customers and markets, products and revenue, based on what he has read and lived through.',
+				'Business questions LEO has faced while attracting international patients: how to view customers and markets, products and revenue, based on what he has read and lived through.',
 			노트: 'Short notes LEO writes as he works: lessons from running this blog and building a service, and questions he has not answered yet.',
 		},
 		navLabel: 'Categories',
@@ -219,10 +219,10 @@ export const UI: Record<Lang, Dict> = {
 		},
 		about: [
 			"Hi, I'm LEO. I have worked to attract international patients since 2009, and today I build and run MyClinic.",
-			'I like looking for new things, thinking about familiar work from a different angle, and turning those thoughts into something concrete. I also like connecting my experiences into a single story. But I still have many challenges to work through in turning ideas into a real service and achieving consistent results with it.',
+			'I like exploring new things, looking at familiar work from a different angle, and turning those thoughts into something concrete. I also like connecting my experiences into a single story. But I still have many challenges in turning ideas into a real service and achieving consistent results.',
 			'I often encountered those challenges while attracting international patients. From promoting hospitals overseas and answering inquiries from abroad to aligning different expectations, bringing in a single international patient takes a lot of time and effort. Even so, turning that effort into customer satisfaction and business revenue was never simple. While handling the work in front of me, I wanted to understand why the same difficulties kept coming back.',
 			"I don't want to keep doing the same work just because I have done it for a long time. I think about whether I can use my experience to make something useful for someone, and whether that work can also give me a reason to keep going. Looking back on what I have done, I found myself examining what I like doing, what I want to do well, and the realities I am actually responsible for.",
-			"When I look again at the difficulties I have faced in the field, I also see new possibilities. If other agencies and hospitals face the same problems I do, couldn't the way of solving them become a service in itself? Couldn't I build a way that helps customers and also lets the people who provide that help keep working sustainably?",
+			"When I look again at the difficulties I have faced in the field, I also see new possibilities. If other agencies and hospitals face the same problems I do, couldn't the way of solving them become a service in itself? Couldn't I build a way that helps customers while letting the people who provide that help keep working sustainably?",
 			'MyClinic is an attempt to answer that question with a real service. I want to reduce the friction international visitors face as they try to understand Korean medical care and prepare for a visit. I am thinking about how to deliver the information they need, what to verify, and how to guide them to the next step. I want to turn what I have learned in the field into something many people can use together.',
 			'My interest in AI, and in learning how to work with it, connects to the same question. I am exploring whether it can help me turn my ideas into concrete results, cut down repetitive work, and focus more on the judgments that matter to me. While building the service, I am also learning what I can hand over to AI and what I need to understand and check myself.',
 			'This blog, LEOLAB80, is a place to record and share that process in my own words. As I keep going, I want to write down the problems I met, what I struggled with, and why I made the choices I did. Writing helps me organize my thinking, and I hope it lets me revisit those judgments later.',

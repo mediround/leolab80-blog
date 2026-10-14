@@ -1,6 +1,6 @@
 ---
 title: "How Much Does It Cost to Attract One International Patient? The CAC of the Facilitation Business"
-description: "International patients top 2 million, yet no one asks what one costs to bring in. High CAC, low LTV, no ownership: unit economics from a facilitator since 2009."
+description: "International patients top 2 million, yet no one asks what it costs to bring one in: high CAC, low LTV, no ownership. Unit economics from a facilitator since 2009."
 sourceDate: "2026-09-05T15:33:40"
 ---
 
@@ -26,13 +26,13 @@ This is not just about getting someone to click an ad banner. You have to overco
 
 ## Why they don't come back, even after all that effort (Low LTV)
 
-In business, a high CAC is justified only if the profit a customer brings over their lifetime, that is, customer lifetime value (LTV), is much larger than that.
+In business, a high CAC is justified only if a customer's lifetime profit, customer lifetime value (LTV), is much higher than that.
 
-But the vast majority of international patients visit only once. They come while traveling in Korea, or make one trip for a procedure, pay, go back home, and that is the end of it. They can't come in regularly for skin care like a neighborhood regular, and they can't easily bring friends along. You spend a huge amount to bring them in, and the relationship ends with a single purchase. In other words, the second tragedy is that lifetime value (LTV) is far too low.
+But most international patients visit only once. They come while traveling in Korea, or make one trip for a procedure, pay, go back home, and that is the end of it. They can't come in regularly for skin care like a neighborhood regular, and they can't easily bring friends along. You spend a huge amount to bring them in, and the relationship ends with a single purchase. In other words, the second tragedy is that lifetime value (LTV) is far too low.
 
 ## Why even that one patient isn't fully "my customer"
 
-If you are a broker (an agency or brokering service) rather than a clinic, this is where it hurts the most. After you absorb a huge CAC and hand the patient over to a clinic, that patient ends up as "the clinic's customer."
+If you are a broker (an agency or brokering service) rather than a clinic, this is where it hurts the most. After you absorb a huge CAC and hand the patient over to a clinic, that patient becomes "the clinic's customer."
 
 The patient's medical records, their satisfaction after the procedure, and any chance of a next visit all belong to the clinic. Even if that patient comes back to Korea, the next transaction has nothing to do with me. When a customer you paid so much to bring in leaves your hands completely the moment they arrive, you can't enjoy the compounding effect of business.
 
@@ -43,11 +43,11 @@ The patient's medical records, their satisfaction after the procedure, and any c
 <figcaption>A structure where high acquisition cost, low lifetime value, and no customer ownership overlap</figcaption>
 </figure>
 
-Looking at these three facts, it is honestly bleak. An overwhelmingly high acquisition cost (CAC) has to be covered by a far too low lifetime value (LTV), and with no ownership of the customer either, there is no way to make up the loss.
+Looking at these three facts, it is honestly bleak. An overwhelmingly high acquisition cost (CAC) has to be covered by a far too low lifetime value (LTV), and with no customer ownership, there is no way to make up the loss.
 
-By my rough estimate based on experience in the field, attracting one international patient costs several hundred thousand won or more. But what if that patient comes in, gets one low-priced minor cosmetic procedure or a skin care treatment, and leaves? The revenue from that one case can never recover the acquisition cost. To turn a profit on a single case, the treatment fee has to be at least [3 to 4 times the CAC (in Korean)](https://www.forentrepreneurs.com/ko/ltv/), and unless it is major plastic surgery, many specialties can't clear that bar.
+By my rough estimate based on experience in the field, attracting one international patient costs several hundred thousand won or more. But what if that patient comes in, gets one low-priced minor cosmetic procedure or a skin care treatment, and leaves? Revenue from that one case can never cover the acquisition cost. To turn a profit on a single case, the treatment fee has to be at least [3 to 4 times the CAC (in Korean)](https://www.forentrepreneurs.com/ko/ltv/), and unless it is major plastic surgery, many specialties can't clear that bar.
 
-On top of that, [the market isn't what it used to be](/en/blog/seventeen-years/). With the rise of social media like TikTok and Instagram, information has become extremely transparent, and clinics now have their own multilingual coordinators and talk to overseas patients directly. The value of the brokering business, which earned facilitation fees by providing "information on medical institutions" and "interpretation," is quickly converging to zero.
+On top of that, [the market isn't what it used to be](/en/blog/seventeen-years/). With the rise of social media like TikTok and Instagram, information has become extremely transparent, and clinics now have their own multilingual coordinators and talk directly to overseas patients. The value of the brokering business, which earned facilitation fees by providing "information on medical institutions" and "interpretation," is quickly converging to zero.
 
 ## Why I keep at it in this field anyway
 
