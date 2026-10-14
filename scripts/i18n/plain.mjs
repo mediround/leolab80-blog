@@ -1,7 +1,7 @@
 // 번역 md → Grammarly 에 넣을 평문 (제목·설명·본문, 그림 글자 포함). node plain.mjs <repo> <lang> <slug>
 import fs from 'node:fs'; import path from 'node:path'; import { createRequire } from 'node:module';
 const [repo, lang, slug] = process.argv.slice(2);
-const require = createRequire(path.join(repo, 'package.json'));
+const require = createRequire(path.resolve(repo, 'package.json'));
 const { micromark } = require('micromark'); const { gfm, gfmHtml } = require('micromark-extension-gfm');
 const raw = fs.readFileSync(path.join(repo, `src/content/blog-${lang}/${slug}.md`), 'utf8');
 const m = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);

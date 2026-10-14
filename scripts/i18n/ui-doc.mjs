@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 const [repo, out] = process.argv.slice(2);
-const require = createRequire(path.join(repo, 'package.json'));
+const require = createRequire(path.resolve(repo, 'package.json'));
 const esbuild = require('esbuild');
 const tmp = path.join(path.dirname(out), '_i18n.bundle.mjs');
 await esbuild.build({ entryPoints: [path.join(repo, 'src/i18n.ts')], bundle: true, format: 'esm', platform: 'node', outfile: tmp, logLevel: 'error' });

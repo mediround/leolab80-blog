@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 const [repo, slug, out] = process.argv.slice(2);
-const require = createRequire(path.join(repo, 'package.json'));
+const require = createRequire(path.resolve(repo, 'package.json'));
 const { micromark } = require('micromark');
 let gfm, gfmHtml;
 try { ({ gfm, gfmHtml } = require('micromark-extension-gfm')); } catch {}
