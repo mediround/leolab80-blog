@@ -2,6 +2,8 @@
 title: "Attracting International Patients on My Own with AI — How Far Can AI Go?"
 description: "My experience attracting international patients with Genie (ChatGPT) and Theo (Claude Code), from video editing to customer guidance: what worked, what needed human input, and how I reorganized our workflow."
 sourceDate: "2026-10-08T23:07:47"
+genieReviewed: "2026-10-14"
+grammarlyChecked: "2026-10-14"
 ---
 
 I work with Genie and Theo. Genie is ChatGPT, and Theo is Claude Code. In our work attracting international patients for MyClinic, Genie mainly produces content, and Theo codes the service.

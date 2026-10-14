@@ -2,6 +2,8 @@
 title: "Attracting International Patients for 17 Years: What Has Changed, and What Hasn't"
 description: "I began in 2009. Information is common; hospitals go direct; introductions pay less. But trust, language, and distance remain—a 17-year search for what lasts."
 sourceDate: "2026-07-14T15:30:00"
+genieReviewed: "2026-10-14"
+grammarlyChecked: "2026-10-14"
 ---
 
 Between the day I started this work 17 years ago and now, what has changed about bringing a single international patient to Korea?

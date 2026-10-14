@@ -2,6 +2,8 @@
 title: "独自用AI招揽外国患者——AI能做到哪一步？"
 description: "我和Genie（ChatGPT）、Theo（Claude Code）一起做外国患者招揽，从视频剪辑到客户引导都交给它们，记录下做得好的地方、仍需人手的地方，以及重新梳理运营方式的过程。"
 sourceDate: "2026-10-08T23:07:47"
+genieReviewed: "2026-10-14"
+grammarlyChecked: "2026-10-14"
 ---
 
 我和Genie、Theo一起工作。Genie是ChatGPT，Theo是Claude Code。在MyClinic的外国患者招揽工作中，Genie主要负责内容制作，Theo负责服务的编程工作。

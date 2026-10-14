@@ -2,6 +2,8 @@
 title: "How Much Does It Cost to Attract One International Patient? The CAC of the Facilitation Business"
 description: "International patients top 2 million, yet no one asks what it costs to bring one in: high CAC, low LTV, no ownership. Unit economics from a facilitator since 2009."
 sourceDate: "2026-09-05T15:33:40"
+genieReviewed: "2026-10-14"
+grammarlyChecked: "2026-10-14"
 ---
 
 Put simply, customer acquisition cost (CAC) means "all the costs incurred to acquire one actual paying customer (advertising, labor, sales expenses, and so on)."

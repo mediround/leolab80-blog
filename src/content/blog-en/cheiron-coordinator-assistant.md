@@ -2,6 +2,8 @@
 title: "How I Used AI to Build an AI Chatbot That Helps Medical Interpreter-Coordinators"
 description: "How I built Chiron, an AI chatbot that supports international patient consultations, with attention to accuracy and consultation time, sample-question tests, and four essentials for development."
 sourceDate: "2026-10-12T23:18:30"
+genieReviewed: "2026-10-14"
+grammarlyChecked: "2026-10-14"
 ---
 
 I built an AI chatbot for MyClinic that supports medical interpreter-coordinators during consultations with international patients. Its role is to help a medical interpreter-coordinator, during a consultation with an international patient, find clinic information, prices, and procedure descriptions, and answer more accurately. International patients don't talk to the AI chatbot; a person does the consulting, with help from the AI chatbot. I named the AI chatbot Chiron. I'm told it is the name of the teacher who taught countless heroes in Greek mythology.

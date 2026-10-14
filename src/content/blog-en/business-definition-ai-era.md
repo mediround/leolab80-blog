@@ -2,6 +2,8 @@
 title: "The Definition of Business That Will Never Change, Even in the AI Era"
 description: "AI lets one person do more, but that isn't business success. Customer-support and Kenyan small-business studies show the gap, and I restate what business is."
 sourceDate: "2026-10-13T21:40:36"
+genieReviewed: "2026-10-14"
+grammarlyChecked: "2026-10-14"
 ---
 
 Working with AI, I can try more things on my own. I create content, draft replies to customers, and build features for the service. With the output right in front of me, it feels as if the business has grown just as much.

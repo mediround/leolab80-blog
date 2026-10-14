@@ -2,6 +2,8 @@
 title: "Developer Terms Worth Knowing, Even When AI Does the Coding"
 description: "Commit, branch, build, CI: terms you encounter while vibe coding. I explain the terms needed to understand what AI is doing and how far it has progressed, following the workflow from the initial request to deployment."
 sourceDate: "2026-09-10T20:56:00"
+genieReviewed: "2026-10-14"
+grammarlyChecked: "2026-10-14"
 ---
 
 When you vibe code with the help of an AI agent, you often run into unfamiliar words.

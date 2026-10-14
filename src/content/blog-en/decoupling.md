@@ -2,6 +2,8 @@
 title: "Decoupling: Splitting the Value Chain of Attracting International Patients."
 description: "More customers now research Korean hospitals and procedures in advance. I use Teixeira's decoupling to consider separating hospital comparison support from booking, weighing customer effort and revenue."
 sourceDate: "2026-10-11T17:20:53"
+genieReviewed: "2026-10-14"
+grammarlyChecked: "2026-10-14"
 ---
 
 More customers now look up Korean hospitals and procedures in advance. By the time a customer turns to a broker, they may have already done part of the hospital-selection work elsewhere. It has become harder to provide as much value as before just by relaying information between international patients and Korean hospitals.

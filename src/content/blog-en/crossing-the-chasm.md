@@ -2,6 +2,8 @@
 title: "Attracting International Patients Before and After the Pandemic, Through the Lens of Crossing the Chasm"
 description: "International patients grew from about 60,000 in 2009 to about 2.01 million in 2025, but business got harder. I revisit how customers changed via Crossing the Chasm."
 sourceDate: "2026-10-11T13:53:53"
+genieReviewed: "2026-10-14"
+grammarlyChecked: "2026-10-14"
 ---
 
 In 2009, when I had just started attracting international patients, it was easier than it is now to introduce Korean medical services to foreigners and get customers to choose them. K-culture, including Korean dramas, and K-beauty were growing popular in Greater China. At the time, my background as a former traditional Chinese medicine doctor in China also worked in my favor as a broker. That is how I ran my facilitation business without much trouble for about ten years.
