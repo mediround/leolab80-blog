@@ -4,7 +4,7 @@ description: "International patients top 2 million, yet no one asks what one cos
 sourceDate: "2026-09-05T15:33:40"
 ---
 
-Put simply, customer acquisition cost (CAC) means "all the costs spent to turn one person into an actual paying customer (advertising, labor, sales expenses, and so on)."
+Put simply, customer acquisition cost (CAC) means "all the costs incurred to acquire one actual paying customer (advertising, labor, sales expenses, and so on)."
 
 When people talk about the market for attracting international patients, their questions usually come down to one thing.
 
@@ -32,7 +32,7 @@ But the vast majority of international patients visit only once. They come while
 
 ## Why even that one patient isn't fully "my customer"
 
-If you are an intermediary (an agency or brokering service) rather than a clinic, this is where it hurts the most. After you absorb a huge CAC and hand the patient over to a clinic, that patient ends up as "the clinic's customer."
+If you are a broker (an agency or brokering service) rather than a clinic, this is where it hurts the most. After you absorb a huge CAC and hand the patient over to a clinic, that patient ends up as "the clinic's customer."
 
 The patient's medical records, their satisfaction after the procedure, and any chance of a next visit all belong to the clinic. Even if that patient comes back to Korea, the next transaction has nothing to do with me. When a customer you paid so much to bring in leaves your hands completely the moment they arrive, you can't enjoy the compounding effect of business.
 
@@ -45,7 +45,7 @@ The patient's medical records, their satisfaction after the procedure, and any c
 
 Looking at these three facts, it is honestly bleak. An overwhelmingly high acquisition cost (CAC) has to be covered by a far too low lifetime value (LTV), and with no ownership of the customer either, there is no way to make up the loss.
 
-(Going by my feel from the field,) attracting one international patient actually costs several hundred thousand won or more. But what if that patient comes in, gets one low-priced minor cosmetic procedure or a skin care treatment, and leaves? The revenue from that one case can never recover the acquisition cost. To turn a profit on a single case, the treatment fee has to be at least [3 to 4 times the CAC (in Korean)](https://www.forentrepreneurs.com/ko/ltv/), and unless it is major plastic surgery, many specialties can't clear that bar.
+By my rough estimate based on experience in the field, attracting one international patient costs several hundred thousand won or more. But what if that patient comes in, gets one low-priced minor cosmetic procedure or a skin care treatment, and leaves? The revenue from that one case can never recover the acquisition cost. To turn a profit on a single case, the treatment fee has to be at least [3 to 4 times the CAC (in Korean)](https://www.forentrepreneurs.com/ko/ltv/), and unless it is major plastic surgery, many specialties can't clear that bar.
 
 On top of that, [the market isn't what it used to be](/en/blog/seventeen-years/). With the rise of social media like TikTok and Instagram, information has become extremely transparent, and clinics now have their own multilingual coordinators and talk to overseas patients directly. The value of the brokering business, which earned facilitation fees by providing "information on medical institutions" and "interpretation," is quickly converging to zero.
 

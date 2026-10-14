@@ -150,14 +150,14 @@ export const UI: Record<Lang, Dict> = {
 	en: {
 		siteTagline: 'A blog I started to get better at attracting international patients',
 		siteDescription:
-			'Notes on attracting international patients to Korea, on business, and on what lies in between. Written by LEO.',
+			'Notes on attracting international patients, on business, and on what lies in between. Written by LEO.',
 		blogDescription:
 			'Every LEOLAB80 post, newest first. LEO writes about what he has seen while attracting international patients, what he has tried with AI, and the thinking in between.',
 		aboutDescription:
-			'About LEO, who has worked in international patient attraction since 2009 and now builds and runs MyClinic. LEOLAB80 is where he records the problems, questions, and choices he meets along the way.',
+			'About LEO, who has worked to attract international patients since 2009 and now builds and runs MyClinic. He created LEOLAB80 to record the problems, questions, and choices he encounters in his work.',
 		categories: {
-			'외국인환자 유치': 'International Patients',
-			'AI로 외국인환자 유치하기': 'Attracting Patients with AI',
+			'외국인환자 유치': 'Attracting International Patients',
+			'AI로 외국인환자 유치하기': 'Attracting International Patients with AI',
 			비즈니스: 'Business',
 			노트: 'Notes',
 		},
@@ -218,9 +218,9 @@ export const UI: Record<Lang, Dict> = {
 			preview: 'Preview — review not finished',
 		},
 		about: [
-			"Hi, I'm LEO. I have worked in international patient attraction since 2009, and today I build and run MyClinic.",
-			'I like looking for new things, thinking about familiar work from a different angle, and turning those thoughts into something concrete. I also like connecting my experiences into a single story. But turning ideas into a real service, and turning that service into steady results, still leaves me with plenty of homework.',
-			'I ran into that homework often while attracting international patients. From promoting hospitals overseas and answering inquiries from abroad to aligning different expectations, bringing in a single international patient takes a lot of time and effort. Even so, turning that effort into customer satisfaction and business revenue was never simple. While handling the work in front of me, I wanted to understand why the same difficulties kept coming back.',
+			"Hi, I'm LEO. I have worked to attract international patients since 2009, and today I build and run MyClinic.",
+			'I like looking for new things, thinking about familiar work from a different angle, and turning those thoughts into something concrete. I also like connecting my experiences into a single story. But I still have many challenges to work through in turning ideas into a real service and achieving consistent results with it.',
+			'I often encountered those challenges while attracting international patients. From promoting hospitals overseas and answering inquiries from abroad to aligning different expectations, bringing in a single international patient takes a lot of time and effort. Even so, turning that effort into customer satisfaction and business revenue was never simple. While handling the work in front of me, I wanted to understand why the same difficulties kept coming back.',
 			"I don't want to keep doing the same work just because I have done it for a long time. I think about whether I can use my experience to make something useful for someone, and whether that work can also give me a reason to keep going. Looking back on what I have done, I found myself examining what I like doing, what I want to do well, and the realities I am actually responsible for.",
 			"When I look again at the difficulties I have faced in the field, I also see new possibilities. If other agencies and hospitals face the same problems I do, couldn't the way of solving them become a service in itself? Couldn't I build a way that helps customers and also lets the people who provide that help keep working sustainably?",
 			'MyClinic is an attempt to answer that question with a real service. I want to reduce the friction international visitors face as they try to understand Korean medical care and prepare for a visit. I am thinking about how to deliver the information they need, what to verify, and how to guide them to the next step. I want to turn what I have learned in the field into something many people can use together.',
@@ -301,7 +301,7 @@ export const UI: Record<Lang, Dict> = {
 			'你好，我是 LEO。我从2009年开始从事外国患者招揽工作，现在开发和运营 MyClinic。',
 			'我喜欢寻找新事物，从不同角度思考熟悉的工作，再把这些想法变成具体的东西。我也喜欢把经历过的事情串联起来，讲成一个完整的故事。不过，把想法做成真正的服务，并让它持续带来成果，对我来说仍有很多课题要解决。',
 			'在从事外国患者招揽的过程中，我经常遇到这样的课题。从向海外介绍医院、回复外国人的咨询，到协调彼此不同的期待，招揽一位外国患者需要投入大量的时间和精力。即便如此，让这些努力转化为客户的满意和企业的收益，这个过程从来都不简单。在处理眼前工作的同时，我也想弄清楚为什么类似的困难总是反复出现。',
-			'我不想仅仅因为做了很久，就一直做同样的事。我在思考，能否凭借这些年的经验做出对别人有用的东西，这件事又能否成为我继续做下去的理由。在回顾过去工作的过程中，我开始同时审视自己喜欢的事、想做好的事，以及实际需要承担的现实。',
+			'我不想仅仅因为做了很久，就一直做同样的事。我在思考，能否凭借这些年的经验做出对别人有用的东西，这件事又能否成为我继续做下去的理由。在回顾过去工作的过程中，我开始同时审视自己喜欢的事、想做好的事，以及现实中必须承担的责任。',
 			'重新审视在一线遇到的困难，也能看到新的可能性。如果其他机构和医院也面临和我一样的问题，那么解决这些问题的方法本身，能不能成为一项服务？能不能找到一种方式，既能帮助客户，也能让提供帮助的人持续工作下去？',
 			'MyClinic 就是把这个问题落实为真正服务的一次尝试。我希望减少外国人在了解韩国医疗、准备来访的过程中遇到的不便。我在思考如何传达他们需要的信息、需要确认哪些内容，以及如何引导下一步。我想把在一线积累的经验，做成许多人可以共同使用的方式。',
 			'关注 AI、学习如何与 AI 一起工作，也和这些思考相连。我在探索能否借助 AI 把想法变成具体成果、减少重复性工作，并更专注于我所重视的判断。在打造服务的过程中，我也在学习哪些事可以交给 AI，哪些部分需要我自己理解和确认。',

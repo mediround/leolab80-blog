@@ -18,6 +18,6 @@ Doing an already-defined customer support job better is different from applying 
 
 ## It turns out not every cost AI cuts becomes my profit
 
-When AI lowers the cost of translation and content production, there's room to improve profits. You can also put AI on customer consultations and save on labor costs. Adding more channels for receiving inquiries doesn't add much of a burden. But competitors use similar tools, too.
+When AI lowers the cost of translation and content production, there's room to improve profits. You can also use AI to handle customer consultations and save on labor costs. Adding more channels for receiving inquiries doesn't add much of a burden. But competitors use similar tools, too.
 
 So if competitors get similar efficiency from AI, the core of competition now becomes what service we offer that carries value only we can provide. The fact that you got paid isn't enough to call it a good business. In the end, a business is **delivering value to customers, getting paid for it, and keeping that work going, so value has to come first, before money.**

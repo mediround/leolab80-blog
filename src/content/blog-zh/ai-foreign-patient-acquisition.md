@@ -6,16 +6,16 @@ sourceDate: "2026-10-08T23:07:47"
 
 我和Genie、Theo一起工作。Genie是ChatGPT，Theo是Claude Code。在MyClinic的外国患者招揽工作中，Genie主要负责制作内容，Theo负责服务的编程工作。
 
-Genie和Theo做的事情真的很多。它们剪辑采访视频并上传到YouTube，制作短视频和卡片新闻发布到Instagram。除了英语，它们还直接用中文、泰语、日语回复消息。如今有了Genie和Theo，再加上ChatGPT的Dots也推出了，连一般的办公事务也在和我一起做。
+Genie和Theo做的事情真的很多。它们剪辑采访视频并上传到YouTube，制作短视频和卡片式图文，发布到Instagram。除了英语，它们还直接用中文、泰语、日语回复消息。如今有了Genie和Theo，再加上ChatGPT的Dots也推出了，连一般的办公事务也在和我一起做。
 
 <figure>
 <div class="fig-body split"><div class="fig-box strong narrow"><b>LEO</b><small>审阅 · 指出要改的地方</small></div><div class="fig-down"></div><div class="fig-hbar" style="--n:2"></div><div class="fig-stubs arrow" style="--n:2"><i></i><i></i></div><div class="fig-row" style="--n:2"><div class="fig-box"><b>Genie · ChatGPT</b><small>内容制作 · 回复消息</small></div><div class="fig-box"><b>Theo · Claude Code</b><small>服务编程 · 咨询接入</small></div></div></div>
 <figcaption>与LEO一起工作的两个AI智能体：Genie和Theo</figcaption>
 </figure>
 
-## 一个AI智能体，就顶得上4到5名员工。
+## 我发现，一个AI智能体就能承担4到5名员工的工作。
 
-Genie从拍摄的原始素材中挑选片段，制作了一部约3分35秒的正片，以及在此基础上重新剪辑的五条短视频。它把内容分成到访前须知、与医护人员相处的经历、翻译、住宿与出行等部分，并加上了英文和中文字幕。它还清理了残留旧品牌的画面，也准备好了封面和发布文案。
+Genie从拍摄的原始素材中挑选片段，制作了一部约3分35秒的正片，以及在此基础上重新剪辑的五条短视频。它把内容分成到访前须知、与医护人员相处的经历、口译、停留与出行等部分，并加上了英文和中文字幕。它还清理了残留旧品牌的画面，也准备好了封面和发布文案。
 
 <figure>
 <iframe width="720" height="405" src="https://www.youtube.com/embed/jNwSiaQgaPY" title="Rhinoplasty in Korea: From Video Consultation to Recovery | Steven" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;width:100%;height:auto;aspect-ratio:16/9;border:0"></iframe>

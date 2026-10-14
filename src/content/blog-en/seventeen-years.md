@@ -33,12 +33,12 @@ Three things have not changed, either.
 
 **Trust is still hard.** More information did not make believing any easier. If anything, it is the opposite. The more information overflows, the harder it is to know what to believe. The fatigue of telling an ad from a review, and the real from the made-up, has grown. The flood of information has not quenched the thirst for trust.
 
-**Language and distance have not changed.** Screens erased borders, but they cannot erase the body. Patients still have to fly thousands of kilometers to a country where they do not speak the language. They need an interpreter, they get lost in an unfamiliar city, and when something goes wrong, they have no idea where to turn. That physical fact has not moved an inch in 17 years.
+**Language and distance have not changed.** Screens have erased borders, but the body still has to cross them. Patients still have to fly thousands of kilometers to a country where they do not speak the language. They need an interpreter, they get lost in an unfamiliar city, and when something goes wrong, they have no idea where to turn. That physical fact has not moved an inch in 17 years.
 
-**When the procedure ends, they go home.** Even a patient you worked hard to bring here often gets one procedure, goes back to their home country, and that is the end of it. Repeat visits are still rare, and care after they return home is still a blind spot. [Earning lasting value from a single patient](/en/blog/foreign-patient-cac/) was an unsolved problem then, and it still is now.
+**When the procedure ends, they go home.** Even a patient you worked hard to bring here often gets one procedure, goes back to their home country, and that is the end of it. Repeat visits remain uncertain, and care after they return home is still a blind spot. [Earning lasting value from a single patient](/en/blog/foreign-patient-cac/) was an unsolved problem then, and it still is now.
 
 <figure>
-<div class="fig-body"><div class="fig-compare"><div><b>What changed</b><span>— Information became common</span><span>— Hospitals go direct</span><span>— Introductions have worn thin</span></div><div><b>What stayed the same</b><span>— Trust is still hard</span><span>— Language and distance, unchanged</span><span>— After the procedure, they go home</span></div></div></div>
+<div class="fig-body"><div class="fig-compare"><div><b>What changed</b><span>— Information became common</span><span>— Hospitals go direct</span><span>— The value of introductions has declined</span></div><div><b>What stayed the same</b><span>— Trust is still hard</span><span>— Language and distance, unchanged</span><span>— After the procedure, they go home</span></div></div></div>
 <figcaption>Technology increased the <b>quantity</b> of touchpoints,<br>but it could not increase the <b>quality</b> of trust.</figcaption>
 </figure>
 
@@ -46,7 +46,7 @@ Three things have not changed, either.
 
 There is one illusion here that has fooled us for a long time. It is the belief that when tools get better, the problem gets solved too.
 
-What technology changed is the quantity of touchpoints. There are more routes to reach patients. But reaching people and getting them to trust you are two different things. Even if your channels grow to ten, nothing happens if the person on the other side of them cannot get past "Can I trust this hospital?" With every new tool, the problem of trust only moves somewhere else; it does not disappear.
+What technology changed is the quantity of touchpoints. There are more routes to reach patients. But reaching people and building trust are two different things. Even if your channels grow to ten, nothing happens if the person on the other side of them cannot get past "Can I trust this hospital?" With every new tool, the problem of trust only moves somewhere else; it does not disappear.
 
 Here is the paradox. The more common information has become, the more precious the work of picking out what is truly worth trusting has become. What becomes common falls in value, and what becomes rare rises in value. What is fading is connection, and what is rising is trust.
 
@@ -60,4 +60,4 @@ If the value of brokering information is fading, the answer is to move away from
 
 The world will keep changing. New tools will come out again, and the face of competition will change again. The past 17 years have already answered what to hold on to each time.
 
-In 2009 and today, the essence of this work comes down to one thing. Putting a stranger at ease so they can cross a border. The way to last in a changing world is not to chase the new faster than anyone, but to guard the place that does not change more deeply than anyone.
+In 2009 and today, the essence of this work comes down to one thing. Putting a stranger at ease so they can cross a border. The way to last in a changing world is not to chase the new faster than anyone, but to stay more firmly rooted in what does not change than anyone else.

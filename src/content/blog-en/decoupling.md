@@ -1,6 +1,6 @@
 ---
 title: "Decoupling: Splitting the Value Chain of Attracting International Patients."
-description: "More customers research Korean hospitals early. I use Teixeira's decoupling to split hospital comparison from booking and weigh effort and revenue questions."
+description: "More customers now research Korean hospitals and procedures in advance. I use Teixeira's decoupling to consider separating hospital comparison support from booking, weighing customer effort and revenue."
 sourceDate: "2026-10-11T17:20:53"
 ---
 
@@ -13,7 +13,7 @@ The Customer Value Chain, as Thales S. Teixeira describes it, is the flow of act
 Customer activities can be looked at by what value they create or use up. [Research by Teixeira and Peter Jamieson](https://www.hbs.edu/ris/Publication%20Files/15-031_accfb920-4667-4ccb-b2e1-453984a1879f.pdf) sorts them into three types.
 
 - Value-creating activities: activities through which customers get the benefits they want. Trying a product firsthand or watching content they want to see are examples.
-- Value-capturing activities: activities through which a company gets paid by customers. This can include not only customers paying for a product but also watching ads.
+- Value-capturing activities: activities through which a company receives something in return from customers. This can include not only customers paying for a product but also watching ads.
 - Value-eroding activities: activities that burden customers without turning into revenue for the company. Think of things that use up customers' time and effort, such as unnecessary travel or waiting.
 
 Showrooming, which separates looking at a product in person from buying it, is one example. Customers try out and compare electronics at a store like Best Buy, then order from an online seller such as Amazon. Customers can now try and buy in different places, and a store may now provide the experience without earning the revenue from the purchase.
@@ -28,9 +28,9 @@ In attracting international patients, we can look at activities such as searchin
 
 Say a customer has received information from three hospitals. If one gives only the treatment fee and another also includes the cost of tests or language support, it is hard to compare on price alone. The customer has to ask again whether the items are the same and what is included.
 
-What I can take on here is organizing the answers the customer received on the same basis and helping them ask the hospitals about terms they have not yet confirmed. What gets compared is the terms the hospitals provided. Whether a treatment is appropriate and how to treat require the judgment of the medical team.
+What I can take on here is organizing the answers the customer received on the same basis and helping them ask the hospitals about terms they have not yet confirmed. What gets compared is the terms the hospitals provided. Whether a treatment is appropriate and which treatment method to use require the judgment of the medical team.
 
-If this comparison support is offered on the condition that the customer also hands over the hospital booking, the two activities are tied together in one service. Could it be designed so that customers use only the comparison support and book wherever they choose? The decoupling I have in mind is splitting that link.
+If this comparison support is offered on the condition that the customer also hands over the hospital booking, the two activities are tied together in one service. Could the service be designed so that customers use the comparison support separately and book through whichever channel they choose? The decoupling I have in mind is splitting that link.
 
 If a customer who received comparison support books through a different channel, they may have to explain the purpose of their visit and their schedule all over again. If they also have to ask again whether the terms confirmed earlier still apply at booking, that is one more step for the customer.
 

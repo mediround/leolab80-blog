@@ -28,7 +28,7 @@ sourceDate: "2026-09-05T15:33:40"
 
 在商业上，高CAC要说得过去，客户一生中带来的收益，也就是客户终身价值（LTV，Lifetime Value），就必须比它大得多。
 
-但绝大多数外国患者只来一次。趁着来韩国旅游顺便，或者专程来做一次项目，付完钱回国，就结束了。他们没法像街坊熟客那样定期来做皮肤管理，也很难轻易带朋友来。花了巨大的成本招来，关系却在一次消费后就结束了。也就是说，终身价值（LTV）低得可怜，这是第二个悲剧。
+但绝大多数外国患者只来一次。他们或是在来韩国旅游时顺便就诊，或是专程来做一次治疗，付完钱回国，就结束了。他们没法像街坊熟客那样定期来做皮肤管理，也很难轻易带朋友来。花了巨大的成本招来，关系却在一次消费后就结束了。也就是说，终身价值（LTV）低得可怜，这是第二个悲剧。
 
 ## 为什么连这一个人也不完全是“我的客户”
 
@@ -39,7 +39,7 @@ sourceDate: "2026-09-05T15:33:40"
 ## 高获客成本（CAC）遇上低客户终身价值（LTV），会发生什么
 
 <figure>
-<div class="fig-body"><div class="fig-row" style="--n:3"><div class="fig-box"><b>高获客成本</b><small>CAC 每人数十万韩元↑</small></div><div class="fig-box"><b>低客户终身价值</b><small>LTV 来一次就结束</small></div><div class="fig-box"><b>客户所有权缺失</b><small>记录·复诊归医院所有</small></div></div><div class="fig-stubs" style="--n:3"><i></i><i></i><i></i></div><div class="fig-hbar" style="--n:3"></div><div class="fig-down arrow"></div><div class="fig-box strong center"><b>单笔无法回本</b><small>诊疗费须达CAC的3~4倍才能盈利</small></div></div>
+<div class="fig-body"><div class="fig-row" style="--n:3"><div class="fig-box"><b>高获客成本</b><small>CAC 每人数十万韩元↑</small></div><div class="fig-box"><b>低客户终身价值</b><small>LTV 来一次就结束</small></div><div class="fig-box"><b>客户所有权缺失</b><small>记录·再次到访归医院所有</small></div></div><div class="fig-stubs" style="--n:3"><i></i><i></i><i></i></div><div class="fig-hbar" style="--n:3"></div><div class="fig-down arrow"></div><div class="fig-box strong center"><b>单笔无法回本</b><small>诊疗费须达CAC的3~4倍才能盈利</small></div></div>
 <figcaption>高获客成本、低客户终身价值、客户所有权缺失三者叠加的结构</figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ sourceDate: "2026-09-05T15:33:40"
 
 （凭现场的感觉来算的话，）招揽一名外国患者，实际成本要数十万韩元以上。可如果这名患者来了，只做了一项客单价低的简单微整形或一次皮肤护理就走了呢？靠单笔收入，绝对收不回获客成本。要想单笔盈利，诊疗费至少得是CAC的[3~4倍](https://www.forentrepreneurs.com/ko/ltv/)（韩文），而除非是整形外科的大手术，很多科室都跨不过这道门槛。
 
-再加上，[市场环境也今非昔比](/zh/blog/seventeen-years/)。随着TikTok、Instagram等社交媒体的发展，信息变得极其透明，如今医院也自己配备多语种协调员，直接与海外患者沟通。靠提供“医疗机构信息”和“翻译”来收取招揽佣金的中介生意，其价值正迅速趋近于零。
+再加上，[市场环境也今非昔比](/zh/blog/seventeen-years/)。随着TikTok、Instagram等社交媒体的发展，信息变得极其透明，如今医院也自己配备多语种协调员，直接与海外患者沟通。靠提供“医疗机构信息”和“口译”来收取招揽佣金的中介生意，其价值正迅速趋近于零。
 
 ## 即便如此，我为什么还在这个领域继续挑战
 

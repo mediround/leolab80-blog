@@ -1,12 +1,12 @@
 ---
 title: "Attracting International Patients on My Own with AI — How Far Can AI Go?"
-description: "Attracting international patients with Genie (ChatGPT) and Theo (Claude Code), from videos to customer guidance: what worked, what needed a human, an ops reset."
+description: "My experience attracting international patients with Genie (ChatGPT) and Theo (Claude Code), from video editing to customer guidance: what worked, what needed human input, and how I reorganized our workflow."
 sourceDate: "2026-10-08T23:07:47"
 ---
 
 I work with Genie and Theo. Genie is ChatGPT, and Theo is Claude Code. In our work attracting international patients for MyClinic, Genie mainly produces content, and Theo does the coding for the service.
 
-Genie and Theo do a lot of work. They edit interview videos and upload them to YouTube, and they make short-form videos and card news and post them on Instagram. They reply to messages directly, not only in English but also in Chinese, Thai, and Japanese. And now that we have Genie and Theo, and ChatGPT's Dots has come out as well, they share everyday office work with me too.
+Genie and Theo do a lot of work. They edit interview videos and upload them to YouTube, and they make short-form videos and carousel posts and post them on Instagram. They reply to messages directly, not only in English but also in Chinese, Thai, and Japanese. And now that we have Genie and Theo, and ChatGPT's Dots has come out as well, they share everyday office work with me too.
 
 <figure>
 <div class="fig-body split"><div class="fig-box strong narrow"><b>LEO</b><small>Review · Pointing out fixes</small></div><div class="fig-down"></div><div class="fig-hbar" style="--n:2"></div><div class="fig-stubs arrow" style="--n:2"><i></i><i></i></div><div class="fig-row" style="--n:2"><div class="fig-box"><b>Genie · ChatGPT</b><small>Content creation · Message replies</small></div><div class="fig-box"><b>Theo · Claude Code</b><small>Service coding · Connecting inquiries</small></div></div></div>
@@ -28,11 +28,11 @@ After content production, they also answer customer inquiries directly. Theo con
 
 Even when Genie edits a video well, it still needs a human hand before it can actually be used. The first time I worked on videos with Genie, I looked at the finished video and cover and had Genie fix the title, the line breaks, and the placement of the people. We had to bring out what the customer was told and how they felt, while making sure nothing that wasn't in the video got added as fiction.
 
-We had to readjust the aspect ratio and the cover for how they appear on Instagram, and we had to check both how things looked in the edit file and how they actually looked on the channel. Genie kept learning too, uploading the revised files and checking all the way through to publishing and playback.
+We had to readjust the aspect ratio and the cover for how they appear on Instagram, and we had to check both how things looked in the edit file and how they actually looked on the channel. Genie kept learning too, uploading the revised files and checking that they were publicly visible and could be played.
 
 The written posts needed even more fixing than the videos. The drafts read as if a third party were describing what was in the video. I had Genie reread the full transcript, and I passed along details I had checked separately. After that step, even with words from the same interview, the wording changed depending on who had experienced and explained what.
 
-In the videos, the titles had to match what was actually said. In the posts, the missing parts of the story and the speakers had to be set right. While Genie did the editing and translation, I looked at the results and pointed out what still needed checking and fixing. My job didn't end with handing over the source material and hitting “click.”
+In the videos, the titles had to match what was actually said. In the posts, we had to restore missing parts of the story and correct who was identified as speaking. While Genie did the editing and translation, I looked at the results and pointed out what still needed checking and fixing. My job didn't end with handing over the source material and hitting “click.”
 
 ## Even with the authority, it stopped
 
@@ -59,8 +59,8 @@ I also sorted out where records are kept. The company's standards and approved d
 
 There was a similar gap in content planning. Posts and videos were being made, but there wasn't enough thinking about who the content was for, what message it would deliver, and what action it should lead to.
 
-So I updated our standards: before production, we research what customers are asking and what others are covering, and connect it to our goals. After deciding what to cover, we choose whether it will be a post or a video, and which channel to publish it on. After it goes live, we need to check how far people moved and feed that into the next plan. Handing research and planning to Genie means reviewing the reasoning behind these choices together as well.
+So I updated our standards: before production, we research what customers are asking and what others are covering, and connect it to our goals. After deciding what to cover, we choose whether it will be a post or a video, and which channel to publish it on. After it goes live, we need to check how far people progressed toward the intended action and use that in the next plan. Handing research and planning to Genie means reviewing the reasoning behind these choices together as well.
 
 ## To attract international patients with AI.
 
-There is no longer any doubt that AI agents can take over people's work and produce high-quality results in every part of a business. Now I want to move to the stage of understanding how much time working with AI has saved me, and how much the cost of attracting international patients has changed, along with bookings and revenue. I also want to follow a single inquiry that came in through our content, all the way through the clinic check and the customer's decision to visit. I want to find out what information was needed, who prepared the answers, and where work stopped because something had to be checked again. As those records build up, maybe I'll learn more about how far AI can be used in attracting international patients.
+There is no longer any doubt that AI agents can take over people's work and produce high-quality results in every part of a business. Now I want to move to the stage of understanding how much time working with AI has saved me, and how much the cost of attracting international patients has changed, along with bookings and revenue. I also want to follow a single inquiry that came in through our content, through confirming details with the clinic and the customer's decision to visit. I want to find out what information was needed, who prepared the answers, and where work stopped because something had to be checked again. As those records build up, maybe I'll learn more about how far AI can be used in attracting international patients.

@@ -193,6 +193,12 @@ const toggleLangs = (Object.keys(toggle) as Lang[]).filter((l) => toggle[l]);
 	.nav-in a {
 		color: #000;
 	}
+	/* 번역 페이지의 카테고리 이름은 한국어보다 길다 — 좁은 PC 폭에서 넘치지 않게 두 줄 허용 */
+	:global(html:not([lang='ko'])) .nav-in {
+		flex-wrap: wrap;
+		row-gap: 6px;
+		column-gap: 28px;
+	}
 	.nav-toggle {
 		display: none;
 	}

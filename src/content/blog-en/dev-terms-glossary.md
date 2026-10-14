@@ -1,6 +1,6 @@
 ---
 title: "Developer Terms Worth Knowing, Even When AI Does the Coding"
-description: "Commit, branch, build, CI: words you meet in vibe coding. I organized the terms you need to judge what AI is doing and how far it got, from request to deploy."
+description: "Commit, branch, build, CI: terms you encounter while vibe coding. I explain the terms needed to understand what AI is doing and how far it has progressed, following the workflow from the initial request to deployment."
 sourceDate: "2026-09-10T20:56:00"
 ---
 
@@ -21,7 +21,7 @@ I organized the terms that come up often, following the flow from the moment you
 | Term | Plain explanation | Example |
 |---|---|---|
 | **Prompt** | A request or instruction you give to AI. | “Build a sign-up screen, and if there's an input error, show a message explaining it.” |
-| **Specification, Spec** | A concrete write-up of the features to build and the conditions they must meet. | “Email is required. If the address is already registered, show a duplicate notice.” |
+| **Specification, Spec** | A concrete write-up of the features to build and the conditions they must meet. | “Email is required. If the address is already registered, show a message saying so.” |
 | **Context** | The information AI refers to when deciding how to do the work. It includes the conversation, code, documents, tool outputs, and so on. | Have it read the existing design and login method first. |
 | **Token** | The unit AI uses to process text and code. It doesn't map exactly to the number of characters or words. | If you pass along long documents and a lot of code, the number of tokens processed goes up too. |
 | **[Context Window](https://platform.claude.com/docs/en/build-with-claude/context-windows)** | The limit on how much information AI can handle in a single pass. | On long tasks, summarize the key decisions and the current status separately and pass them along. |
@@ -54,7 +54,7 @@ Once you know this distinction, you can make sense of an explanation like “The
 | **Repository, Repo** | The space where a project's files and change history are managed. |
 | **Branch** | A line of work that splits off from the existing history and carries changes forward separately. |
 | **[Worktree](https://git-scm.com/docs/git-worktree)** | A Git feature that lets you work on different branches of the same repository in separate folders. |
-| **Diff** | The difference that shows what was added, changed, or deleted between before and after a change. |
+| **Diff** | A comparison showing what was added, modified, or deleted between the old and new versions. |
 | **Commit** | Recording selected changes as a single point in Git history. It's separate from saving a file. |
 | **Push** | Sending commits and the like from your local repository to a remote repository. |
 | **Pull** | Bringing in changes from a remote repository and integrating them into your current branch. |
