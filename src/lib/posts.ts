@@ -57,7 +57,10 @@ export async function getPosts(lang: Lang): Promise<Post[]> {
 			warned.add(`${lang}:${tr.id}:orphan`);
 			continue;
 		}
-		const reviewed = REQUIRED_REVIEWS[lang].every((k) => Boolean(tr.data[k]));
+		// Grammarly 단계는 대표 결정으로 생략할 수 있다(grammarlySkipped 에 사유) — 날짜를 꾸며 적지 않는다
+		const reviewed = REQUIRED_REVIEWS[lang].every(
+			(k) => Boolean(tr.data[k]) || (k === 'grammarlyChecked' && Boolean(tr.data.grammarlySkipped)),
+		);
 		const koDate = ko.data.updatedDate ?? ko.data.pubDate;
 		if (koDate.valueOf() > tr.data.sourceDate.valueOf() && !warned.has(`${lang}:${tr.id}:stale`)) {
 			console.warn(`[i18n] ${lang}/${tr.id}: 한국어 글이 번역 뒤에 고쳐졌다(${koDate.toISOString()} > ${tr.data.sourceDate.toISOString()}) — 번역도 맞출 것`);

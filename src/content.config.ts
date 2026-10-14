@@ -26,6 +26,8 @@ const translation = z.object({
 	sourceDate: z.coerce.date(), // 번역한 한국어 글의 updatedDate(없으면 pubDate)
 	genieReviewed: z.coerce.date().optional(),
 	grammarlyChecked: z.coerce.date().optional(),
+	// Grammarly 를 거치지 못하고 대표 결정으로 게시한 경우 그 사유(검수한 것처럼 날짜를 적지 않는다)
+	grammarlySkipped: z.string().optional(),
 });
 
 const blogEn = defineCollection({
