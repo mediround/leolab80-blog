@@ -4,31 +4,35 @@ import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 import ProfileImage from '../assets/profile-leo.jpg';
 import { AUTHOR, SOCIALS } from '../consts';
+import { localizePath, splitLangPath, t } from '../i18n';
 
 interface Props {
 	/** 「LEO 소개 →」 링크 표시 — 소개 페이지 자신에서는 끈다 */
 	showAboutLink?: boolean;
 }
 const { showAboutLink = true } = Astro.props;
+const lang = splitLangPath(Astro.url.pathname).lang;
+const ui = t(lang);
+const aboutHref = localizePath('/about/', lang);
 ---
 
-<aside class="author prose" aria-label="글쓴이">
-	<a class="author-photo" href="/about/" aria-hidden="true" tabindex="-1">
-		<Image src={ProfileImage} width={112} height={112} alt="LEO(신영종) 프로필 사진" />
+<aside class="author prose" aria-label={ui.author.label}>
+	<a class="author-photo" href={aboutHref} aria-hidden="true" tabindex="-1">
+		<Image src={ProfileImage} width={112} height={112} alt={ui.author.photoAlt} />
 	</a>
 	<div>
 		<p class="author-name">
-			<a href="/about/">{AUTHOR.alternateName}</a>
-			<span class="author-title">{AUTHOR.jobTitle}</span>
+			<a href={aboutHref}>{AUTHOR.alternateName}</a>
+			<span class="author-title">{ui.author.jobTitle}</span>
 		</p>
-		<p class="author-bio">{AUTHOR.bio}</p>
+		<p class="author-bio">{ui.author.bio}</p>
 		<p class="author-links">
-			{showAboutLink && <a class="more" href="/about/">LEO 소개 →</a>}
+			{showAboutLink && <a class="more" href={aboutHref}>{ui.author.aboutLink}</a>}
 			<span class="author-soc">
-				<a href={SOCIALS.instagram} target="_blank" rel="noopener" aria-label="인스타그램"><Icon name="simple-icons:instagram" size={15} /></a>
-				<a href={SOCIALS.x} target="_blank" rel="noopener" aria-label="엑스"><Icon name="simple-icons:x" size={14} /></a>
-				<a href={SOCIALS.linkedin} target="_blank" rel="noopener" aria-label="링크드인"><Icon name="simple-icons:linkedin" size={15} /></a>
-				<a href={SOCIALS.youtube} target="_blank" rel="noopener" aria-label="유튜브"><Icon name="simple-icons:youtube" size={15} /></a>
+				<a href={SOCIALS.instagram} target="_blank" rel="noopener" aria-label={ui.social.instagram}><Icon name="simple-icons:instagram" size={15} /></a>
+				<a href={SOCIALS.x} target="_blank" rel="noopener" aria-label={ui.social.x}><Icon name="simple-icons:x" size={14} /></a>
+				<a href={SOCIALS.linkedin} target="_blank" rel="noopener" aria-label={ui.social.linkedin}><Icon name="simple-icons:linkedin" size={15} /></a>
+				<a href={SOCIALS.youtube} target="_blank" rel="noopener" aria-label={ui.social.youtube}><Icon name="simple-icons:youtube" size={15} /></a>
 			</span>
 		</p>
 	</div>

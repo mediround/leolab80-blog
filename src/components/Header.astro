@@ -1,26 +1,52 @@
 ---
-import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE } from '../consts';
+import { CATEGORIES, CATEGORY_SLUG, SITE_TITLE } from '../consts';
+import { LANG_META, type Lang, localizePath, splitLangPath, t } from '../i18n';
+import { getAlternates } from '../lib/posts';
+
+// 언어 = 주소 앞부분(/en · /zh)으로 정한다. 토글은 게시된 번역이 있는 언어만 보인다(2026-10-14).
+const { lang, basePath } = splitLangPath(Astro.url.pathname);
+const ui = t(lang);
+const { toggle } = await getAlternates(basePath);
+const toggleLangs = (Object.keys(toggle) as Lang[]).filter((l) => toggle[l]);
 ---
 
 <header>
+	{
+		toggleLangs.length > 1 && (
+			<nav class="wrap langbar" aria-label={ui.langLabel}>
+				{toggleLangs.map((l, i) => (
+					<>
+						{i > 0 && <span class="lang-sep" aria-hidden="true">·</span>}
+						{l === lang ? (
+							<span class="lang-on" aria-current="true" lang={LANG_META[l].htmlLang}>{LANG_META[l].label}</span>
+						) : (
+							<a href={toggle[l]} hreflang={LANG_META[l].hreflang} lang={LANG_META[l].htmlLang}>{LANG_META[l].label}</a>
+						)}
+					</>
+				))}
+			</nav>
+		)
+	}
 	<div class="wrap mast">
-		<div class="mast-line"><a href="/" class="logo">{SITE_TITLE}</a></div>
-		<div class="mast-line"><span class="tag">{SITE_TAGLINE}</span></div>
+		<div class="mast-line"><a href={localizePath('/', lang)} class="logo">{SITE_TITLE}</a></div>
+		<div class="mast-line"><span class="tag">{ui.siteTagline}</span></div>
+		{/* 번역 페이지: 로고 크기를 한국어 페이지와 같게 — 한국어 태그라인 폭을 보이지 않게 재서 쓴다 */}
+		{lang !== 'ko' && <span class="tag tag-ref" aria-hidden="true">{t('ko').siteTagline}</span>}
 	</div>
 
-	<nav class="nav" aria-label="카테고리">
+	<nav class="nav" aria-label={ui.navLabel}>
 		<!-- 휴대폰(720px 이하)에서만 보이는 메뉴 버튼 (2026-10-09 대표 요청). JS 가 꺼져 있으면 버튼은 숨고 링크가 그대로 펼쳐진다 -->
-		<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+		<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-open-label={ui.close} data-closed-label={ui.menu}>
 			<span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
-			<span class="nav-toggle-label">메뉴</span>
+			<span class="nav-toggle-label">{ui.menu}</span>
 		</button>
 		<div class="wrap nav-in" id="nav-links">
 			{
 				CATEGORIES.map((c) => (
-					<a href={`/category/${CATEGORY_SLUG[c]}/`}>{c}</a>
+					<a href={localizePath(`/category/${CATEGORY_SLUG[c]}/`, lang)}>{ui.categories[c]}</a>
 				))
 			}
-			<a href="/about/">LEO</a>
+			<a href={localizePath('/about/', lang)}>LEO</a>
 		</div>
 	</nav>
 </header>
@@ -29,7 +55,7 @@ import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE } from '../consts';
 	(function () {
 		function fit() {
 			var logo = document.querySelector('.mast .logo');
-			var tag = document.querySelector('.mast .tag');
+			var tag = document.querySelector('.mast .tag-ref') || document.querySelector('.mast .tag');
 			if (!logo || !tag) return;
 			logo.style.fontSize = '';
 			var tagW = tag.getBoundingClientRect().width;
@@ -55,7 +81,7 @@ import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE } from '../consts';
 		function setOpen(open) {
 			nav.classList.toggle('is-open', open);
 			btn.setAttribute('aria-expanded', String(open));
-			label.textContent = open ? '닫기' : '메뉴';
+			label.textContent = open ? btn.dataset.openLabel : btn.dataset.closedLabel;
 		}
 		btn.addEventListener('click', function () {
 			setOpen(!nav.classList.contains('is-open'));
@@ -94,6 +120,41 @@ import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE } from '../consts';
 		text-align: center;
 		padding: 40px 0 14px;
 	}
+	/* 언어 토글 (2026-10-14) — 로고 위 오른쪽 작은 한 줄. 지금 언어는 굵게+밑줄 */
+	.langbar {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding-top: 14px;
+		font-size: 12px;
+		line-height: 1;
+		letter-spacing: 0.04em;
+	}
+	.langbar a {
+		color: #000;
+	}
+	.lang-on {
+		font-weight: 700;
+		border-bottom: 1.5px solid #000;
+		padding-bottom: 2px;
+	}
+	.lang-sep {
+		margin: 0 9px;
+		color: #999;
+	}
+	.langbar + .mast {
+		padding-top: 22px;
+	}
+	.mast {
+		position: relative;
+	}
+	.tag-ref {
+		position: absolute;
+		left: 0;
+		top: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
 	.mast-line {
 		text-align: center;
 		line-height: 1;
@@ -110,6 +171,7 @@ import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE } from '../consts';
 	.tag {
 		display: inline-block;
 		white-space: nowrap;
+		max-width: 100%;
 		font-size: 13px;
 		font-weight: 400;
 		margin-top: 12px;
@@ -135,6 +197,12 @@ import { CATEGORIES, CATEGORY_SLUG, SITE_TAGLINE, SITE_TITLE } from '../consts';
 		display: none;
 	}
 	@media (max-width: 720px) {
+		/* 번역 태그라인(영어)이 휴대폰 폭보다 길면 두 줄로 */
+		:global(html:not([lang='ko'])) .tag:not(.tag-ref) {
+			white-space: normal;
+			text-wrap: balance;
+			line-height: 1.5;
+		}
 		/* JS 가 없을 때의 대체 모양(예전과 같음) */
 		.nav-in {
 			gap: 18px;

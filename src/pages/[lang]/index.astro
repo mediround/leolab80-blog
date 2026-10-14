@@ -1,0 +1,15 @@
+---
+// 번역 홈 — /en/ · /zh/. 게시된 번역이 하나도 없는 언어는 만들지 않는다(src/lib/posts.ts)
+import { TRANSLATED_LANGS } from '../../i18n';
+import { getPosts } from '../../lib/posts';
+import HomeView from '../../views/HomeView.astro';
+
+export async function getStaticPaths() {
+	const paths = [];
+	for (const lang of TRANSLATED_LANGS) if ((await getPosts(lang)).length > 0) paths.push({ params: { lang } });
+	return paths;
+}
+const { lang } = Astro.params as { lang: 'en' | 'zh' };
+---
+
+<HomeView lang={lang} />

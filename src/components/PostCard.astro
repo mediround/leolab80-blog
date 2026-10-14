@@ -1,18 +1,19 @@
 ---
 import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
+import { localizePath, t } from '../i18n';
+import type { Post } from '../lib/posts';
 
 interface Props {
-	post: CollectionEntry<'blog'>;
+	post: Post;
 }
 const { post } = Astro.props;
-const { title, category, heroImage } = post.data;
+const { title, category, heroImage, lang } = post;
 ---
 
-<a class="card" href={`/blog/${post.id}/`}>
+<a class="card" href={localizePath(`/blog/${post.id}/`, lang)}>
 	<div class="card-img">
 		{heroImage && <Image class="duotone" src={heroImage} width={520} height={390} alt={title} />}
-		<span class="badge">{category}</span>
+		<span class="badge">{t(lang).categories[category]}</span>
 	</div>
 	<h3 class="card-title">{title}</h3>
 </a>

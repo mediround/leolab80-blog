@@ -1,30 +1,32 @@
 ---
 // 홈·카테고리 세로 리스트 1건 (구조 v0.2 · 2026-09-05)
 import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
 import { AUTHOR, CATEGORY_SLUG } from '../consts';
+import { localizePath, t } from '../i18n';
+import type { Post } from '../lib/posts';
 import FormattedDate from './FormattedDate.astro';
 
 interface Props {
-	post: CollectionEntry<'blog'>;
+	post: Post;
 }
 const { post } = Astro.props;
-const { title, description, category, pubDate, heroImage } = post.data;
+const { title, description, category, pubDate, heroImage, lang } = post;
+const href = localizePath(`/blog/${post.id}/`, lang);
 ---
 
 <article class="item">
-	<a class="thumb" href={`/blog/${post.id}/`} aria-hidden="true" tabindex="-1">
+	<a class="thumb" href={href} aria-hidden="true" tabindex="-1">
 		{heroImage ? <Image class="duotone" src={heroImage} width={520} height={390} alt="" /> : <div class="ghost-img">대표이미지</div>}
 	</a>
 	<div class="body">
 		<p class="meta">
-			<a class="cat" href={`/category/${CATEGORY_SLUG[category]}/`}>{category}</a>
+			<a class="cat" href={localizePath(`/category/${CATEGORY_SLUG[category]}/`, lang)}>{t(lang).categories[category]}</a>
 			<span class="dot">·</span>
 			<FormattedDate date={pubDate} />
 			<span class="dot">·</span>
 			<span>{AUTHOR.alternateName}</span>
 		</p>
-		<h2 class="title"><a href={`/blog/${post.id}/`}>{title}</a></h2>
+		<h2 class="title"><a href={href}>{title}</a></h2>
 		<p class="desc">{description}</p>
 	</div>
 </article>

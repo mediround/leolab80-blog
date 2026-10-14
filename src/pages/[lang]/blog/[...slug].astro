@@ -1,0 +1,22 @@
+---
+// 번역본 글 — /en/blog/<slug>/ · /zh/blog/<slug>/ (2026-10-14). 게시 조건 = src/lib/posts.ts
+import { render } from 'astro:content';
+import BlogPost from '../../../layouts/BlogPost.astro';
+import { TRANSLATED_LANGS } from '../../../i18n';
+import { getPosts, type Post } from '../../../lib/posts';
+
+export async function getStaticPaths() {
+	const paths = [];
+	for (const lang of TRANSLATED_LANGS) {
+		for (const post of await getPosts(lang)) paths.push({ params: { lang, slug: post.id }, props: { post } });
+	}
+	return paths;
+}
+
+const { post } = Astro.props as { post: Post };
+const { Content } = await render(post.entry);
+---
+
+<BlogPost post={post}>
+	<Content />
+</BlogPost>

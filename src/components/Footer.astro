@@ -1,6 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { SOCIALS } from '../consts';
+import { splitLangPath, t } from '../i18n';
+const social = t(splitLangPath(Astro.url.pathname).lang).social;
 const year = new Date().getFullYear();
 ---
 
@@ -8,16 +10,16 @@ const year = new Date().getFullYear();
 	<div class="wrap foot-in">
 		<span>© {year} LEOLAB80</span>
 		<span class="soc">
-			<a href={SOCIALS.instagram} target="_blank" rel="noopener" aria-label="인스타그램">
+			<a href={SOCIALS.instagram} target="_blank" rel="noopener" aria-label={social.instagram}>
 				<Icon name="simple-icons:instagram" size={16} />
 			</a>
-			<a href={SOCIALS.x} target="_blank" rel="noopener" aria-label="엑스">
+			<a href={SOCIALS.x} target="_blank" rel="noopener" aria-label={social.x}>
 				<Icon name="simple-icons:x" size={16} />
 			</a>
-			<a href={SOCIALS.linkedin} target="_blank" rel="noopener" aria-label="링크드인">
+			<a href={SOCIALS.linkedin} target="_blank" rel="noopener" aria-label={social.linkedin}>
 				<Icon name="simple-icons:linkedin" size={16} />
 			</a>
-			<a href={SOCIALS.youtube} target="_blank" rel="noopener" aria-label="유튜브">
+			<a href={SOCIALS.youtube} target="_blank" rel="noopener" aria-label={social.youtube}>
 				<Icon name="simple-icons:youtube" size={16} />
 			</a>
 		</span>

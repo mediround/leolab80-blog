@@ -1,0 +1,14 @@
+---
+import { TRANSLATED_LANGS } from '../../../i18n';
+import { getPosts } from '../../../lib/posts';
+import BlogIndexView from '../../../views/BlogIndexView.astro';
+
+export async function getStaticPaths() {
+	const paths = [];
+	for (const lang of TRANSLATED_LANGS) if ((await getPosts(lang)).length > 0) paths.push({ params: { lang } });
+	return paths;
+}
+const { lang } = Astro.params as { lang: 'en' | 'zh' };
+---
+
+<BlogIndexView lang={lang} />

@@ -1,0 +1,24 @@
+---
+import { CATEGORIES, CATEGORY_SLUG } from '../../../../consts';
+import { TRANSLATED_LANGS } from '../../../../i18n';
+import { getPosts } from '../../../../lib/posts';
+import CategoryView from '../../../../views/CategoryView.astro';
+
+export async function getStaticPaths({ paginate }) {
+	const out = [];
+	for (const lang of TRANSLATED_LANGS) {
+		const posts = await getPosts(lang);
+		if (posts.length === 0) continue;
+		for (const cat of CATEGORIES) {
+			const list = posts.filter((p) => p.category === cat);
+			out.push(...paginate(list, { params: { lang, category: CATEGORY_SLUG[cat] }, props: { cat }, pageSize: 8 }));
+		}
+	}
+	return out;
+}
+
+const { cat, page } = Astro.props;
+const { lang } = Astro.params as { lang: 'en' | 'zh' };
+---
+
+<CategoryView lang={lang} cat={cat} page={page} />

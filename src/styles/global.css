@@ -714,3 +714,22 @@ hr {
 		max-width: calc(100% - 2em);
 	}
 }
+
+/* 다국어 (2026-10-14) — 번역본 글자 처리
+   중국어: 띄어쓰기가 없어 keep-all 이면 줄이 안 바뀌고 넘친다 → 기본 줄바꿈. 간체 폰트 우선.
+   영어: 양쪽 맞춤에서 단어 사이가 벌어지지 않게 하이픈 줄바꿈 허용. */
+html[lang='zh-Hans'] {
+	--font-sans: 'Noto Sans SC', 'Noto Sans KR', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
+}
+html[lang='zh-Hans'] body {
+	word-break: normal;
+	line-break: strict;
+}
+html[lang='en'] .prose p {
+	hyphens: auto;
+	-webkit-hyphens: auto;
+}
+/* 그림 상자도 중국어는 기본 줄바꿈 (keep-all 이면 띄어쓰기 없는 간체가 칸을 넘친다) */
+html[lang='zh-Hans'] .prose .fig-box {
+	word-break: normal;
+}

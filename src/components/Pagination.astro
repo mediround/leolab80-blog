@@ -7,16 +7,18 @@ interface Props {
 	nextUrl?: string;
 	hrefFor: (n: number) => string;
 }
+import { splitLangPath, t } from '../i18n';
 const { current, last, prevUrl, nextUrl, hrefFor } = Astro.props;
+const ui = t(splitLangPath(Astro.url.pathname).lang);
 const pages = Array.from({ length: last }, (_, i) => i + 1);
 ---
 
 {
 	last > 1 && (
-		<nav class="pager" aria-label="페이지">
-			{prevUrl ? <a href={prevUrl}>‹ 이전</a> : <span class="off">‹ 이전</span>}
+		<nav class="pager" aria-label={ui.pagerLabel}>
+			{prevUrl ? <a href={prevUrl}>{ui.prev}</a> : <span class="off">{ui.prev}</span>}
 			{pages.map((n) => (n === current ? <b aria-current="page">{n}</b> : <a href={hrefFor(n)}>{n}</a>))}
-			{nextUrl ? <a href={nextUrl}>다음 ›</a> : <span class="off">다음 ›</span>}
+			{nextUrl ? <a href={nextUrl}>{ui.next}</a> : <span class="off">{ui.next}</span>}
 		</nav>
 	)
 }

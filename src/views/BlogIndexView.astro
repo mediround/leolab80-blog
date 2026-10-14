@@ -1,0 +1,50 @@
+---
+// 전체 글 — 언어별 공용 (2026-10-14 다국어)
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import PostCard from '../components/PostCard.astro';
+import { SITE_TITLE } from '../consts';
+import { LANG_META, type Lang, t } from '../i18n';
+import { getPosts } from '../lib/posts';
+
+interface Props {
+	lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+const posts = await getPosts(lang);
+---
+
+<!doctype html>
+<html lang={LANG_META[lang].htmlLang}>
+	<head>
+		<BaseHead title={`${ui.allPosts} — ${SITE_TITLE}`} description={ui.blogDescription} />
+	</head>
+	<body>
+		<Header />
+		<main class="wrap archive">
+			<h1 class="sec-head">{ui.allPosts}</h1>
+			<div class="cards">
+				{posts.map((p) => <PostCard post={p} />)}
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.archive {
+		padding: 2.4rem 0 0;
+	}
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 28px;
+	}
+	@media (max-width: 620px) {
+		.cards {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

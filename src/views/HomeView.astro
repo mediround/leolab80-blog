@@ -1,0 +1,155 @@
+---
+// 홈 — 언어별 공용 (2026-10-14 다국어). 한국어 = /, 번역 = /en/ · /zh/
+import { Image } from 'astro:assets';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { CATEGORIES, CATEGORY_SLUG, SITE_TITLE } from '../consts';
+import { LANG_META, type Lang, localizePath, t } from '../i18n';
+import { getPosts } from '../lib/posts';
+
+interface Props {
+	lang: Lang;
+}
+const { lang } = Astro.props;
+const ui = t(lang);
+const posts = await getPosts(lang);
+
+// 홈 구조 (2026-09-05 대표 확정): 최신 글 1편 = 전체 가로폭 대표이미지 + 제목만(구역 이름 없음)
+// → 카테고리별 최신 3편씩 한 행 (최대 4×3 = 12편)
+const lead = posts[0];
+---
+
+<!doctype html>
+<html lang={LANG_META[lang].htmlLang}>
+	<head>
+		<BaseHead title={`${SITE_TITLE} — ${ui.siteTagline}`} description={ui.siteDescription} />
+	</head>
+	<body>
+		<Header />
+		<main class="wrap home">
+			<h1 class="sr-only">{SITE_TITLE} — {ui.siteTagline}</h1>
+			{
+				lead && (
+					<section class="hero">
+						<a class="lead" href={localizePath(`/blog/${lead.id}/`, lang)}>
+							<div class="lead-img">
+								{lead.heroImage && (
+									<Image
+										class="duotone"
+										src={lead.heroImage}
+										width={1120}
+										height={630}
+										alt={lead.title}
+										loading="eager"
+									/>
+								)}
+								<span class="badge">{ui.categories[lead.category]}</span>
+							</div>
+							<h2 class="lead-title">{lead.title}</h2>
+						</a>
+					</section>
+				)
+			}
+
+			{
+				CATEGORIES.map((cat) => {
+					const list = posts.filter((p) => p.category === cat).slice(0, 3);
+					if (list.length === 0) return null;
+					return (
+						<section>
+							<div class="rule-thick" />
+							<div class="sec-row">
+								<h2 class="sec-head">{ui.categories[cat]}</h2>
+								<a class="more" href={localizePath(`/category/${CATEGORY_SLUG[cat]}/`, lang)}>{ui.seeAll}</a>
+							</div>
+							<div class="cards">
+								{list.map((p) => (
+									<a class="card" href={localizePath(`/blog/${p.id}/`, lang)}>
+										<div class="card-img">
+											{p.heroImage && (
+												<Image class="duotone" src={p.heroImage} width={520} height={390} alt={p.title} />
+											)}
+											<span class="badge">{ui.categories[p.category]}</span>
+										</div>
+										<h3 class="card-title">{p.title}</h3>
+									</a>
+								))}
+							</div>
+						</section>
+					);
+				})
+			}
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.home {
+		padding: 2.4rem 0 0;
+	}
+	a {
+		color: #000;
+	}
+	.sec-row {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+	}
+
+	/* 최신 글 1편: 전체 가로폭 */
+	.hero {
+		margin: 0 0 0.5rem;
+	}
+	.lead {
+		display: block;
+	}
+	.lead-img {
+		position: relative;
+		aspect-ratio: 16 / 9;
+		border: 1px solid #000;
+		overflow: hidden;
+	}
+	.lead-img :global(img),
+	.card-img :global(img) {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.lead-title {
+		text-align: center;
+		font-size: 34px;
+		line-height: 1.35;
+		margin: 22px auto 0;
+		max-width: 860px;
+	}
+
+	/* 카테고리별 3편 */
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 28px;
+	}
+	.card-img {
+		position: relative;
+		aspect-ratio: 4 / 3;
+		border: 1px solid #000;
+		overflow: hidden;
+	}
+	.card-title {
+		font-size: 17px;
+		line-height: 1.45;
+		margin: 12px 0 0;
+	}
+	@media (max-width: 720px) {
+		.lead-title {
+			font-size: 24px;
+		}
+	}
+	@media (max-width: 620px) {
+		.cards {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

@@ -7,7 +7,9 @@ interface Props {
 	url: string;
 	title: string;
 }
+import { splitLangPath, t as uiText } from '../i18n';
 const { url, title } = Astro.props;
+const ui = uiText(splitLangPath(Astro.url.pathname).lang).share;
 const u = encodeURIComponent(url);
 const t = encodeURIComponent(title);
 
@@ -17,20 +19,20 @@ const li = `https://www.linkedin.com/sharing/share-offsite/?url=${u}`;
 ---
 
 <div class="share">
-	<span class="share__label">이 글 공유</span>
+	<span class="share__label">{ui.label}</span>
 	<div class="share__btns">
-		<a class="share__btn" href={fb} target="_blank" rel="noopener" aria-label="페이스북에 공유">
+		<a class="share__btn" href={fb} target="_blank" rel="noopener" aria-label={ui.facebook}>
 			<Icon name="simple-icons:facebook" size={16} />
 		</a>
-		<a class="share__btn" href={x} target="_blank" rel="noopener" aria-label="X(트위터)에 공유">
+		<a class="share__btn" href={x} target="_blank" rel="noopener" aria-label={ui.x}>
 			<Icon name="simple-icons:x" size={14} />
 		</a>
-		<a class="share__btn" href={li} target="_blank" rel="noopener" aria-label="링크드인에 공유">
+		<a class="share__btn" href={li} target="_blank" rel="noopener" aria-label={ui.linkedin}>
 			<Icon name="simple-icons:linkedin" size={16} />
 		</a>
-		<button class="share__btn share__btn--copy" type="button" data-url={url} aria-label="링크 복사">
+		<button class="share__btn share__btn--copy" type="button" data-url={url} aria-label={ui.copy}>
 			<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-			<span class="share__copied" aria-hidden="true">복사됨</span>
+			<span class="share__copied" aria-hidden="true">{ui.copied}</span>
 		</button>
 	</div>
 </div>

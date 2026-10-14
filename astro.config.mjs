@@ -36,8 +36,11 @@ for (const file of fs.readdirSync(blogDir)) {
 }
 const newestOverallISO = newestOverall ? new Date(newestOverall).toISOString() : undefined;
 
+// 번역본(/en · /zh, 2026-10-14)은 한국어 원문과 같은 날짜를 쓴다 — 언어 앞부분을 떼고 찾는다
+const stripLang = (p) => p.replace(/^\/(en|zh)(?=\/)/, '');
+
 function lastmodFor(url) {
-	const p = new URL(url).pathname;
+	const p = stripLang(new URL(url).pathname);
 	if (postLastmod[p]) return postLastmod[p];
 	if (p === '/' || p === '/blog/') return newestOverallISO;
 	const m = p.match(/^\/category\/([^/]+)\/$/);
@@ -52,8 +55,10 @@ export default defineConfig({
 		mdx(),
 		sitemap({
 			// 글이 없는 카테고리 페이지는 sitemap에서 제외(얇은 페이지) — 글이 생기면 catNewest에 잡혀 자동 복귀
+			// 언어별 같은 페이지를 사이트맵에서도 짝지어 준다(xhtml:link). 한국어 = 앞부분 없음
+			i18n: { defaultLocale: 'ko', locales: { ko: 'ko', en: 'en', zh: 'zh-Hans' } },
 			filter(page) {
-				const m = new URL(page).pathname.match(/^\/category\/([^/]+)\/$/);
+				const m = stripLang(new URL(page).pathname).match(/^\/category\/([^/]+)\/$/);
 				return !m || Boolean(catNewest[m[1]]);
 			},
 			serialize(item) {

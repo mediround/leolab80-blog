@@ -1,0 +1,63 @@
+---
+// 카테고리 목록 — 언어별 공용 (2026-10-14 다국어). 페이지 나누기는 각 라우트의 getStaticPaths 가 한다.
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Pagination from '../components/Pagination.astro';
+import PostListItem from '../components/PostListItem.astro';
+import { type Category, CATEGORY_SLUG, SITE_TITLE } from '../consts';
+import { LANG_META, type Lang, localizePath, t } from '../i18n';
+import type { Post } from '../lib/posts';
+
+interface Props {
+	lang: Lang;
+	cat: Category;
+	page: {
+		data: Post[];
+		currentPage: number;
+		lastPage: number;
+		url: { prev?: string; next?: string };
+	};
+}
+const { lang, cat, page } = Astro.props;
+const ui = t(lang);
+const name = ui.categories[cat];
+const base = localizePath(`/category/${CATEGORY_SLUG[cat]}/`, lang);
+const hrefFor = (n: number) => (n === 1 ? base : `${base}${n}/`);
+---
+
+<!doctype html>
+<html lang={LANG_META[lang].htmlLang}>
+	<head>
+		<BaseHead title={`${name} — ${SITE_TITLE}`} description={ui.categoryDescriptions[cat]} noindex={page.data.length === 0} />
+	</head>
+	<body>
+		<Header />
+		<main class="wrap archive">
+			<h1 class="sec-head">{name}</h1>
+			{
+				page.data.length === 0 ? (
+					<p class="empty">{ui.emptyCategory}</p>
+				) : (
+					<div class="list">
+						{page.data.map((p) => <PostListItem post={p} />)}
+					</div>
+				)
+			}
+			<Pagination current={page.currentPage} last={page.lastPage} prevUrl={page.url.prev} nextUrl={page.url.next} hrefFor={hrefFor} />
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.archive {
+		padding: 2.4rem 0 0;
+	}
+	.list {
+		border-top: 2px solid var(--line);
+	}
+	.empty {
+		color: #555;
+	}
+</style>
