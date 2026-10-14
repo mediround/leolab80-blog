@@ -157,7 +157,7 @@ export const UI: Record<Lang, Dict> = {
 			'About LEO, who has worked in international patient attraction since 2009 and now builds and runs MyClinic. LEOLAB80 is where he records the problems, questions, and choices he meets along the way.',
 		categories: {
 			'외국인환자 유치': 'International Patients',
-			'AI로 외국인환자 유치하기': 'AI for International Patients',
+			'AI로 외국인환자 유치하기': 'Attracting Patients with AI',
 			비즈니스: 'Business',
 			노트: 'Notes',
 		},
@@ -275,7 +275,7 @@ export const UI: Record<Lang, Dict> = {
 		social: { instagram: 'Instagram', x: 'X', linkedin: 'LinkedIn', youtube: 'YouTube' },
 		author: {
 			label: '作者',
-			jobTitle: 'Mediround 代表',
+			jobTitle: 'Mediround CEO',
 			bio: '想把外国患者招揽做好的人。开发并运营 MyClinic。',
 			photoAlt: 'LEO 的头像',
 			aboutLink: '关于 LEO →',

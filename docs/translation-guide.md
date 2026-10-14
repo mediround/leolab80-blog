@@ -67,11 +67,24 @@ grammarlyChecked: …   # Grammarly 검수 반영 날짜 (검수 전에는 넣�
 | 테오 (Claude Code) | Theo | Theo |
 | 케이론 | Chiron | Chiron（喀戎） |
 | LEO / LEOLAB80 | LEO / LEOLAB80 | LEO / LEOLAB80 |
-| 대표 | CEO / founder (문맥) | 代表 / 创始人 |
+| 대표 | CEO / founder (문맥) | CEO / 创始人 (「代表」 단독은 본토에서 「대리인」으로 읽힘) |
+| 고객 | customer(s) — 코디네이터 상담 맥락은 client(s) | 客户 |
+| 의료진 | medical team | 医疗团队 |
+| 시술 위키 · 시술정보 데이터베이스 | Procedure Wiki · procedure information database | 治疗项目维基 · 治疗项目信息数据库 |
+| 쁘띠 시술 | minor cosmetic procedure | 微整形 |
+| 사후관리 | aftercare | 后续管理 |
+| 기술 수용 주기 · 초기시장 · 주류시장 | technology adoption life cycle · early market · mainstream market | 技术采用生命周期 · 早期市场 · 主流市场 |
+| 완전완비제품 | the whole product | 完整产品（Whole Product） |
+| 가치창출 · 가치확보 · 가치소모 활동 | value-creating · value-capturing · value-eroding activities | 价值创造 · 价值获取 · 价值侵蚀活动 |
+| 쇼루밍 | showrooming | 展厅现象 |
+| AI 에이전트 | AI agent | AI智能体 |
+| 보건복지부 | Ministry of Health and Welfare | 保健福祉部 |
 
 - 사람 이름: 제프리 무어 = Geoffrey Moore / 杰弗里·摩尔 · 탈레스 테이셰이라 = Thales S. Teixeira / 塔莱斯·特谢拉.
 - 책: 『캐즘 마케팅』 = *Crossing the Chasm* / 《跨越鸿沟》 · 『디커플링』 = *Unlocking the Customer Value Chain* / 中文版名称 확인 후 사용(없으면 영문 원제).
 - 새 용어가 나오면 이 표에 추가하고 두 언어에서 같은 말을 쓴다.
+- 영어 표기: 글 제목 = 제목형(Title Case) · 소제목 = 문장형(Sentence case) · 책 제목 = 이탤릭.
+- 그림 안 글자는 칸 폭이 정해져 있다 — 짧은 말을 고르고, 중국어는 줄바꿈 처리(CSS)가 따로 있다.
 
 ## 4. 번역본 상단 안내 (코드가 자동으로 붙인다 — 본문에 쓰지 않는다)
 
