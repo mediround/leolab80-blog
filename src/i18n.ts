@@ -151,7 +151,7 @@ export const UI: Record<Lang, Dict> = {
 		],
 	},
 	en: {
-		siteTagline: 'A blog I started to get better at attracting international patients',
+		siteTagline: 'A blog about getting better at attracting international patients',
 		siteDescription:
 			'Notes on attracting international patients, on business, and on what lies in between. Written by LEO.',
 		blogDescription:
@@ -159,8 +159,8 @@ export const UI: Record<Lang, Dict> = {
 		aboutDescription:
 			'LEO has worked to attract international patients since 2009 and now builds and runs MyClinic. He created LEOLAB80 to record the problems, questions, and choices he encounters in his work.',
 		categories: {
-			'외국인환자 유치': 'Attracting International Patients',
-			'AI로 외국인환자 유치하기': 'Attracting International Patients with AI',
+			'외국인환자 유치': 'Medical Tourism',
+			'AI로 외국인환자 유치하기': 'AI in Medical Tourism',
 			비즈니스: 'Business',
 			노트: 'Notes',
 		},
@@ -232,24 +232,24 @@ export const UI: Record<Lang, Dict> = {
 		],
 	},
 	zh: {
-		siteTagline: '为了把外国患者招揽做好而写的博客',
-		siteDescription: '关于外国患者招揽、商业以及两者之间的思考。由 LEO 亲自撰写的记录。',
+		siteTagline: '为了更好地吸引国际患者而写的博客',
+		siteDescription: '关于吸引国际患者、商业以及两者之间的思考。由 LEO 亲自撰写的记录。',
 		blogDescription:
-			'按时间倒序汇集 LEOLAB80 的全部文章。LEO 亲自记录了在外国患者招揽一线的经历、用 AI 做招揽工作的尝试，以及其间的思考。',
+			'按时间倒序汇集 LEOLAB80 的全部文章。LEO 亲自记录了在吸引国际患者一线的经历、用 AI 做这项工作的尝试，以及其间的思考。',
 		aboutDescription:
-			'LEO 的自我介绍。他从2009年开始从事外国患者招揽工作，目前正在开发和运营 MyClinic。LEOLAB80 用来记录他在一线遇到的问题、思考和选择。',
+			'LEO 的自我介绍。他从2009年开始从事吸引国际患者的工作，目前正在开发和运营 MyClinic。LEOLAB80 用来记录他在一线遇到的问题、思考和选择。',
 		categories: {
-			'외국인환자 유치': '外国患者招揽',
-			'AI로 외국인환자 유치하기': '用 AI 招揽外国患者',
+			'외국인환자 유치': '医疗旅游',
+			'AI로 외국인환자 유치하기': 'AI 与医疗旅游',
 			비즈니스: '商业',
 			노트: '笔记',
 		},
 		categoryDescriptions: {
 			'외국인환자 유치':
-				'自2009年起从事外国患者招揽的 LEO 整理的一线观察，涉及招揽成本、不断变化的客户、中介的角色等这份工作中遇到的问题。',
+				'自2009年起从事吸引国际患者工作的 LEO 整理的一线观察，涉及获客成本、不断变化的客户、中介的角色等这份工作中遇到的问题。',
 			'AI로 외국인환자 유치하기':
-				'与 AI 一起做外国患者招揽的记录。和 ChatGPT、Claude Code 一起制作内容、准备客户指引，并梳理哪些事交给 AI、哪些需要人来确认。',
-			비즈니스: '整理在外国患者招揽中遇到的商业问题。LEO 根据自己的阅读和经历，写下自己对客户与市场、产品与收益的看法。',
+				'与 AI 一起做吸引国际患者工作的记录。和 ChatGPT、Claude Code 一起制作内容、准备客户指引，并梳理哪些事交给 AI、哪些需要人来确认。',
+			비즈니스: '整理在吸引国际患者的过程中遇到的商业问题。LEO 根据自己的阅读和经历，写下自己对客户与市场、产品与收益的看法。',
 			노트: 'LEO 在工作中随手写下的简短笔记：运营博客、打造服务时学到的东西，以及尚未找到答案的问题。',
 		},
 		navLabel: '分类',
@@ -279,7 +279,7 @@ export const UI: Record<Lang, Dict> = {
 		author: {
 			label: '作者',
 			jobTitle: 'Mediround CEO',
-			bio: '想把外国患者招揽做好的人。开发并运营 MyClinic。',
+			bio: '一个想更好地吸引国际患者的人。开发并运营 MyClinic。',
 			photoAlt: 'LEO 的头像',
 			aboutLink: '关于 LEO →',
 		},
@@ -299,9 +299,9 @@ export const UI: Record<Lang, Dict> = {
 			preview: '预览 — 审校尚未完成',
 		},
 		about: [
-			'你好，我是 LEO。我从2009年开始从事外国患者招揽工作，目前正在开发和运营 MyClinic。',
+			'你好，我是 LEO。我从2009年开始从事吸引国际患者的工作，目前正在开发和运营 MyClinic。',
 			'我喜欢寻找新事物，从不同角度思考熟悉的工作，再把这些想法变成具体的东西。我也喜欢把经历过的事情串联起来，讲成一个完整的故事。不过，把想法做成真正的服务，并让它持续带来成果，对我来说仍有很多课题要解决。',
-			'在从事外国患者招揽的过程中，我经常遇到这样的课题。从向海外介绍医院、回复外国人的咨询，到协调彼此不同的期待，招揽一位外国患者需要投入大量的时间和精力。即便如此，让这些努力转化为客户的满意和企业的收益，这个过程从来都不简单。在处理眼前工作的同时，我也想弄清楚为什么类似的困难总是反复出现。',
+			'在从事吸引国际患者工作的过程中，我经常遇到这样的课题。从向海外介绍医院、回复外国人的咨询，到协调彼此不同的期待，吸引一位国际患者需要投入大量的时间和精力。即便如此，让这些努力转化为客户的满意和企业的收益，这个过程从来都不简单。在处理眼前工作的同时，我也想弄清楚为什么类似的困难总是反复出现。',
 			'我不想仅仅因为做了很久，就一直做同样的事。我在思考，能否凭借这些年的经验做出对别人有用的东西，这件事又能否成为我继续做下去的理由。在回顾过去工作的过程中，我开始同时审视自己喜欢的事、想做好的事，以及现实中必须承担的责任。',
 			'重新审视在一线遇到的困难，也能看到新的可能性。如果其他机构和医院也面临和我一样的问题，那么解决这些问题的方法本身，能不能成为一项服务？能不能找到一种方式，既能帮助客户，也能让提供帮助的人持续工作下去？',
 			'MyClinic 就是把这个问题落实为真正服务的一次尝试。我希望减少外国人在了解韩国医疗、准备来访的过程中遇到的不便。我在思考如何传达他们需要的信息、需要确认哪些内容，以及如何引导下一步。我想把在一线积累的经验，做成许多人可以共同使用的方式。',
