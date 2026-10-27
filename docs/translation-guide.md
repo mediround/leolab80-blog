@@ -44,9 +44,9 @@ grammarlySkipped: "…" # Grammarly 를 못 거치고 대표 결정으로 게시
 | 한국어 | English | 简体中文 |
 |---|---|---|
 | 외국인환자 | international patient(s) | 外国患者 |
-| 외국인환자 유치 | attracting international patients (명사구: international patient attraction) · **메뉴·분류 이름 = Medical Tourism** | 吸引国际患者 · **메뉴·분류 이름 = 医疗旅游** · ⛔ 招揽 쓰지 않음(2026-10-27 대표 — 대만 의료법 제61조 「招攬病人」 금지 표현 · 본토 医托 연상) |
-| 유치업 / 유치업체 / 유치업자 | international patient facilitation (business) / facilitator(s) | (招揽 대체어 미정 — 다음 번역 때 지니가 확정. 「招揽」 쓰지 않음) |
-| 유치 수수료 | facilitation fee | (招揽 대체어 미정 — 다음 번역 때 지니가 확정. 「招揽」 쓰지 않음) |
+| 외국인환자 유치 | attracting international patients (명사구: international patient attraction) · **메뉴·분류 이름 = Medical Tourism** | 吸引国际患者 (시장 = 国际患者市场 · 획득비용 = 获客成本) · **메뉴·분류 이름 = 医疗旅游** · ⛔ 招揽 쓰지 않음(2026-10-27 대표 — 대만 의료법 제61조 「招攬病人」 금지 표현 · 본토 医托 연상) |
+| 유치업 / 유치업체 / 유치업자 | international patient facilitation (business) / facilitator(s) | 国际患者中介业 / 国际患者中介机构 (2026-10-27 · 「招揽」 쓰지 않음) |
+| 유치 수수료 | facilitation fee | 佣金 / 中介佣金 (2026-10-27 · 「招揽」 쓰지 않음) |
 | 중개 / 중개업체 | brokering / broker(s), intermediary | 中介 / 中介机构 |
 | 의료관광 | medical tourism | 医疗旅游 |
 | 의료통역코디네이터 | medical interpreter-coordinator | 医疗翻译协调员 |
