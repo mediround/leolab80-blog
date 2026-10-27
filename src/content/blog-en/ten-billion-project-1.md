@@ -4,6 +4,11 @@ description: "On October 26, 2026, I began a 20-month project to grow MyClinic, 
 sourceDate: "2026-10-27T21:47:43"
 genieReviewed: "2026-10-27" # 번역·원문 대조 = 수지(대표 지시 10-27) — 지니 검수 칸에 대신 기록
 grammarlySkipped: "2026-10-27 대표 결정 「세 언어 모두 지금」 — Grammarly 미실시(번역 = 수지 원문 대조만)"
+keyPoints:
+  - "On October 26, 2026, I began a 20-month project to grow MyClinic, a service operated by Mediround, into a business worth KRW 10 billion and sell it. My target date is June 26, 2028."
+  - "MyClinic helps international customers access healthcare in Korea. I want to develop it into a content-driven commerce service where customers can find the information they need, choose suitable healthcare services, and move on to consultations and bookings."
+  - "I want to keep my destination clear while adapting my methods based on the results I actually see."
+  - "When I say I want to pursue this goal with greater determination, I do not mean sacrificing sleep and working longer hours at all costs. I mean using my limited energy where it matters and building that energy by looking after my physical and mental health."
 ---
 
 October 26, 2026 — A Record of the Beginning

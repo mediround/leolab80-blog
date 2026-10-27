@@ -4,6 +4,11 @@ description: "My experience attracting international patients with Genie (ChatGP
 sourceDate: "2026-10-08T23:07:47"
 genieReviewed: "2026-10-14"
 grammarlyChecked: "2026-10-14"
+keyPoints:
+  - "Genie is ChatGPT, and Theo is Claude Code. In our work attracting international patients for MyClinic, Genie mainly produces content, and Theo codes the service."
+  - "From the raw footage, Genie picked out segments and made a main video of about 3 minutes 35 seconds, plus five short-form videos re-edited from it."
+  - "Even when Genie edits a video well, it still needs a human hand before it can actually be used."
+  - "There is no longer any doubt that AI agents can take over people's work and produce high-quality results in every part of a business. Now I want to move to the stage of understanding how much time working with AI has saved me, and how much the cost of attracting international patients has changed, along with bookings and revenue."
 ---
 
 I work with Genie and Theo. Genie is ChatGPT, and Theo is Claude Code. In our work attracting international patients for MyClinic, Genie mainly produces content, and Theo codes the service.

@@ -4,6 +4,11 @@ description: "International patients grew from about 60,000 in 2009 to about 2.0
 sourceDate: "2026-10-11T13:53:53"
 genieReviewed: "2026-10-14"
 grammarlyChecked: "2026-10-14"
+keyPoints:
+  - "The number of international patients, counted as unique individuals, grew from about 60,000 in 2009 to about 500,000 in 2019. After the pandemic, it expanded to about 610,000 in 2023, about 1.17 million in 2024, and about 2.01 million in 2025."
+  - "After the pandemic, customers increased, and the market grew, but the business got harder. International patients no longer decide based only on the information that international patient brokers like us provide."
+  - "I see the change since the pandemic as the international patient attraction market moving from a stage centered on early customers to one where it must win mainstream customers."
+  - "The value I add can shift from passing on hospital information to checking the necessary conditions and connecting customers with what they need to receive the care they have chosen."
 ---
 
 In 2009, when I had just started attracting international patients, it was easier than it is now to introduce Korean medical services to foreigners and get customers to choose them. K-culture, including Korean dramas, and K-beauty were growing popular in Greater China. At the time, my background as a former traditional Chinese medicine doctor in China also worked in my favor as a broker. That is how I ran my facilitation business without much trouble for about ten years.

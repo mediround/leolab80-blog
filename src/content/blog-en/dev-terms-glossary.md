@@ -4,6 +4,11 @@ description: "Commit, branch, build, CI: terms you encounter while vibe coding. 
 sourceDate: "2026-09-10T20:56:00"
 genieReviewed: "2026-10-14"
 grammarlyChecked: "2026-10-14"
+keyPoints:
+  - "You don't need to memorize every developer term. But knowing a few makes it easier to judge what the AI is doing, how far it has gotten, and what to check next."
+  - "I organized the terms that come up often, following the flow from the moment you hand a task to AI until the change reaches the live service."
+  - "Opening a PR doesn't mean the merge is done, and committing doesn't mean the change is on the remote repository."
+  - "Once you know a few terms, the sentences you use to make requests to AI become more specific, too."
 ---
 
 When you vibe code with the help of an AI agent, you often run into unfamiliar words.

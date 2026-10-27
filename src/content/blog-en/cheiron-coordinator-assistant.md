@@ -4,6 +4,11 @@ description: "How I built Chiron, an AI chatbot that supports international pati
 sourceDate: "2026-10-12T23:18:30"
 genieReviewed: "2026-10-14"
 grammarlyChecked: "2026-10-14"
+keyPoints:
+  - "I built an AI chatbot for MyClinic that supports medical interpreter-coordinators during consultations with international patients."
+  - "International patients don't talk to the AI chatbot; a person does the consulting, with help from the AI chatbot. I named the AI chatbot Chiron."
+  - "When I calculated how much time I spent communicating with one client, from the first inquiry until their treatment finished, it came to nearly 10 hours."
+  - "Managing the data is the hardest part. Confirming clinic information and keeping it up to date takes constant work."
 ---
 
 I built an AI chatbot for MyClinic that supports medical interpreter-coordinators during consultations with international patients. Its role is to help a medical interpreter-coordinator, during a consultation with an international patient, find clinic information, prices, and procedure descriptions, and answer more accurately. International patients don't talk to the AI chatbot; a person does the consulting, with help from the AI chatbot. I named the AI chatbot Chiron. I'm told it is the name of the teacher who taught countless heroes in Greek mythology.

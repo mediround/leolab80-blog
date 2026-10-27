@@ -23,7 +23,7 @@ interface Props {
 	image?: ImageMetadata;
 	imageAlt?: string;
 	// 글 페이지에서만 전달 — og:type=article 및 BlogPosting JSON-LD 활성화
-	post?: { headline: string; pubDate: Date; updatedDate?: Date; section?: string };
+	post?: { headline: string; pubDate: Date; updatedDate?: Date; section?: string; keyPoints?: string[] };
 	// 이동 경로(홈→카테고리→글). 마지막 항목은 url 생략(현재 페이지)
 	breadcrumb?: { name: string; url?: string }[];
 	// 얇은 페이지(빈 카테고리 등)를 색인에서 제외. 내용이 생기면 호출부에서 자동 해제.
@@ -98,6 +98,8 @@ const jsonLd = post && {
 	'@type': 'BlogPosting',
 	headline: post.headline,
 	description,
+	// 글 상단 「핵심 요약」을 AI·검색엔진에도 같은 문장으로 (2026-10-27)
+	...(post.keyPoints?.length ? { abstract: post.keyPoints.join(' ') } : {}),
 	url: canonicalURL.toString(),
 	mainEntityOfPage: canonicalURL.toString(),
 	image: ogImage,

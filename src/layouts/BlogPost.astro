@@ -16,14 +16,14 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, description, pubDate, updatedDate, category, heroImage, lang } = post;
+const { title, description, pubDate, updatedDate, category, heroImage, lang, keyPoints } = post;
 const ui = t(lang);
 const categoryName = ui.categories[category];
 
 // 공유 링크에 쓸 이 글의 정식 URL(사이트 도메인 + 현재 경로)
 const shareUrl = new URL(Astro.url.pathname, Astro.site).toString();
 
-// 번역본이면 한국어 원문 주소 (상단 안내 · JSON-LD translationOfWork)
+// 번역본이면 한국어 원문 주소 (JSON-LD translationOfWork)
 const originalURL = lang === 'ko' ? undefined : new URL(`/blog/${post.id}/`, Astro.site).toString();
 
 // 이동 경로: 홈 → 카테고리 → (현재 글)
@@ -48,7 +48,7 @@ const related = [...same, ...rest]
 			title={`${title} — LEOLAB80`}
 			description={description}
 			image={heroImage}
-			post={{ headline: title, pubDate, updatedDate, section: categoryName }}
+			post={{ headline: title, pubDate, updatedDate, section: categoryName, keyPoints }}
 				breadcrumb={breadcrumb}
 			translationOf={originalURL}
 			noindex={!post.reviewed}
@@ -88,12 +88,17 @@ const related = [...same, ...rest]
 						</p>
 						<div class="tick"></div>
 					</div>
+					{!post.reviewed && ui.notice && <p class="tr-preview">{ui.notice.preview}</p>}
 					{
-						ui.notice && originalURL && (
-							<p class="tr-notice">
-								{!post.reviewed && <strong class="tr-preview">{ui.notice.preview}</strong>}
-								{ui.notice.text} <a href={originalURL} hreflang="ko" lang="ko">{ui.notice.original}</a>
-							</p>
+						keyPoints && keyPoints.length > 0 && (
+							<section class="key-points" aria-labelledby="key-points-title">
+								<h2 id="key-points-title">{ui.keyPoints}</h2>
+								<ul>
+									{keyPoints.map((point) => (
+										<li>{point}</li>
+									))}
+								</ul>
+							</section>
 						)
 					}
 					<slot />
@@ -186,24 +191,39 @@ const related = [...same, ...rest]
 		margin: 0 0.4em;
 		color: #666;
 	}
-	/* 번역본 안내 (2026-10-14) — 본문보다 작게(캡션 13px), 원문 링크 */
-	.tr-notice {
+	/* 미리보기 배포에서만 — 검수 전 번역본 표시 (운영에는 검수 전 번역이 나가지 않는다) */
+	.tr-preview {
 		font-size: 13px;
-		line-height: 1.6;
-		text-align: left;
-		color: var(--muted);
+		font-weight: 700;
+		color: var(--ink);
 		border: 1px solid var(--line-thin);
-		padding: 10px 14px;
+		padding: 8px 14px;
 		margin: 0.6rem 0 1.8rem;
 	}
-	.tr-notice a {
-		color: var(--ink);
-		text-decoration: underline;
-		white-space: nowrap;
+	/* 핵심 요약 (2026-10-27) — 마이클리닉 글의 Key points 처럼 제목 아래 위아래 선 사이. 글자는 본문보다 한 단계 작게 */
+	.key-points {
+		border-top: 1px solid var(--ink);
+		border-bottom: 1px solid var(--line-thin);
+		padding: 1.1rem 0 1.2rem;
+		margin: 0.4rem 0 2.2rem;
 	}
-	.tr-preview {
-		display: block;
-		color: var(--ink);
-		margin-bottom: 2px;
+	.prose .key-points h2 {
+		font-size: 15px;
+		line-height: 1.4;
+		margin: 0 0 0.6rem;
+		padding: 0;
+		border: 0;
+	}
+	.key-points ul {
+		margin: 0;
+		padding-left: 1.2em;
+	}
+	.key-points li {
+		font-size: 15px;
+		line-height: 1.7;
+		margin: 0 0 0.45rem;
+	}
+	.key-points li:last-child {
+		margin-bottom: 0;
 	}
 </style>

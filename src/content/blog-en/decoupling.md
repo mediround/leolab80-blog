@@ -4,6 +4,11 @@ description: "More customers now research Korean hospitals and procedures in adv
 sourceDate: "2026-10-11T17:20:53"
 genieReviewed: "2026-10-14"
 grammarlyChecked: "2026-10-14"
+keyPoints:
+  - "It has become harder to provide as much value as before just by relaying information between international patients and Korean hospitals."
+  - "Decoupling means breaking the links between customer activities that used to go together."
+  - "What I can do here is organize the answers the customer received on the same basis and help them ask the hospitals about terms they have not yet confirmed."
+  - "Whether customers would pay for comparison support itself, and what kind of help hospitals would pay for, still needs to be confirmed. The work can only continue if the help customers get, and the reason to bear its cost, are both clear."
 ---
 
 More customers now look up Korean hospitals and procedures in advance. By the time a customer turns to a broker, they may have already done part of the hospital-selection work elsewhere. It has become harder to provide as much value as before just by relaying information between international patients and Korean hospitals.

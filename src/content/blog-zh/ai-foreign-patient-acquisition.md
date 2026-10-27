@@ -4,6 +4,11 @@ description: "我和Genie（ChatGPT）、Theo（Claude Code）一起做外国患
 sourceDate: "2026-10-08T23:07:47"
 genieReviewed: "2026-10-14"
 grammarlyChecked: "2026-10-14"
+keyPoints:
+  - "Genie是ChatGPT，Theo是Claude Code。在MyClinic的外国患者招揽工作中，Genie主要负责内容制作，Theo负责服务的编程工作。"
+  - "Genie从拍摄的原始素材中挑选片段，制作了一部约3分35秒的正片，以及在此基础上重新剪辑的五条短视频。"
+  - "即使Genie把视频剪得很好，要真正用起来，仍然需要人手。"
+  - "如今，AI智能体能够替代人的工作，在业务的各个环节做出高质量的成果，这一点已经毋庸置疑。接下来，我想进入下一个阶段：弄清和AI协作为我节省了多少时间，外国患者招揽成本以及预约和收入发生了多大变化。"
 ---
 
 我和Genie、Theo一起工作。Genie是ChatGPT，Theo是Claude Code。在MyClinic的外国患者招揽工作中，Genie主要负责内容制作，Theo负责服务的编程工作。

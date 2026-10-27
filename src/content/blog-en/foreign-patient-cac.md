@@ -4,6 +4,11 @@ description: "International patients top 2 million, yet no one asks what it cost
 sourceDate: "2026-09-05T15:33:40"
 genieReviewed: "2026-10-14"
 grammarlyChecked: "2026-10-14"
+keyPoints:
+  - "Put simply, customer acquisition cost (CAC) means \"all the costs incurred to acquire one actual paying customer (advertising, labor, sales expenses, and so on).\""
+  - "An overwhelmingly high acquisition cost (CAC) has to be covered by a far too low lifetime value (LTV), and with no customer ownership, there is no way to make up the loss."
+  - "By my rough estimate based on experience in the field, attracting one international patient costs several hundred thousand won or more."
+  - "To turn a profit on a single case, the treatment fee has to be at least 3 to 4 times the CAC, and unless it is major plastic surgery, many specialties can't clear that bar."
 ---
 
 Put simply, customer acquisition cost (CAC) means "all the costs incurred to acquire one actual paying customer (advertising, labor, sales expenses, and so on)."

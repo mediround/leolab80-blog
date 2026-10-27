@@ -16,6 +16,8 @@ export interface Post {
 	updatedDate?: Date;
 	category: Category;
 	heroImage?: ImageMetadata;
+	/** 글 상단 「핵심 요약」 — 그 언어의 본문 문장 그대로 */
+	keyPoints?: string[];
 	/** 본문 렌더용 원래 항목 */
 	entry: Entry;
 	/** 번역본: 검수(지니·Grammarly)를 다 마쳤는가. 한국어 = 항상 true */
@@ -76,6 +78,7 @@ export async function getPosts(lang: Lang): Promise<Post[]> {
 			updatedDate: ko.data.updatedDate,
 			category: ko.data.category,
 			heroImage: ko.data.heroImage,
+			keyPoints: tr.data.keyPoints,
 			entry: tr,
 			reviewed,
 		});

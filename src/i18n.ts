@@ -57,6 +57,7 @@ type Dict = {
 	home: string;
 	crumbsLabel: string;
 	updated: string;
+	keyPoints: string;
 	emptyCategory: string;
 	prev: string;
 	next: string;
@@ -76,7 +77,8 @@ type Dict = {
 		tooMany: string;
 		failed: string;
 	};
-	notice?: { text: string; original: string; preview: string };
+	// 번역본 「AI 번역」 안내문은 2026-10-27 대표 지시로 삭제 — 미리보기 배포의 「검수 전」 표시만 남긴다
+	notice?: { preview: string };
 	about: string[];
 };
 
@@ -103,6 +105,7 @@ export const UI: Record<Lang, Dict> = {
 		home: '홈',
 		crumbsLabel: '이동 경로',
 		updated: '수정',
+		keyPoints: '핵심 요약',
 		emptyCategory: '아직 이 카테고리의 글이 없습니다.',
 		prev: '‹ 이전',
 		next: '다음 ›',
@@ -180,6 +183,7 @@ export const UI: Record<Lang, Dict> = {
 		home: 'Home',
 		crumbsLabel: 'Breadcrumb',
 		updated: 'Updated',
+		keyPoints: 'Key points',
 		emptyCategory: 'No posts in this category yet.',
 		prev: '‹ Previous',
 		next: 'Next ›',
@@ -213,8 +217,6 @@ export const UI: Record<Lang, Dict> = {
 			failed: 'Your message could not be sent. What you typed is still here, so please try again in a moment.',
 		},
 		notice: {
-			text: 'This post was translated from the Korean original with AI and reviewed before publishing.',
-			original: 'Read the original (Korean) →',
 			preview: 'Preview — review not finished',
 		},
 		about: [
@@ -260,6 +262,7 @@ export const UI: Record<Lang, Dict> = {
 		home: '首页',
 		crumbsLabel: '导航路径',
 		updated: '更新',
+		keyPoints: '要点',
 		emptyCategory: '此分类暂无文章。',
 		prev: '‹ 上一页',
 		next: '下一页 ›',
@@ -293,8 +296,6 @@ export const UI: Record<Lang, Dict> = {
 			failed: '发送失败。您填写的内容仍保留在页面上，请稍后再试。',
 		},
 		notice: {
-			text: '本文由韩语原文经 AI 翻译，并在发布前经过审校。',
-			original: '阅读韩语原文 →',
 			preview: '预览 — 审校尚未完成',
 		},
 		about: [

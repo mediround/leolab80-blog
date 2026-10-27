@@ -4,6 +4,11 @@ description: "I began in 2009. Information is common; hospitals go direct; intro
 sourceDate: "2026-07-14T15:30:00"
 genieReviewed: "2026-10-14"
 grammarlyChecked: "2026-10-14"
+keyPoints:
+  - "The value of brokering that merely connected patients with hospitals has declined. The search bar now makes that connection for free."
+  - "Trust is still hard. More information did not make believing any easier."
+  - "If the value of brokering information is fading, the answer is to move away from selling information and toward selling trust."
+  - "In 2009 and today, the essence of this work comes down to one thing. Putting a stranger at ease so they can cross a border."
 ---
 
 Between the day I started this work 17 years ago and now, what has changed about bringing a single international patient to Korea?

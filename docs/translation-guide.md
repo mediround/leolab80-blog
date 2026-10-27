@@ -90,10 +90,11 @@ grammarlySkipped: "…" # Grammarly 를 못 거치고 대표 결정으로 게시
 - 영어 표기: 글 제목 = 제목형(Title Case) · 소제목 = 문장형(Sentence case) · 책 제목 = 이탤릭.
 - 그림 안 글자는 칸 폭이 정해져 있다 — 짧은 말을 고르고, 중국어는 줄바꿈 처리(CSS)가 따로 있다.
 
-## 4. 번역본 상단 안내 (코드가 자동으로 붙인다 — 본문에 쓰지 않는다)
+## 4. 번역본 상단 안내 — 없음(2026-10-27 삭제) · 대신 「핵심 요약」(keyPoints) = 한국어 글과 같은 순서·개수, 번역문의 해당 문장 그대로
 
-- English: *This post was translated from the Korean original with AI and reviewed before publishing.* · Read the original (Korean) →
-- 中文: 本文由韩语原文经 AI 翻译，并在发布前经过审校。· 阅读韩语原文 →
+- (2026-10-27 대표 지시로 번역본 상단 안내문 삭제 — 번역본도 한국어 글과 같은 모양. 아래 두 줄은 이력)
+- English(삭제됨): *This post was translated from the Korean original with AI and reviewed before publishing.* · Read the original (Korean) →
+- 中文(삭제됨): 本文由韩语原文经 AI 翻译，并在发布前经过审校。· 阅读韩语原文 →
 
 ## 5. 지니 → 테오 인계 (업로드에 필요한 것)
 

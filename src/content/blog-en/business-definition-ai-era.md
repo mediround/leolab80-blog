@@ -4,6 +4,11 @@ description: "AI lets one person do more, but that isn't business success. Custo
 sourceDate: "2026-10-13T21:40:36"
 genieReviewed: "2026-10-14"
 grammarlyChecked: "2026-10-14"
+keyPoints:
+  - "A 2025 study published in the Quarterly Journal of Economics analyzed 5,172 customer support agents at a software company. After the company introduced an AI assistant tool, the number of customer issues resolved per hour rose by about 15% on average."
+  - "A 2026 study published in Management Science ran a randomized experiment with 640 small business owners in Kenya over about five months. Some were given a GPT-4-based business advice tool, but the study could not statistically confirm an average improvement in sales or profits."
+  - "Even as AI gets more capable, the business owner still has to decide what to hand off and how that work connects to customers and sales."
+  - "In the end, a business delivers value to customers, gets paid for it, and keeps that work going, so value has to come before money."
 ---
 
 Working with AI, I can try more things on my own. I create content, draft replies to customers, and build features for the service. With the output right in front of me, it feels as if the business has grown just as much.
